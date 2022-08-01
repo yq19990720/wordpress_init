@@ -14,7 +14,7 @@
  *
  * @return array[] Array of categories for block types.
  */
-function get_default_block_categories() {
+        function get_default_block_categories() {
 	return array(
 		array(
 			'slug'  => 'text',

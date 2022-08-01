@@ -22,6 +22,6 @@ jobs:
           php phpcs.phar --version
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
-          files: "wp-includes/ebay/ebay_config.php"
+          files: "wp-includes/**.php"
           phpcs_path: php phpcs.phar
           standard: "phpcs.xml"
