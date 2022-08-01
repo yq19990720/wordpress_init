@@ -3,7 +3,7 @@ use Spatie\SchemaOrg\LocalBusiness;
 use Spatie\SchemaOrg\Schema;
 class ebay_api
 {
-    public function setConfig()
+            public function setConfig()
     {
         global $Config;
         $Config['cache'] = 'cache';
