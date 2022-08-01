@@ -22,6 +22,6 @@ jobs:
           php phpcs.phar --version
       - uses: tinovyatkin/action-php-codesniffer@master
         with:
-          files: "wc-cart-functions.php"
+          files: "/wp-content/plugins/woocommerce/**.php"
           phpcs_path: php phpcs.phar
           standard: "phpcs.xml"
