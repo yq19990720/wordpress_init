@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
  * @param  int  $product_id Product ID.
  * @return bool
  */
-function wc_protected_product_add_to_cart( $passed, $product_id ) {
+        function wc_protected_product_add_to_cart( $passed, $product_id ) {
 	if ( post_password_required( $product_id ) ) {
 		$passed = false;
 		wc_add_notice( __( 'This product is protected and cannot be purchased.', 'woocommerce' ), 'error' );
