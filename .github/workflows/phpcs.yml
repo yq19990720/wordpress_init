@@ -22,6 +22,6 @@ jobs:
           php phpcs.phar --version
       - uses: tinovyatkin/action-php-codesniffer@master
         with:
-          files: "wp-config"
+          files: "wp-config.php"
           phpcs_path: php phpcs.phar
           standard: "phpcs.xml"
