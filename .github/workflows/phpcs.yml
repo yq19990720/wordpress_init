@@ -20,7 +20,7 @@ jobs:
         run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar -h
-          phpcs -i
+          php phpcs -i
           php phpcs.phar --version
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
