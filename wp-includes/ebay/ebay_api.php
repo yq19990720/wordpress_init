@@ -1,5 +1,7 @@
 <?php
+
 use Spatie\SchemaOrg\Schema;
+
 class EbayApi
 {
     public function setConfig()
@@ -11,7 +13,7 @@ class EbayApi
             'x-app-id: ' . App_id,
             'x-api-key: ' . Api_key,
             'Content-Type: application/json',
-            'X-Forwarded-For:'.getIP()
+            'X-Forwarded-For:' . getIP()
         );
         $Config['url'] = '';
         $Config['api_url'] = Api_url;
@@ -26,7 +28,7 @@ class EbayApi
         $ApiUrl  = $Config['api_url'] . $url;
         $jsonStr = json_encode($arr);
         $header  = $Config['api_header'];
-        if($type) {
+        if ($type) {
             $ApiUrl = $url;
             $jsonStr = json_encode($arr);
             $header = array(
@@ -37,14 +39,14 @@ class EbayApi
         return json_decode($data);
     }
 
-    public function productCategoryList($update=null)
+    public function productCategoryList($update = null)
     {
         global $Category_list;
         //缓存列表
         $data = get_mysql_options('banner', BANNER_MYSQL_TIME);//过期时间一天
         $Category_list = $data->data;
-        if($data && !$update && !$data->request) {
-            if(empty($data->data)) {
+        if ($data && !$update && !$data->request) {
+            if (empty($data->data)) {
                 return array();
             }
             return res_banner($data->data);
@@ -60,33 +62,33 @@ class EbayApi
             return array();
         }
         $res->status == 200 ? set_mysql_options($res, 'banner') : set_mysql_options('', 'banner');
-        if($update) {
+        if ($update) {
             return date('Y-m-d H:i:s');
         }
         return res_banner($res->data);
     }
 
-    public function productList($data, $page_num, $page_size,$search=null)
+    public function productList($data, $page_num, $page_size, $search = null)
     {
         global $ebay_list;
-        if(!$search) {
+        if (!$search) {
             $data = str_replace("sku", "", Page_code($data));
             verify_product_id($data, "banner");
         }
         $page_num  = (int)$page_num;
         $page_size = (int)$page_size;
-        if($search) {
+        if ($search) {
             $res = $this->get(
                 "/get_list",
                 array(
                     'src'   => Api_Src,
                     'extra' => Api_Extra,
-                    "search_word"   =>$data,
+                    "search_word"   => $data,
                     "page_size"     => $page_size,
                     "page_num"      => $page_num
                 )
             );
-        }else{
+        } else {
             $res = $this->get(
                 "/get_list",
                 array(
@@ -97,35 +99,34 @@ class EbayApi
                     "page_num"      => $page_num
                 )
             );
-
         }
-        if(empty($res->data->items)) {
+        if (empty($res->data->items)) {
             return array();
         }
         if ($res->status == 200) {
             foreach ($res->data->items as $value) {
-                $price = get_rate_price($value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100)/100);
+                $price = get_rate_price($value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100) / 100);
                 $ID = Page_code("sku" . $value->item_id, "en");
                 $title = UrlCode(ucwords(strtolower($value->title)));
                 $posts[] = (object)array(
                     "ID"                => $value->item_id,
                     "post_content"      => "",
                     'element_title'     => $value->title,
-                    "featured"          => product_hot($value->title)? array("featured", "rated-5"):array(),
+                    "featured"          => product_hot($value->title) ? array("featured", "rated-5") : array(),
                     "post_title"        => htmlSpecial($value->title),
                     "rating_counts"     => product_rating($value->title),
                     "average_rating"    => product_rating($value->title),
-                    "usd_price"         => get_rate_price($value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100)/100, 'USD'),
+                    "usd_price"         => get_rate_price($value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100) / 100, 'USD'),
                     "post_status"       => "publish",
                     "price"             => $price,
                     "regular_price"     => "",
                     "sale_price"        => $price,
-                    "description_price"  => floor($value->current_price * 0.5 * 100)/100,
+                    "description_price"  => floor($value->current_price * 0.5 * 100) / 100,
                     "comment_status"    => "open",
                     "ping_status"       => "closed",
                     "currency_id"       => $value->currency_id,
-                    "post_name"         => $title . "_" . $ID.".html",
-                    "post_url"          => $title . "_" . $ID.".html",
+                    "post_name"         => $title . "_" . $ID . ".html",
+                    "post_url"          => $title . "_" . $ID . ".html",
                     "image_id"          =>  $value->album,
                     "post_type"         => "product",
                     "filter"            => "raw",
@@ -138,10 +139,10 @@ class EbayApi
         return $posts;
     }
 
-    public function productDetails($item_id, $recommend,$type=null)
+    public function productDetails($item_id, $recommend, $type = null)
     {
         global $jsonld;
-        if(!$type) {
+        if (!$type) {
             $item_id = str_replace("sku", "", Page_code($item_id));
             verify_product_id($item_id, "product");
         }
@@ -155,48 +156,48 @@ class EbayApi
             )
         );
         $data = $res->data;
-        if(empty($data)) {
+        if (empty($data)) {
             return array();
         }
 
         if ($res->status == 200) {
-            $price = get_rate_price($data->currency_id, determine_locale_currency(), floor($data->current_price * 0.5 * 100)/100);
+            $price = get_rate_price($data->currency_id, determine_locale_currency(), floor($data->current_price * 0.5 * 100) / 100);
             $ProductDetails[] = (object)array(
                 'ID'                  => $data->item_id,
                 "featured"            => array(
                     "featured",
                     "rated-5"
                 ),
-                'post_title'         =>htmlSpecial($data->title),
-                'element_title'      =>$data->title,
-                'post_url'           =>Urlcode(ucwords(strtolower($data->title))). "_" . Page_code("sku" . $data->item_id, "en").".html",
-                'post_type'          =>"product",
-                "usd_price"         => get_rate_price($data->currency_id, determine_locale_currency(), floor($data->current_price * 0.5 * 100)/100, 'USD'),
-                "rating_counts"      =>product_rating($data->title),
-                "average_rating"     =>product_rating($data->title),
-                "description_price"  => floor($data->current_price * 0.5 * 100)/100,
-                'post_name'          =>$data->category_name,
-                'post_specifics'     =>$data->specifics,
-                'post_content'       =>$data->description,
-                'post_hit_count'     =>$data->hit_count,
-                'image_id'           =>$data->pictures[0],
-                "purchasable"        =>true,
-                'category_name'        =>end($data->category_name_path_vec),
-                "price"              =>$price,
-                "total_sales"        =>$data->current_price * 0.5 - 10,
-                "tax_status"         =>"taxable",
-                "stock_quantity"     =>$data->quantity >= 10 ?$data->quantity : 100,
-                "stock_status"       =>"instock",
-                "backorders"         =>"no",
-                "low_stock_amount"   =>"",
-                "manage_stock"       =>true,
-                "sold_individually"  =>false,
-                "regular_price"      =>"",
-                "sale_price"         =>$price,
-                'pictures'           =>$data->pictures,
-                "currency_id"        =>$data->currency_id,
-                'bread_crumbs'       =>$data->category_name_path_vec,
-                'bread_crumbs_id'    =>$data->category_id_path_vec,
+                'post_title'         => htmlSpecial($data->title),
+                'element_title'      => $data->title,
+                'post_url'           => Urlcode(ucwords(strtolower($data->title))) . "_" . Page_code("sku" . $data->item_id, "en") . ".html",
+                'post_type'          => "product",
+                "usd_price"         => get_rate_price($data->currency_id, determine_locale_currency(), floor($data->current_price * 0.5 * 100) / 100, 'USD'),
+                "rating_counts"      => product_rating($data->title),
+                "average_rating"     => product_rating($data->title),
+                "description_price"  => floor($data->current_price * 0.5 * 100) / 100,
+                'post_name'          => $data->category_name,
+                'post_specifics'     => $data->specifics,
+                'post_content'       => $data->description,
+                'post_hit_count'     => $data->hit_count,
+                'image_id'           => $data->pictures[0],
+                "purchasable"        => true,
+                'category_name'        => end($data->category_name_path_vec),
+                "price"              => $price,
+                "total_sales"        => $data->current_price * 0.5 - 10,
+                "tax_status"         => "taxable",
+                "stock_quantity"     => $data->quantity >= 10 ? $data->quantity : 100,
+                "stock_status"       => "instock",
+                "backorders"         => "no",
+                "low_stock_amount"   => "",
+                "manage_stock"       => true,
+                "sold_individually"  => false,
+                "regular_price"      => "",
+                "sale_price"         => $price,
+                'pictures'           => $data->pictures,
+                "currency_id"        => $data->currency_id,
+                'bread_crumbs'       => $data->category_name_path_vec,
+                'bread_crumbs_id'    => $data->category_id_path_vec,
                 "recommends"         => recommend($res->recommends)
             );
         }
@@ -208,27 +209,27 @@ class EbayApi
     {
         $category_id = str_replace("sku", "", Page_code($category_id));
         verify_product_id($category_id, "banner");
-        $res  =$this->get(
+        $res  = $this->get(
             "/get_sub",
             array(
-                'src'           =>Api_Src,
-                'extra'         =>Api_Extra,
-                "category_id"   =>$category_id,
+                'src'           => Api_Src,
+                'extra'         => Api_Extra,
+                "category_id"   => $category_id,
             )
         );
-        if($res->data) {
-            foreach ($res->data as $value){
+        if ($res->data) {
+            foreach ($res->data as $value) {
                 $Sub[] = (object)array(
-                    "term_id"               =>$value->category_id,
-                    "name"                  =>$value->category_name,
-                    "slug"                  =>Urlcode(ucwords(strtolower($value->category_name))). "_" . Page_code("sku" . $value->category_id, "en"),
-                    "term_group"            =>0,
-                    "term_taxonomy_id"      =>89,
-                    "taxonomy"              =>"product_cat",
-                    "description"           =>"",
-                    "parent"                =>0,
-                    "count"                 =>9,
-                    "filter"                =>"raw"
+                    "term_id"               => $value->category_id,
+                    "name"                  => $value->category_name,
+                    "slug"                  => Urlcode(ucwords(strtolower($value->category_name))) . "_" . Page_code("sku" . $value->category_id, "en"),
+                    "term_group"            => 0,
+                    "term_taxonomy_id"      => 89,
+                    "taxonomy"              => "product_cat",
+                    "description"           => "",
+                    "parent"                => 0,
+                    "count"                 => 9,
+                    "filter"                => "raw"
                 );
             }
         }
@@ -238,7 +239,7 @@ class EbayApi
     public function getRate()
     {
         $rates = get_mysql_options('rate', RATE_MYSQL_TIME);
-        if(!$rates || $rates->request) {//汇率不存在，或者返回信息中携带请求对象则再次请求汇率接口
+        if (!$rates || $rates->request) {//汇率不存在，或者返回信息中携带请求对象则再次请求汇率接口
             //获取接口汇率缓存
             $res = $this->get("/get_rate", array());
             $res->status == 200 ? set_mysql_options($res, 'rate') : set_mysql_options('', 'rate');
@@ -247,11 +248,11 @@ class EbayApi
     }
 
     //通过接口获取国家地区信息
-    public function get_language_currency()
+    public function getLanguageCurrency()
     {
-        $res = $this->get($_SERVER['HTTP_HOST']."/api/country", array(), 'get');
+        $res = $this->get($_SERVER['HTTP_HOST'] . "/api/country", array(), 'get');
         $result = array();
-        if($res->status == 200) {
+        if ($res->status == 200) {
             $result['country_code'] = $res->data->registered_country->iso_code;
             $result['area'] = $res->data->country->iso_code;
         }
@@ -263,17 +264,17 @@ class EbayApi
     {
         $post_sign = $_GET['sign'];
 
-        switch ($_SERVER["REQUEST_URI"]){
-        case "/healthcheck":
-            header('HTTP/1.1 204');
-            exit();
+        switch ($_SERVER["REQUEST_URI"]) {
+            case "/healthcheck":
+                header('HTTP/1.1 204');
+                exit();
                 break;
-        case "/_self_config":
-            outsideself::index();
-            break;
-        case "/_self_config?sign=".$post_sign:
-            outsideself::index();
-        default:
+            case "/_self_config":
+                outsideself::index();
+                break;
+            case "/_self_config?sign=" . $post_sign:
+                outsideself::index();
+            default:
         }
     }
 }
@@ -284,30 +285,30 @@ class EbayApi
  * @param  string $price         价格
  * @return float
  */
-function get_currency_price($currency_code='',$payment_way='',$price='')
+function get_currency_price($currency_code = '', $payment_way = '', $price = '')
 {
     //货币代码
     $code = CURRENCY_CODE[$currency_code]['code'];//define定义的常量用key=>value的取法只适用版本7+，7一下的不支持需赋值给变量后取出
     //校验货币代码是否存在
-    if(!CURRENCY_CODE[$currency_code]) {
-        throw new Exception(sprintf(__("No corresponding ".$currency_code." payment currency!")));
+    if (!CURRENCY_CODE[$currency_code]) {
+        throw new Exception(sprintf(__("No corresponding " . $currency_code . " payment currency!")));
     }
     //付款方式
     $payment = CURRENCY_CODE[$currency_code][$payment_way];
-    switch ($payment_way){
-    case "stripe":
-        $price = get_stripe_payment($payment, $code, $price, $currency_code);
-        break;
-    case "paypalloli":
-        $price = get_paypal_payment($payment, $currency_code, $price);
-        break;
-    default:
-        return "No ".$payment_way." payment method";
+    switch ($payment_way) {
+        case "stripe":
+            $price = get_stripe_payment($payment, $code, $price, $currency_code);
+            break;
+        case "paypalloli":
+            $price = get_paypal_payment($payment, $currency_code, $price);
+            break;
+        default:
+            return "No " . $payment_way . " payment method";
     }
     return (float)$price;
 }
 
-function get_paypal_payment($payment,$currency_code,$price)
+function get_paypal_payment($payment, $currency_code, $price)
 {
     /**
      * PayPal包含两个条件
@@ -317,18 +318,18 @@ function get_paypal_payment($payment,$currency_code,$price)
     $is_decimal = $payment['is_decimal'];//是否支持小数点支付
     $is_cur_not_sup = $payment['is_cur_not_sup'];//是否支持该货币付款
     //不支持则返回false
-    if(!$is_cur_not_sup) {
-        throw new Exception(sprintf(__("This payment method does not support ".$currency_code." payment in this currency")));
+    if (!$is_cur_not_sup) {
+        throw new Exception(sprintf(__("This payment method does not support " . $currency_code . " payment in this currency")));
     }
     //不支持小数->四舍五入
-    if(!$is_decimal) {
+    if (!$is_decimal) {
         //该处只适用于加上邮费后的总价
         $price = round($price);
     }
     return $price;
 }
 
-function get_stripe_payment($payment,$code,$price,$currency_code)
+function get_stripe_payment($payment, $code, $price, $currency_code)
 {
     /**
      * Stripe包含两个条件
@@ -336,7 +337,7 @@ function get_stripe_payment($payment,$code,$price,$currency_code)
      * 2、付款最低限制，无则是false
      */
     $is_zero_decimal = $payment['is_zero_decimal']; //是否是零位十进制
-    if(!$is_zero_decimal || $currency_code == 'JPY' || $currency_code == 'HUF') {
+    if (!$is_zero_decimal || $currency_code == 'JPY' || $currency_code == 'HUF') {
         $price = round($price);
     }
     return $price;
@@ -351,19 +352,19 @@ function get_stripe_payment($payment,$code,$price,$currency_code)
  * @param  String $type                  调用类型
  * @return float
  */
-function get_rate_price($product_currency_code, $currency_code, $price,$type='')
+function get_rate_price($product_currency_code, $currency_code, $price, $type = '')
 {
     global $rates;//获取数据库缓存
-    if($rates->status == 200) {
-        switch ($type){
-        case 'USD':
-            $price = $price / $rates->data->rates->$product_currency_code;
-            break;
-        case 'RATE':
-            $price =  $rates->data->rates->$product_currency_code;
-            break;
-        default:
-            $price = $price * $rates->data->rates->$product_currency_code * $rates->data->rates->$currency_code;
+    if ($rates->status == 200) {
+        switch ($type) {
+            case 'USD':
+                $price = $price / $rates->data->rates->$product_currency_code;
+                break;
+            case 'RATE':
+                $price =  $rates->data->rates->$product_currency_code;
+                break;
+            default:
+                $price = $price * $rates->data->rates->$product_currency_code * $rates->data->rates->$currency_code;
         }
     }
     return $price;
@@ -377,7 +378,7 @@ function get_rate_price($product_currency_code, $currency_code, $price,$type='')
 function get_self_config()
 {
     global $wpdb;
-    $self_config = $wpdb->get_results("select self_config from ".SELF_CONFIG_TABEL." limit 1");
+    $self_config = $wpdb->get_results("select self_config from " . SELF_CONFIG_TABEL . " limit 1");
     //提取self_config转换为数组
     return json_decode($self_config[0]->self_config, true);
 }
@@ -391,32 +392,31 @@ function get_self_config()
  * @param  string $price
  * @return bool|string
  */
-function standard_price($language='',$currency_code='',$currency_symbol='',$price='')
+function standard_price($language = '', $currency_code = '', $currency_symbol = '', $price = '')
 {
-    if(empty($price)) {
+    if (empty($price)) {
         return false;
     }
     $price = str_replace($currency_symbol, "", $price);
     $price = str_replace(",", "", $price);
     $price = str_replace("&nbsp;", "", $price);
-    switch ($language){
-    case 'en_US':
-        $standard_price = "$currency_symbol".number_format($price, 2, '.', ',');
-        break;
-    case 'fr_FR':
-        $standard_price = number_format($price, 2, ',', ' ')."$currency_symbol";
-        break;
-    case 'de_DE':
-    case 'it_IT':
-    case 'es_ES':
-        $standard_price = number_format($price, 2, ',', '.')."$currency_symbol";
-        break;
-    case 'nl_NL_formal':
-        $standard_price = "$currency_symbol" . number_format($price, 2, ',', '.');
-        break;
-    default:
-        return false;
-
+    switch ($language) {
+        case 'en_US':
+            $standard_price = "$currency_symbol" . number_format($price, 2, '.', ',');
+            break;
+        case 'fr_FR':
+            $standard_price = number_format($price, 2, ',', ' ') . "$currency_symbol";
+            break;
+        case 'de_DE':
+        case 'it_IT':
+        case 'es_ES':
+            $standard_price = number_format($price, 2, ',', '.') . "$currency_symbol";
+            break;
+        case 'nl_NL_formal':
+            $standard_price = "$currency_symbol" . number_format($price, 2, ',', '.');
+            break;
+        default:
+            return false;
     }
     return $standard_price;
 }
@@ -432,9 +432,9 @@ function order_time_verify($order)
 {
     $format = 'Y-m-d H:i:s';
     $date = $order->get_date_created()->date($format);
-    $tomorrow = strtotime(date($format, strtotime("$date ".ORDER_TIME)));
+    $tomorrow = strtotime(date($format, strtotime("$date " . ORDER_TIME)));
     $now_date = strtotime(date($format));
-    if($now_date>=$tomorrow && $order->get_status()=="pending") {
+    if ($now_date >= $tomorrow && $order->get_status() == "pending") {
         return true;
     }
     return false;
@@ -449,14 +449,14 @@ function order_time_verify($order)
 function negative_product_handle($data)
 {
     //Check if it is a negative number, if it is a negative number, replace it with a positive number
-    if(!is_string($data)) {
-        if($data < 0) {
+    if (!is_string($data)) {
+        if ($data < 0) {
             $data = $data * -1;
-        }else if (is_float($data)) {
+        } elseif (is_float($data)) {
             return false;
         }
         return $data == 0 ?  1 : $data;
-    }else{
+    } else {
         return false;
     }
 }
@@ -471,9 +471,10 @@ function negative_product_handle($data)
 function verify_search_param($verify_param)
 {
     //将参数转换为string类型并计算长度
-    $search_len = strlen((String)$verify_param);
-    if($search_len == 0 ||$search_len > MAX_LEN) {
-        header('HTTP/1.1 422 Unprocessable Entity');exit();
+    $search_len = strlen((string)$verify_param);
+    if ($search_len == 0 || $search_len > MAX_LEN) {
+        header('HTTP/1.1 422 Unprocessable Entity');
+        exit();
     }
     return true;
 }
@@ -481,12 +482,12 @@ function verify_search_param($verify_param)
 /**
  * 二次封装session
  */
-function sql_session($key,$value=null)
+function sql_session($key, $value = null)
 {
     session_start();
-    $key = $key.TEMPLATE_NAME;
+    $key = $key . TEMPLATE_NAME;
     $data = Session::get($key);
-    if($value) {
+    if ($value) {
         Session::set($key, $value);
         $data = Session::get($key);
     }
@@ -500,32 +501,33 @@ function sql_session($key,$value=null)
  * @param  $type
  * @return boolean
  */
-function verify_product_id($verify_id,$type=null)
+function verify_product_id($verify_id, $type = null)
 {
     //参数不为空并且是整数
-    if(!empty($verify_id) && ctype_digit((string)$verify_id)) {
+    if (!empty($verify_id) && ctype_digit((string)$verify_id)) {
         //判断校验类型
         $id_len = strlen((string)$verify_id);
-        switch ($type){
-        case "banner" :
-            //是否超出范围 大于等于1 小于等于8
-            if($id_len >= 1 &&  8 >= $id_len) {
-                return true;
-            }
-            break;
-        case "product":
-            //是否超出范围 大于等于9 小于等于15
-            if($id_len >= 9 &&  15 >= $id_len) {
-                return true;
-            }
-            break;
-        default:
-            header('HTTP/1.1 400 Bad Request');
-            exit();
+        switch ($type) {
+            case "banner":
+                //是否超出范围 大于等于1 小于等于8
+                if ($id_len >= 1 &&  8 >= $id_len) {
+                    return true;
+                }
+                break;
+            case "product":
+                //是否超出范围 大于等于9 小于等于15
+                if ($id_len >= 9 &&  15 >= $id_len) {
+                    return true;
+                }
+                break;
+            default:
+                header('HTTP/1.1 400 Bad Request');
+                exit();
         }
-    }else{
+    } else {
         //校验不通过直接返回状态代码400
-        header('HTTP/1.1 400 Bad Request');exit();
+        header('HTTP/1.1 400 Bad Request');
+        exit();
     }
 }
 
@@ -538,14 +540,14 @@ function verify_product_id($verify_id,$type=null)
 function verify_product_id_data_store_cart($verify_id)
 {
     //参数不为空并且是整数
-    if(!empty($verify_id) && ctype_digit((string)$verify_id)) {
+    if (!empty($verify_id) && ctype_digit((string)$verify_id)) {
         //判断校验类型
         $id_len = strlen((string)$verify_id);
         //是否超出范围 大于等于9 小于等于15
-        if($id_len >= 9 &&  15 >= $id_len) {
+        if ($id_len >= 9 &&  15 >= $id_len) {
             return true;
         }
-    }else{
+    } else {
         return false;
     }
 }
@@ -566,7 +568,7 @@ function product_rating($product_name): int
  * 返回是否是热卖产品
  * 商品名长度对2取余,结果作为热卖显示
  */
-function product_hot($product_name) : int
+function product_hot($product_name): int
 {
     return strlen(trim($product_name)) % 2;
 }
@@ -585,17 +587,13 @@ function getPriceByRule($price)
 
     if ($price >= 500) {
         $price *= (8 / 10);
-    }else if ($price >= 400) {
-
+    } elseif ($price >= 400) {
         $price *= (9 / 10);
-    }else if ($price >= 300) {
-
+    } elseif ($price >= 300) {
         $price -= 30;
-    }else if($price >= 200) {
-
+    } elseif ($price >= 200) {
         $price -= 20;
-    }else if ($price >= 100) {
-
+    } elseif ($price >= 100) {
         $price -= 10;
     }
     return $price;
@@ -603,25 +601,25 @@ function getPriceByRule($price)
 //处理轮播图排列组合
 function getCombination($num, $n)
 {
-    if($num) {
+    if ($num) {
         $combinations = 1;
-        for ($i=0;$i<$n;$i++){
+        for ($i = 0; $i < $n; $i++) {
             $combinations *= $num - $i;
         }
-        for ($i=0;$i<$n;$i++){
+        for ($i = 0; $i < $n; $i++) {
             $combinations /= $n - $i;
         }
         $host = substr(md5(get_host($_SERVER['SERVER_NAME'])), -11, -1);
         $value = hexdec($host);
         $key1 = $value % $combinations;
         $half = intval($combinations / 2);
-        if($key1>$half) {
+        if ($key1 > $half) {
             $key2 = $key1 - $half;
-        }else{
+        } else {
             $key2 = $key1 + $half ;
         }
-        $value1 = "/".IMAGEURL."/".($key1 % $num + 1).".jpg";
-        $value2 = "/".IMAGEURL."/".($key2 % $num + 1).".jpg";
+        $value1 = "/" . IMAGEURL . "/" . ($key1 % $num + 1) . ".jpg";
+        $value2 = "/" . IMAGEURL . "/" . ($key2 % $num + 1) . ".jpg";
         return array($value1,$value2);
     }
 }
@@ -629,24 +627,25 @@ function getCombination($num, $n)
 //读取文件中的文件数
 function getImages()
 {
-    if(is_dir(IMAGEURL)) {
+    if (is_dir(IMAGEURL)) {
         $info = opendir(IMAGEURL);
         $arr = [];
         while (($file = readdir($info)) !== false) {
-            if(strstr($file, "jpg")) {
+            if (strstr($file, "jpg")) {
                 array_push($arr, $file);
             }
         }
         closedir($info);
     }
-    if($arr) { return count($arr);
+    if ($arr) {
+        return count($arr);
     }
 }
 
 //处理推荐商品映射
 function recommend($key)
 {
-    if(empty($key)) {
+    if (empty($key)) {
         return null;
     }
     foreach ($key as $value) {
@@ -658,35 +657,35 @@ function recommend($key)
             "comment_status" => "open",
             "ping_status" => "closed",
             "post_status" => "publish",
-            "featured" => product_hot($value->title)? array("featured", "rated-5"):array(),
+            "featured" => product_hot($value->title) ? array("featured", "rated-5") : array(),
             "rating_counts" => product_rating($value->title),
             "average_rating" => product_rating($value->title),
-            'usd_price' => get_rate_price($value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100)/100, 'USD'),
+            'usd_price' => get_rate_price($value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100) / 100, 'USD'),
             "post_type" => "product",
-            "post_name" => $Url . "_" . $ID.".html",
+            "post_name" => $Url . "_" . $ID . ".html",
             'image' =>  $value->album,
-            "price" => floor($value->current_price * 0.5 * 100)/100,
+            "price" => floor($value->current_price * 0.5 * 100) / 100,
             "regular_price" => "",
-            "sale_price" =>  floor($value->current_price * 0.5 * 100)/100,
+            "sale_price" =>  floor($value->current_price * 0.5 * 100) / 100,
         );
     }
     return $data;
 }
 
 //数据库缓存查询
-function get_mysql_options($like,$expire)
+function get_mysql_options($like, $expire)
 {
     global $wpdb;
-    $get_data= $wpdb->get_results("SELECT option_value,autoload FROM ".$wpdb->options." WHERE 1=1 AND option_name LIKE '$like'");
+    $get_data = $wpdb->get_results("SELECT option_value,autoload FROM " . $wpdb->options . " WHERE 1=1 AND option_name LIKE '$like'");
     $data_value = json_decode($get_data[0]->option_value);
     $date = $get_data[0]->autoload;
     $now_date = strtotime(date('Y-m-d H:i:s'));
-    $tomorrow = $data_value->response ? strtotime("$date +1 minute") : strtotime("$date ".$expire);
-    if($now_date>=$tomorrow && $data_value->response) {
+    $tomorrow = $data_value->response ? strtotime("$date +1 minute") : strtotime("$date " . $expire);
+    if ($now_date >= $tomorrow && $data_value->response) {
         $data_value->request = true;
         return $data_value;
     }
-    return $now_date>=$tomorrow ? null : $data_value;
+    return $now_date >= $tomorrow ? null : $data_value;
 }
 
 //获取keywords要素
@@ -695,21 +694,21 @@ function get_keywords()
     global $ebay_product_detail,$ebay_list;
     $url = explode("/", PRODUCT_URL)[1];
     $title = $ebay_list[1]->element_title;
-    if($url == 'shop') {
-        $keywords = $title.','.LIST_PAGE_META_1;
-    }else if($url == 'detail') {
+    if ($url == 'shop') {
+        $keywords = $title . ',' . LIST_PAGE_META_1;
+    } elseif ($url == 'detail') {
         $sublist = $ebay_product_detail[0]->bread_crumbs;
         $count = count($sublist);
-        if($count > 1) {
-            $sub = $sublist[count($sublist)-2];
+        if ($count > 1) {
+            $sub = $sublist[count($sublist) - 2];
         }
-        $Category_name = $ebay_product_detail[0]->category_name.','.LIST_PAGE_META_0;
-        $product_title = $ebay_product_detail[0]->element_title.','.LIST_PAGE_META_1;
-        $count == 1? $Category_on_name = LIST_PAGE_META_2: $Category_on_name = $sub .','.LIST_PAGE_META_2;
-        $keywords = $Category_name .','. $product_title .',' . $Category_on_name ;
-    }else if($_GET['s']) {
-        $keywords = $title.','.LIST_PAGE_META_1;
-    }else{
+        $Category_name = $ebay_product_detail[0]->category_name . ',' . LIST_PAGE_META_0;
+        $product_title = $ebay_product_detail[0]->element_title . ',' . LIST_PAGE_META_1;
+        $count == 1 ? $Category_on_name = LIST_PAGE_META_2 : $Category_on_name = $sub . ',' . LIST_PAGE_META_2;
+        $keywords = $Category_name . ',' . $product_title . ',' . $Category_on_name ;
+    } elseif ($_GET['s']) {
+        $keywords = $title . ',' . LIST_PAGE_META_1;
+    } else {
         $keywords = HOME_PAGE_META_KEYWORDS;
     }
     return htmlSpecial(Three_element_code($keywords));
@@ -724,14 +723,14 @@ function get_description()
     $title_three = $ebay_list[2]->element_title;
     $price = $ebay_list[1]->description_price;
     $currency_list_symbol = CURRENCY_CODE[$ebay_list[1]->currency_id]['code'];
-    if($url == 'shop') {
+    if ($url == 'shop') {
         $Category_name = explode("/", explode("_", PRODUCT_URL)[0])[2];
-        $description =  $currency_list_symbol.$price.','.$title.','.$Category_name.','.$title_three.','.LIST_PAGE_META_2;
-    }else if($url == 'detail') {
-        $description =  CURRENCY_CODE[$ebay_product_detail[0]->currency_id]['code'].$ebay_product_detail[0]->description_price.','.substr(htmlspecialchars(preg_replace('/<\/?[^>]+>/', '', htmlspecialchars_decode($ebay_product_detail[0]->post_content))), 0, 200);
-    }else if($_GET['s']) {
-        $description = $currency_list_symbol.$price.','.$title.','.$title_three.','.LIST_PAGE_META_2;
-    }else{
+        $description =  $currency_list_symbol . $price . ',' . $title . ',' . $Category_name . ',' . $title_three . ',' . LIST_PAGE_META_2;
+    } elseif ($url == 'detail') {
+        $description =  CURRENCY_CODE[$ebay_product_detail[0]->currency_id]['code'] . $ebay_product_detail[0]->description_price . ',' . substr(htmlspecialchars(preg_replace('/<\/?[^>]+>/', '', htmlspecialchars_decode($ebay_product_detail[0]->post_content))), 0, 200);
+    } elseif ($_GET['s']) {
+        $description = $currency_list_symbol . $price . ',' . $title . ',' . $title_three . ',' . LIST_PAGE_META_2;
+    } else {
         $description = HOME_PAGE_META_DESCRIPTION;
     }
     return htmlSpecial($description);
@@ -748,13 +747,13 @@ function get_bloginfo_data()
     $type = explode("/", PRODUCT_URL)[1];
     $Category_name = explode("/", explode("_", PRODUCT_URL)[0])[2];
     $search_title = $_GET['s'];
-    if($search_title) {
+    if ($search_title) {
         $Category_name = $search_title;
     }
-    $title = $Category_name.','.$ebay_list[1]->element_title .','. LIST_PAGE_META_0;
+    $title = $Category_name . ',' . $ebay_list[1]->element_title . ',' . LIST_PAGE_META_0;
     $data = array(
       'type' => $type,
-      'title'=> $title
+      'title' => $title
     );
     return $data;
 }
@@ -772,29 +771,29 @@ function Three_element_code($content)
 function get_host($domain)
 {
     $len = strlen("www.");
-    if(substr($domain, 0, $len) === "www.") {
+    if (substr($domain, 0, $len) === "www.") {
         return str_replace("www.", "", $domain);
     }
     return $domain;
 }
 
 
-function set_mysql_options($data,$like)
+function set_mysql_options($data, $like)
 {
     global $wpdb;
     //查询该条数据是否存在，存在更新不存在插入
-    $get_data = $wpdb->get_results("SELECT option_value,autoload FROM ".$wpdb->options." WHERE 1=1 AND option_name LIKE '$like'");
+    $get_data = $wpdb->get_results("SELECT option_value,autoload FROM " . $wpdb->options . " WHERE 1=1 AND option_name LIKE '$like'");
     $data_value = json_decode($get_data[0]->option_value);
     $data_value->response = true;//如果接口未正常响应则添加response属性设置为true
     $data_value = json_encode($data_value);
     $options_value = json_encode($data);
     $time = date('Y-m-d H:i:s');
-    if($get_data) {//update
+    if ($get_data) {//update
         //在数据不存在时为了保证站点的正常运行只对存入时间进行更新
-        $data ? $wpdb->query("UPDATE ".$wpdb->options." SET option_value='{$options_value}',autoload='{$time}' WHERE option_name = '{$like}'") :
-            $wpdb->query("UPDATE ".$wpdb->options." SET option_value='{$data_value}', autoload='{$time}' WHERE option_name = '{$like}'");
-    }else{
-        $wpdb->insert("wp_options", array("option_name"=>$like, "option_value"=>$options_value, "autoload"=>$time));//insert
+        $data ? $wpdb->query("UPDATE " . $wpdb->options . " SET option_value='{$options_value}',autoload='{$time}' WHERE option_name = '{$like}'") :
+            $wpdb->query("UPDATE " . $wpdb->options . " SET option_value='{$data_value}', autoload='{$time}' WHERE option_name = '{$like}'");
+    } else {
+        $wpdb->insert("wp_options", array("option_name" => $like, "option_value" => $options_value, "autoload" => $time));//insert
     }
 }
 
@@ -807,14 +806,13 @@ function res_banner($data)
     foreach ($Init as $value) {
         array_push($More, $value);
     }
-    foreach ($language as $value){
+    foreach ($language as $value) {
         array_push($More, $value);
     }
-    foreach ($currency as $value){
+    foreach ($currency as $value) {
         array_push($More, $value);
     }
     return $More;
-
 }
 
 //构造一级分类映射
@@ -842,7 +840,7 @@ function InitialClassification($data)
             "type"              => "post_type"
         );
     }
-    if(count($data)>=5) {
+    if (count($data) >= 5) {
         $data = (object)array(
             "ID"         => 666,
             "menu_order" => $menu_order,
@@ -858,7 +856,7 @@ function InitialClassification($data)
         "ID"            => 777,
         "menu_order"    => 201,
         "post_title"    => get_language_result()[determine_locale()],
-        "language_title"=> get_language_result()[determine_locale()],
+        "language_title" => get_language_result()[determine_locale()],
         "country_image" => get_language_result()['lang_image_url'],
         "post_type"     => "nav_menu_item",
         "classes"       => array(
@@ -869,7 +867,7 @@ function InitialClassification($data)
         "ID"            => 778,
         "menu_order"    => 200,
         "post_title"    => determine_locale_currency(),
-        "currency_title"=> determine_locale_currency(),
+        "currency_title" => determine_locale_currency(),
         "post_type"     => "nav_menu_item",
         "classes"       => array(
             "menu-item-has-children",
@@ -884,8 +882,8 @@ function Home_product_url()
 {
     global $ebay_product_category_list;
     $data = [];
-    foreach ($ebay_product_category_list as $value){
-        if($value->id_type) {
+    foreach ($ebay_product_category_list as $value) {
+        if ($value->id_type) {
             array_push($data, $value);
         }
     }
@@ -898,22 +896,22 @@ function Other()
     $url = ["/my-account","/checkout","/cart"];
     $id = ["10","9","8"];
     $menu_order = 1;
-    foreach ($arr as $value){
+    foreach ($arr as $value) {
         $accounts[] = (object)array(
-            "ID"                    =>$id[array_search($value, $arr)],
-            "Items_id"              =>$url[array_search($value, $arr)],
-            "post_title"            =>__($value, "woocommerce"),
-            "post_type"             =>"nav_menu_item",
-            "url_type"              =>"other",
-            "post_status"           =>"publish",
-            "menu_item_parent"      =>"555",
-            "comment_status"        =>"closed",
-            "menu_order"            =>$menu_order++,
-            "ping_status"           =>"closed",
-            "filter"                =>"raw",
-            "object"                =>"page",
-            "object_id"             =>$id[array_search($value, $arr)],
-            "type"                  =>"post_type"
+            "ID"                    => $id[array_search($value, $arr)],
+            "Items_id"              => $url[array_search($value, $arr)],
+            "post_title"            => __($value, "woocommerce"),
+            "post_type"             => "nav_menu_item",
+            "url_type"              => "other",
+            "post_status"           => "publish",
+            "menu_item_parent"      => "555",
+            "comment_status"        => "closed",
+            "menu_order"            => $menu_order++,
+            "ping_status"           => "closed",
+            "filter"                => "raw",
+            "object"                => "page",
+            "object_id"             => $id[array_search($value, $arr)],
+            "type"                  => "post_type"
         );
     }
     return $accounts;
@@ -924,11 +922,11 @@ function get_language_result()
     $country_name = ["Deutsch","Español","Français","Italiano","Nederlands","English"];
     $language_name = get_available_languages();
     array_push($language_name, "en_US");
-    foreach ($country_name as $value){
+    foreach ($country_name as $value) {
         $name =  $language_name[array_search($value, $country_name)];
         $arr[$name] = array(
-            $name=>$value,
-            "lang_image_url"  =>'/wp-content/uploads/language/'.$name.'.png',
+            $name => $value,
+            "lang_image_url"  => '/wp-content/uploads/language/' . $name . '.png',
         );
     }
     return $arr[determine_locale()];
@@ -939,28 +937,28 @@ function language()
     $country_name = ["Deutsch","Español","Français","Italiano","Nederlands","English"];
     $language_name = get_available_languages();
     array_push($language_name, "en_US");
-    foreach ($country_name as $value){
+    foreach ($country_name as $value) {
         $index = array_search($value, $country_name);
         $name =  $language_name[array_search($value, $country_name)];
         $url = explode("_", $name)[0];
         $language[] = (object)array(
-            "ID"                    =>$index,
-            "language_url"          =>"/?lang=".$url,
-            "language_code"         =>$url,
-            "post_title"            =>$value,
-            'alt'                   =>$name,
-            "post_type"             =>"nav_menu_item",
-            "url_type"              =>"language",
-            "post_status"           =>"publish",
-            "menu_item_parent"      =>777,
-            "comment_status"        =>"closed",
-            "lang_image_url"        =>'/wp-content/uploads/language/'.$name.'.png',
-            "menu_order"            =>$index,
-            "ping_status"           =>"closed",
-            "filter"                =>"raw",
-            "object"                =>"page",
-            "object_id"             =>$index,
-            "type"                  =>"post_type"
+            "ID"                    => $index,
+            "language_url"          => "/?lang=" . $url,
+            "language_code"         => $url,
+            "post_title"            => $value,
+            'alt'                   => $name,
+            "post_type"             => "nav_menu_item",
+            "url_type"              => "language",
+            "post_status"           => "publish",
+            "menu_item_parent"      => 777,
+            "comment_status"        => "closed",
+            "lang_image_url"        => '/wp-content/uploads/language/' . $name . '.png',
+            "menu_order"            => $index,
+            "ping_status"           => "closed",
+            "filter"                => "raw",
+            "object"                => "page",
+            "object_id"             => $index,
+            "type"                  => "post_type"
         );
     }
     return $language;
@@ -969,24 +967,24 @@ function language()
 function currency()
 {
     $n = 0;
-    foreach (CURRENCY_CODE as $code => $value){
+    foreach (CURRENCY_CODE as $code => $value) {
         $symbol = $value['code'];
         $currency[] = (object)array(
-            "ID"                    =>$n++,
-            "currency_url"          =>"javascript:void(0);",
-            "post_title"            =>$code." ".$symbol,
-            "post_type"             =>"nav_menu_item",
-            "url_type"              =>"currency",
-            "currency_code"         =>$code,
-            "post_status"           =>"publish",
+            "ID"                    => $n++,
+            "currency_url"          => "javascript:void(0);",
+            "post_title"            => $code . " " . $symbol,
+            "post_type"             => "nav_menu_item",
+            "url_type"              => "currency",
+            "currency_code"         => $code,
+            "post_status"           => "publish",
             "menu_item_parent"      => 778,
-            "comment_status"        =>"closed",
-            "menu_order"            =>$n++,
-            "ping_status"           =>"closed",
-            "filter"                =>"raw",
-            "object"                =>"page",
-            "object_id"             =>$n++,
-            "type"                  =>"post_type"
+            "comment_status"        => "closed",
+            "menu_order"            => $n++,
+            "ping_status"           => "closed",
+            "filter"                => "raw",
+            "object"                => "page",
+            "object_id"             => $n++,
+            "type"                  => "post_type"
         );
     }
     return $currency;
@@ -1000,7 +998,7 @@ function MoreInformation($data)
     foreach ($More as $value) {
         $slice[] = (object)array(
             "ID"                    => $value->category_id,
-            "Items_id"              => Urlcode(ucwords(strtolower($value->category_name))). "_" . Page_code("sku" . $value->category_id, "en"),
+            "Items_id"              => Urlcode(ucwords(strtolower($value->category_name))) . "_" . Page_code("sku" . $value->category_id, "en"),
             "home_id"               => Page_code("sku" . $value->category_id, "en"),
             "post_title"            => $value->category_name,
             "post_type"             => "nav_menu_item",
@@ -1089,7 +1087,7 @@ function getIP()
     if (isset($_SERVER)) {
         if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
             $realip = $_SERVER["HTTP_X_FORWARDED_FOR"];
-        } else if (isset($_SERVER["HTTP_CLIENT_IP"])) {
+        } elseif (isset($_SERVER["HTTP_CLIENT_IP"])) {
             $realip = $_SERVER["HTTP_CLIENT_IP"];
         } else {
             $realip = $_SERVER["REMOTE_ADDR"];
@@ -1097,7 +1095,7 @@ function getIP()
     } else {
         if (getenv("HTTP_X_FORWARDED_FOR")) {
             $realip = getenv("HTTP_X_FORWARDED_FOR");
-        } else if (getenv("HTTP_CLIENT_IP")) {
+        } elseif (getenv("HTTP_CLIENT_IP")) {
             $realip = getenv("HTTP_CLIENT_IP");
         } else {
             $realip = getenv("REMOTE_ADDR");
@@ -1110,10 +1108,10 @@ function referer()
 {
     $ServerName = $_SERVER['SERVER_NAME'];
     $HttpReferer = $_SERVER["HTTP_REFERER"];
-    if(empty($HttpReferer)) {
+    if (empty($HttpReferer)) {
         return $ServerName . "+";
     }
-    return $ServerName . "+" .$HttpReferer;
+    return $ServerName . "+" . $HttpReferer;
 }
 
 function calculateRating($quantity, $sold, $hit_count)
@@ -1156,66 +1154,56 @@ function calculateRating($quantity, $sold, $hit_count)
 function jsonld($product_info)
 {
 
-    if($product_info) {//满足产品信息的情况下
+    if ($product_info) {//满足产品信息的情况下
         //结构化数据
         $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
 
         $exif_data = [];
         if (isset($product_info->specifics)) {
-
             foreach ($product_info->specifics as $k => $v) {
-
                 if (empty($product_info->condition) && $k == "Condition") {
-
                     $product_info->Condition = $v;
                 }
 
                 if (empty($product_info->weight) && $k == "Weight") {
-
                     $product_info->weight = $v;
                 }
 
                 if (empty($product_info->height) && $k == "Height") {
-
                     $product_info->height = $v;
                 }
 
 
                 if (empty($product_info->Width) && $k == "Width") {
-
                     $product_info->weight = $v;
                 }
 
 
                 if (empty($product_info->color) && $k == "Color") {
-
                     $product_info->color = $v;
                 }
 
                 if (empty($product_info->mpn) && $k == "MPN") {
-
                     $product_info->mpn = $v;
                 }
 
                 if (empty($product_info->brand) && $k == "Brand") {
-
                     $product_info->brand = $v;
                 }
 
                 if (empty($product_info->depth) && $k == "Depth") {
-
                     $product_info->depth = $v;
                 }
 
 
                 if (empty($product_info->material) && $k == "Material") {
-
                     $product_info->material = $v;
                 }
 
 
                 array_push(
-                    $exif_data, [
+                    $exif_data,
+                    [
                     "@type" => "PropertyValue",
                     "name"  => $k,
                     "value" => $v
@@ -1225,9 +1213,7 @@ function jsonld($product_info)
         }
         $image_data = [];
         if (isset($product_info->pictures)) {
-
             foreach ($product_info->pictures as $k => $v) {
-
                 $image_data[] = $http_type . $_SERVER['SERVER_NAME'] . $v;
             }
         }
@@ -1240,7 +1226,7 @@ function jsonld($product_info)
 
         $price_valid_until = date("Y-m-d", strtotime("next year"));
 
-        $price =  floor($product_info->current_price * 0.5  * 100)/100 < 0.01 ? 0.01 : floor($product_info->current_price * 0.5  * 100)/100;//价格不能少于0.01，默认给出0.01
+        $price =  floor($product_info->current_price * 0.5  * 100) / 100 < 0.01 ? 0.01 : floor($product_info->current_price * 0.5  * 100) / 100;//价格不能少于0.01，默认给出0.01
 
         $priceCurrency = $product_info->currency_id ? $product_info->currency_id : determine_locale_currency();//无价格货币则采用默认的价格货币
 
@@ -1314,7 +1300,3 @@ function jsonld($product_info)
 $EbApi = new EbayApi();
 $Config = array();
 $EbApi->setConfig();
-
-
-
-
