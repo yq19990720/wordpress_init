@@ -9,16 +9,20 @@ on: # rebuild any PRs and main branch changes
 jobs:
   phpcs:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: ["7.3"]
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # important!
+      - name: Set up PHP ${{ matrix.php-version }}
 
       # we may use whatever way to install phpcs, just specify the path on the next step
       # however, curl seems to be the fastest
-      - #  curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
       - name: Install PHP_CodeSniffer
         run: |
+          curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
