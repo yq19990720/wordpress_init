@@ -28,4 +28,4 @@ jobs:
         with:
           files: "wp-includes/ebay/**.php"
           phpcs_path: php phpcs.phar
-          standard: 'PSR2'
+          standard: '(PSR2,)'
