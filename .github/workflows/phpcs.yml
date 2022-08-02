@@ -20,12 +20,9 @@ jobs:
         run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
+          phpcs --config-set default_standard PSR2
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
           files: "wp-includes/ebay/**.php"
           phpcs_path: php phpcs.phar
           standard: "phpcs.xml"
-
-      - name: Config default_standard
-        run: |
-          phpcs --config-set default_standard PSR2
