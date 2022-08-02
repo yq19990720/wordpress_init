@@ -1,7 +1,6 @@
 <?php
-use Spatie\SchemaOrg\LocalBusiness;
 use Spatie\SchemaOrg\Schema;
-class ebay_api
+class EbayApi
 {
     public function setConfig()
     {
@@ -21,7 +20,6 @@ class ebay_api
         }
     }
 
-    //封装公共请求部分
     public function get($url, $arr, $type = '')
     {
         global $Config;
@@ -39,8 +37,7 @@ class ebay_api
         return json_decode($data);
     }
 
-    //获取分类列表
-    public function ProductCategoryList($update=null)
+    public function productCategoryList($update=null)
     {
         global $Category_list;
         //缓存列表
@@ -69,8 +66,7 @@ class ebay_api
         return res_banner($res->data);
     }
 
-    //获取产品列表
-    public function ProductList($data, $page_num, $page_size,$search=null)
+    public function productList($data, $page_num, $page_size,$search=null)
     {
         global $ebay_list;
         if(!$search) {
@@ -142,8 +138,7 @@ class ebay_api
         return $posts;
     }
 
-    //获取产品详情
-    public function ProductDetails($item_id, $recommend,$type=null)
+    public function productDetails($item_id, $recommend,$type=null)
     {
         global $jsonld;
         if(!$type) {
@@ -209,8 +204,7 @@ class ebay_api
         return $ProductDetails;
     }
 
-    //获取二级分类
-    public function ProductSubList($category_id)
+    public function productSubList($category_id)
     {
         $category_id = str_replace("sku", "", Page_code($category_id));
         verify_product_id($category_id, "banner");
@@ -241,8 +235,7 @@ class ebay_api
         return $Sub;
     }
 
-    //get exchange rate
-    public function get_rate()
+    public function getRate()
     {
         $rates = get_mysql_options('rate', RATE_MYSQL_TIME);
         if(!$rates || $rates->request) {//汇率不存在，或者返回信息中携带请求对象则再次请求汇率接口
@@ -537,7 +530,6 @@ function verify_product_id($verify_id,$type=null)
 }
 
 /**
- * 
  * 查询购物车id加上校验判断
  *
  * @param  $verify_id $type
@@ -1319,7 +1311,7 @@ function jsonld($product_info)
     return $localBusiness;
 }
 
-$EbApi = new ebay_api();
+$EbApi = new EbayApi();
 $Config = array();
 $EbApi->setConfig();
 
