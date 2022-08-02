@@ -1,6 +1,11 @@
 name: "CI"
 
-on: [push]
+on: # rebuild any PRs and main branch changes
+  pull_request:
+    paths:
+      - "**.php"
+      - "phpcs.xml"
+      - ".github/workflows/phpcs.yml"
 
 jobs:
   phpcs:
@@ -23,4 +28,4 @@ jobs:
         with:
           files: "wp-includes/ebay/**.php"
           phpcs_path: php phpcs.phar
-          standard: "PSR1"
+          standard: "PSR12"
