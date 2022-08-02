@@ -1,5 +1,4 @@
 name: "CI"
-
 on: # rebuild any PRs and main branch changes
   pull_request:
     paths:
@@ -10,9 +9,6 @@ on: # rebuild any PRs and main branch changes
 jobs:
   phpcs:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php-version: ["7.3"]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -28,4 +24,8 @@ jobs:
         with:
           files: "wp-includes/ebay/**.php"
           phpcs_path: php phpcs.phar
-          standard: '(PSR2,)'
+          standard: "phpcs.xml"
+
+      - name: Config default_standard
+        run: |
+          phpcs --config-set default_standard PSR2
