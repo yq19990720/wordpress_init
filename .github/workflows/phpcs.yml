@@ -24,4 +24,4 @@ jobs:
         with:
           files: "wp-includes/ebay/**.php"
           phpcs_path: php phpcs.phar
-          default_standard: "PSR1"
+          standard: "PSR1"
