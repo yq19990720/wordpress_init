@@ -13,10 +13,10 @@ jobs:
       matrix:
         php-version: ["7.3"]
     steps:
+      - name: Set up PHP ${{ matrix.php-version }}
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # important!
-      - name: Set up PHP ${{ matrix.php-version }}
 
       # we may use whatever way to install phpcs, just specify the path on the next step
       # however, curl seems to be the fastest
