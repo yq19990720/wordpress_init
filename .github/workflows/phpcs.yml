@@ -1,10 +1,6 @@
 name: "CI"
-on: # rebuild any PRs and main branch changes
-  pull_request:
-    paths:
-      - "**.php"
-      - "phpcs.xml"
-      - ".github/workflows/phpcs.yml"
+
+on: [push]
 
 jobs:
   phpcs:
@@ -13,7 +9,6 @@ jobs:
       matrix:
         php-version: ["7.3"]
     steps:
-      - name: Set up PHP ${{ matrix.php-version }}
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # important!
