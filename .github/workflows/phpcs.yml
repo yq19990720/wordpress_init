@@ -20,6 +20,9 @@ jobs:
         run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
+          mv phpcs.phar /usr/local/bin/phpcs
+          sudo chmod +x /usr/local/bin/phpcs
+          phpcs -h
           phpcs --config-set default_standard PSR2
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
