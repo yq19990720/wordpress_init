@@ -1,8 +1,8 @@
 <?php
 
-namespace EbayApi;
+namespace OutSideSelf;
 
-class outSideSelf
+class OutSideSelf
 {
     public static function index()
     {
@@ -62,7 +62,9 @@ class outSideSelf
                 );
             } else {
                 $save_data = $wpdb->query(
-                    " UPDATE " . SELF_CONFIG_TABEL . " SET self_config='{$self_json}',update_time='{$date}'  WHERE id = {$self_config[0]->id}"
+                    " UPDATE " . SELF_CONFIG_TABEL .
+                    " SET self_config='{$self_json}',update_time='{$date}'  
+                    WHERE id = {$self_config[0]->id}"
                 );
             }
             if ($save_data) {
