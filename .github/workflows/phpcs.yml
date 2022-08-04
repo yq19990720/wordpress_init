@@ -24,5 +24,3 @@ jobs:
       - uses: tinovyatkin/action-php-codesniffer@master
         with:
           files: "**.php"
-          phpcs_path: php phpcs.phar
-          standard: ""
