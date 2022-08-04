@@ -1,5 +1,7 @@
 <?php
 
+namespace EbayApi;
+
 use Spatie\SchemaOrg\Schema;
 
 class EbayApi
@@ -39,7 +41,7 @@ class EbayApi
         return json_decode($data);
     }
 
-    public function productCategoryList($update = null)
+    final public function productCategoryList(string $update = null): array
     {
         global $Category_list;
         //缓存列表
@@ -62,13 +64,15 @@ class EbayApi
             return array();
         }
         $res->status == 200 ? set_mysql_options($res, 'banner') : set_mysql_options('', 'banner');
+        $updateTime = array();
         if ($update) {
-            return date('Y-m-d H:i:s');
+            array_push($updateTime, date('Y-m-d H:i:s'));
+            return $updateTime;
         }
         return res_banner($res->data);
     }
 
-    public function productList($data, $page_num, $page_size, $search = null)
+    final public function productList(string $data, string $page_num, string $page_size, string $search = null): array
     {
         global $ebay_list;
         if (!$search) {
@@ -105,7 +109,8 @@ class EbayApi
         }
         if ($res->status == 200) {
             foreach ($res->data->items as $value) {
-                $price = get_rate_price($value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100) / 100);
+                $price = get_rate_price(
+                    $value->currency_id, determine_locale_currency(), floor($value->current_price * 0.5 * 100) / 100);
                 $ID = Page_code("sku" . $value->item_id, "en");
                 $title = UrlCode(ucwords(strtolower($value->title)));
                 $posts[] = (object)array(
@@ -205,7 +210,7 @@ class EbayApi
         return $ProductDetails;
     }
 
-    public function productSubList($category_id)
+    final public function productSubList(string $category_id): array
     {
         $category_id = str_replace("sku", "", Page_code($category_id));
         verify_product_id($category_id, "banner");
@@ -222,7 +227,9 @@ class EbayApi
                 $Sub[] = (object)array(
                     "term_id"               => $value->category_id,
                     "name"                  => $value->category_name,
-                    "slug"                  => Urlcode(ucwords(strtolower($value->category_name))) . "_" . Page_code("sku" . $value->category_id, "en"),
+                    "slug"                  =>
+                        Urlcode(ucwords(strtolower($value->category_name)))
+                        . "_" . Page_code("sku" . $value->category_id, "en"),
                     "term_group"            => 0,
                     "term_taxonomy_id"      => 89,
                     "taxonomy"              => "product_cat",
@@ -236,7 +243,7 @@ class EbayApi
         return $Sub;
     }
 
-    public function getRate()
+    final public function getRate(): string
     {
         $rates = get_mysql_options('rate', RATE_MYSQL_TIME);
         if (!$rates || $rates->request) {//汇率不存在，或者返回信息中携带请求对象则再次请求汇率接口
@@ -248,7 +255,7 @@ class EbayApi
     }
 
     //通过接口获取国家地区信息
-    public function getLanguageCurrency()
+    final public function getLanguageCurrency(): array
     {
         $res = $this->get($_SERVER['HTTP_HOST'] . "/api/country", array(), 'get');
         $result = array();
@@ -260,7 +267,7 @@ class EbayApi
     }
 
     //router
-    public static function router()
+    final public static function router(): null
     {
         $post_sign = $_GET['sign'];
 
@@ -274,6 +281,7 @@ class EbayApi
                 break;
             case "/_self_config?sign=" . $post_sign:
                 outsideself::index();
+                //
             default:
         }
     }
@@ -319,7 +327,12 @@ function get_paypal_payment($payment, $currency_code, $price)
     $is_cur_not_sup = $payment['is_cur_not_sup'];//是否支持该货币付款
     //不支持则返回false
     if (!$is_cur_not_sup) {
-        throw new Exception(sprintf(__("This payment method does not support " . $currency_code . " payment in this currency")));
+        throw new Exception(
+            sprintf(
+                __("This payment method does not support "
+                    . $currency_code . " payment in this currency")
+            )
+        );
     }
     //不支持小数->四舍五入
     if (!$is_decimal) {
