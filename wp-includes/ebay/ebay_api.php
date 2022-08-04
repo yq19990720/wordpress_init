@@ -1419,4 +1419,3 @@ function jsonld($product_info)
     }
     return $localBusiness;
 }
-
