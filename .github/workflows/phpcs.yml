@@ -23,10 +23,5 @@ jobs:
 
       - name: Analysing the code with phpcs
         run: |
-          php phpcs.phar --config-set default_standard PSR12 $(git ls-files '*.php')
-          php phpcs.phar wp-includes/ebay/ebay_api.php
-#      - uses: tinovyatkin/action-php-codesniffer@v1
-#        with:
-#          files: "**.php"
-#          phpcs_path: php phpcs.phar
-#          standard: php phpcs.phar --config-set default_standard PSR12
+          php phpcs.phar --config-set default_standard PSR12
+          php phpcs.phar $(git ls-files '*.php')
