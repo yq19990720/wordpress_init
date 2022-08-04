@@ -1279,8 +1279,8 @@ function jsonld($product_info)
 {
 
     if ($product_info) {
-//满足产品信息的情况下
-    //结构化数据
+        //满足产品信息的情况下
+        //结构化数据
         $http_type = ((
             isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')
             || (isset($_SERVER['HTTP_X_FORWARDED_PROTO'])
@@ -1351,19 +1351,19 @@ function jsonld($product_info)
             $product_info->current_price * 0.5  * 100
         )
         / 100 < 0.01 ? 0.01 : floor($product_info->current_price * 0.5  * 100) / 100;
-//价格不能少于0.01，默认给出0.01
+        //价格不能少于0.01，默认给出0.01
 
         $priceCurrency = $product_info->currency_id ? $product_info->currency_id : determine_locale_currency();
-//无价格货币则采用默认的价格货币
+        //无价格货币则采用默认的价格货币
 
         $product_description = htmlspecialchars($product_info->description, ENT_QUOTES);
-//产品描述
+        //产品描述
 
         $name = strip_tags($product_info->title);
-//产品标题
+        //产品标题
 
         $description = empty(str_replace(" ", "", $product_description)) ? $name : $product_description;
-//为空则填充标题
+        //为空则填充标题
 
         $localBusiness = Schema::Product()
         ->name($name)
@@ -1420,6 +1420,3 @@ function jsonld($product_info)
     return $localBusiness;
 }
 
-$EbApi = new EbayApi();
-$Config = array();
-$EbApi->setConfig();
