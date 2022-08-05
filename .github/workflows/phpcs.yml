@@ -24,4 +24,4 @@ jobs:
       - name: Analysing the code with phpcs
         run: |
           php phpcs.phar --config-set default_standard PSR12
-          php phpcs.phar wp-includes/ebay/ebay_api.php wp-includes/ebay/currency_config.php wp-includes/ebay/outside_self.php wp-includes/ebay/topay_config.php wp-includes/ebay/sign_utils.php
+          php phpcs.phar --standard=seo.xml wp-includes/ebay/

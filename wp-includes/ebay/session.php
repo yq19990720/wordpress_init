@@ -1,25 +1,28 @@
 <?php
+
 /**
  * Session控制类
  */
-class Session{
-
+class Session
+{
     /**
      * 设置session
      * @param String $name   session name
      * @param Mixed  $data   session data
      * @param Int    $expire 超时时间(秒)
      */
-    public static function set($name, $data, $expire=null){
-        if($_SESSION[$name]){
+    public static function set($name, $data, $expire = null)
+    {
+        if ($_SESSION[$name]) {
             return false;
         }
         $session_data = array();
         $session_data['data'] = $data;
-        if(!$expire){
-            $expire = SESSION_TIME;//default time
+        if (!$expire) {
+            $expire = SESSION_TIME;
+        //default time
         }
-        $session_data['expire'] = time()+$expire;
+        $session_data['expire'] = time() + $expire;
         $_SESSION[$name] = $session_data;
     }
 
@@ -28,11 +31,12 @@ class Session{
      * @param  String $name  session name
      * @return Mixed
      */
-    public static function get($name){
-        if(isset($_SESSION[$name])){
-            if($_SESSION[$name]['expire']>time()){
+    public static function get($name)
+    {
+        if (isset($_SESSION[$name])) {
+            if ($_SESSION[$name]['expire'] > time()) {
                 return $_SESSION[$name]['data'];
-            }else{
+            } else {
                 self::clear($name);
             }
         }
@@ -43,9 +47,8 @@ class Session{
      * 清除session
      * @param  String  $name  session name
      */
-    public static function clear($name){
+    public static function clear($name)
+    {
         unset($_SESSION[$name]);
     }
-
 }
-?>

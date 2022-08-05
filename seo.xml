@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="CustomStandard">
+    <rule ref="PSR12">
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    </rule>
+    <exclude-pattern>wp-includes/ebay/data_config.php</exclude-pattern>
+    <exclude-pattern>wp-includes/ebay/ebay_config.php</exclude-pattern>
+    <exclude-pattern>wp-includes/ebay/language_config.php</exclude-pattern>
+</ruleset>
