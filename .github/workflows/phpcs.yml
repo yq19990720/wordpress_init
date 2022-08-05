@@ -5,6 +5,11 @@ on: # rebuild any PRs and main branch changes
       - "**.php"
       - "phpcs.xml"
       - ".github/workflows/phpcs.yml"
+  push:
+    paths:
+      - "**.php"
+      - "phpcs.xml"
+      - ".github/workflows/phpcs.yml"
 
 jobs:
   phpcs:
