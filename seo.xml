@@ -5,5 +5,4 @@
     </rule>
     <exclude-pattern>wp-includes/ebay/data_config.php</exclude-pattern>
     <exclude-pattern>wp-includes/ebay/ebay_config.php</exclude-pattern>
-    <exclude-pattern>wp-includes/ebay/language_config.php</exclude-pattern>
 </ruleset>
