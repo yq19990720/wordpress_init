@@ -21,6 +21,7 @@ require_once WC_ABSPATH . 'includes/class-wc-cart-session.php';
 /**
  * WC_Cart class.
  */
+// @codingStandardsIgnoreLine
 class WC_Cart extends WC_Legacy_Cart
 {
     /**
@@ -97,6 +98,7 @@ class WC_Cart extends WC_Legacy_Cart
     /**
      * Constructor for the cart class. Loads options and hooks in the init method.
      */
+    // @codingStandardsIgnoreLine
     public function __construct()
     {
         $this->session  = new WC_Cart_Session($this);
@@ -119,6 +121,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * These properties store a reference to the cart, so we use new instead of clone.
      */
+    // @codingStandardsIgnoreLine
     public function __clone()
     {
         $this->session  = clone $this->session;
@@ -139,6 +142,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return array of cart items
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_contents()
     {
         return apply_filters('woocommerce_get_cart_contents', (array) $this->cart_contents);
@@ -150,6 +154,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_removed_cart_contents()
     {
         return (array) $this->removed_cart_contents;
@@ -160,6 +165,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array of applied coupons
      */
+    // @codingStandardsIgnoreLine
     public function get_applied_coupons()
     {
         return (array) $this->applied_coupons;
@@ -171,6 +177,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_coupon_discount_totals()
     {
         return (array) $this->coupon_discount_totals;
@@ -181,6 +188,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_coupon_discount_tax_totals()
     {
         return (array) $this->coupon_discount_tax_totals;
@@ -192,6 +200,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_totals()
     {
         return empty($this->totals) ? $this->default_totals : $this->totals;
@@ -204,6 +213,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param string $key Key of element in $totals array.
      * @return mixed
      */
+    // @codingStandardsIgnoreLine
     protected function get_totals_var($key)
     {
         return isset($this->totals[ $key ]) ? $this->totals[ $key ] : $this->default_totals[ $key ];
@@ -215,6 +225,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_subtotal()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('subtotal'));
@@ -226,6 +237,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_subtotal_tax()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('subtotal_tax'));
@@ -237,6 +249,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_discount_total()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('discount_total'));
@@ -248,6 +261,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_discount_tax()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('discount_tax'));
@@ -259,6 +273,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_shipping_total()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('shipping_total'));
@@ -270,6 +285,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_shipping_tax()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('shipping_tax'));
@@ -281,6 +297,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_contents_total()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('cart_contents_total'));
@@ -292,6 +309,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_contents_tax()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('cart_contents_tax'));
@@ -304,6 +322,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param string $context If the context is view, the value will be formatted for display. This keeps it compatible with pre-3.2 versions.
      * @return float|string
      */
+    // @codingStandardsIgnoreLine
     public function get_total($context = 'view')
     {
         $total = apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('total'));
@@ -316,6 +335,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_total_tax()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('total_tax'));
@@ -327,6 +347,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_fee_total()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('fee_total'));
@@ -338,6 +359,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_fee_tax()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('fee_tax'));
@@ -348,6 +370,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @since 3.2.0
      */
+    // @codingStandardsIgnoreLine
     public function get_shipping_taxes()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('shipping_taxes'));
@@ -358,6 +381,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @since 3.2.0
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_contents_taxes()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('cart_contents_taxes'));
@@ -368,6 +392,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @since 3.2.0
      */
+    // @codingStandardsIgnoreLine
     public function get_fee_taxes()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, $this->get_totals_var('fee_taxes'));
@@ -379,6 +404,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.3.0
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function display_prices_including_tax()
     {
         return apply_filters('woocommerce_cart_' . __FUNCTION__, 'incl' === $this->get_tax_price_display_mode());
@@ -397,6 +423,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @param array $value Cart array.
      */
+    // @codingStandardsIgnoreLine
     public function set_cart_contents($value)
     {
         $this->cart_contents = (array) $value;
@@ -408,6 +435,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param array $value Item array.
      */
+    // @codingStandardsIgnoreLine
     public function set_removed_cart_contents($value = array())
     {
         $this->removed_cart_contents = (array) $value;
@@ -418,6 +446,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @param array $value List of applied coupon codes.
      */
+    // @codingStandardsIgnoreLine
     public function set_applied_coupons($value = array())
     {
         $this->applied_coupons = (array) $value;
@@ -429,6 +458,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param array $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_coupon_discount_totals($value = array())
     {
         $this->coupon_discount_totals = (array) $value;
@@ -439,6 +469,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param array $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_coupon_discount_tax_totals($value = array())
     {
         $this->coupon_discount_tax_totals = (array) $value;
@@ -450,6 +481,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param array $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_totals($value = array())
     {
         $this->totals = wp_parse_args($value, $this->default_totals);
@@ -461,6 +493,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_subtotal($value)
     {
         $this->totals['subtotal'] = wc_format_decimal($value);
@@ -472,6 +505,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_subtotal_tax($value)
     {
         $this->totals['subtotal_tax'] = $value;
@@ -483,6 +517,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_discount_total($value)
     {
         $this->totals['discount_total'] = $value;
@@ -494,6 +529,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_discount_tax($value)
     {
         $this->totals['discount_tax'] = $value;
@@ -505,6 +541,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_shipping_total($value)
     {
         $this->totals['shipping_total'] = wc_format_decimal($value);
@@ -516,6 +553,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_shipping_tax($value)
     {
         $this->totals['shipping_tax'] = $value;
@@ -527,6 +565,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_cart_contents_total($value)
     {
         $this->totals['cart_contents_total'] = wc_format_decimal($value);
@@ -538,6 +577,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_cart_contents_tax($value)
     {
         $this->totals['cart_contents_tax'] = $value;
@@ -549,6 +589,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_total($value)
     {
         $this->totals['total'] = wc_format_decimal($value, wc_get_price_decimals());
@@ -560,6 +601,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_total_tax($value)
     {
         // We round here because this is a total entry, as opposed to line items in other setters.
@@ -572,6 +614,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_fee_total($value)
     {
         $this->totals['fee_total'] = wc_format_decimal($value);
@@ -583,6 +626,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param string $value Value to set.
      */
+    // @codingStandardsIgnoreLine
     public function set_fee_tax($value)
     {
         $this->totals['fee_tax'] = $value;
@@ -594,6 +638,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param array $value Tax values.
      */
+    // @codingStandardsIgnoreLine
     public function set_shipping_taxes($value)
     {
         $this->totals['shipping_taxes'] = (array) $value;
@@ -605,6 +650,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param array $value Tax values.
      */
+    // @codingStandardsIgnoreLine
     public function set_cart_contents_taxes($value)
     {
         $this->totals['cart_contents_taxes'] = (array) $value;
@@ -616,6 +662,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.2.0
      * @param array $value Tax values.
      */
+    // @codingStandardsIgnoreLine
     public function set_fee_taxes($value)
     {
         $this->totals['fee_taxes'] = (array) $value;
@@ -632,6 +679,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array merged taxes
      */
+    // @codingStandardsIgnoreLine
     public function get_taxes()
     {
         return apply_filters('woocommerce_cart_get_taxes', wc_array_merge_recursive_numeric($this->get_shipping_taxes(), $this->get_cart_contents_taxes(), $this->get_fee_taxes()), $this);
@@ -642,6 +690,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array contents of the cart
      */
+    // @codingStandardsIgnoreLine
     public function get_cart()
     {
         if (! did_action('wp_loaded')) {
@@ -659,6 +708,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param string $item_key Cart item key.
      * @return array Item data
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_item($item_key)
     {
         return isset($this->cart_contents[ $item_key ]) ? $this->cart_contents[ $item_key ] : array();
@@ -669,6 +719,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function is_empty()
     {
         return 0 === count($this->get_cart());
@@ -679,6 +730,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @param bool $clear_persistent_cart Should the persistent cart be cleared too. Defaults to true.
      */
+    // @codingStandardsIgnoreLine
     public function empty_cart($clear_persistent_cart = true)
     {
 
@@ -706,6 +758,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return int
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_contents_count()
     {
         return apply_filters('woocommerce_cart_contents_count', array_sum(wp_list_pluck($this->get_cart(), 'quantity')));
@@ -717,6 +770,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 2.5.0
      * @return float
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_contents_weight()
     {
         $weight = 0.0;
@@ -735,6 +789,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_item_quantities()
     {
         $quantities = array();
@@ -750,6 +805,7 @@ class WC_Cart extends WC_Legacy_Cart
     /**
      * Check all cart items for errors.
      */
+    // @codingStandardsIgnoreLine
     public function check_cart_items()
     {
         $return = true;
@@ -773,6 +829,7 @@ class WC_Cart extends WC_Legacy_Cart
     /**
      * Check cart coupons for errors.
      */
+    // @codingStandardsIgnoreLine
     public function check_cart_coupons()
     {
         foreach ($this->get_applied_coupons() as $code) {
@@ -790,6 +847,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return bool|WP_Error
      */
+    // @codingStandardsIgnoreLine
     public function check_cart_item_validity()
     {
         $return = true;
@@ -811,6 +869,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return bool|WP_Error
      */
+    // @codingStandardsIgnoreLine
     public function check_cart_item_stock()
     {
         $error                    = new WP_Error();
@@ -861,6 +920,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param bool  $flat Should the data be returned flat or in a list.
      * @return string
      */
+    // @codingStandardsIgnoreLine
     public function get_item_data($cart_item, $flat = false)
     {
         wc_deprecated_function('WC_Cart::get_item_data', '3.3', 'wc_get_formatted_cart_item_data');
@@ -873,6 +933,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array cross_sells (item ids)
      */
+    // @codingStandardsIgnoreLine
     public function get_cross_sells()
     {
         $cross_sells = array();
@@ -895,6 +956,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param string $cart_item_key contains the id of the cart item.
      * @return string url to page
      */
+    // @codingStandardsIgnoreLine
     public function get_remove_url($cart_item_key)
     {
         wc_deprecated_function('WC_Cart::get_remove_url', '3.3', 'wc_get_cart_remove_url');
@@ -908,6 +970,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  string $cart_item_key Cart item key to undo.
      * @return string url to page
      */
+    // @codingStandardsIgnoreLine
     public function get_undo_url($cart_item_key)
     {
         wc_deprecated_function('WC_Cart::get_undo_url', '3.3', 'wc_get_cart_undo_url');
@@ -920,6 +983,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_tax_totals()
     {
         $shipping_taxes = $this->get_shipping_taxes(); // Shipping taxes are rounded differently, so we will subtract from all taxes, then round and then add them back.
@@ -963,6 +1027,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_item_tax_classes()
     {
         $found_tax_classes = array();
@@ -981,6 +1046,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_item_tax_classes_for_shipping()
     {
         $found_tax_classes = array();
@@ -1008,6 +1074,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 2.6.0
      * @return string
      */
+    // @codingStandardsIgnoreLine
     public function get_displayed_subtotal()
     {
         return $this->display_prices_including_tax() ? $this->get_subtotal() + $this->get_subtotal_tax() : $this->get_subtotal();
@@ -1021,6 +1088,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param mixed $cart_id id of product to find in the cart.
      * @return string cart item key
      */
+    // @codingStandardsIgnoreLine
     public function find_product_in_cart($cart_id = false)
     {
         if (false !== $cart_id) {
@@ -1040,6 +1108,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param array $cart_item_data other cart item data passed which affects this items uniqueness in the cart.
      * @return string cart item key
      */
+    // @codingStandardsIgnoreLine
     public function generate_cart_id($product_id, $variation_id = 0, $variation = array(), $cart_item_data = array())
     {
         $id_parts = array( $product_id );
@@ -1081,6 +1150,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param array $cart_item_data extra cart item data we want to pass into the item.
      * @return string|bool $cart_item_key
      */
+    // @codingStandardsIgnoreLine
     public function add_to_cart($product_id = 0, $quantity = 1, $variation_id = 0, $variation = array(), $cart_item_data = array())
     {
         try {
@@ -1359,6 +1429,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  string $cart_item_key Cart item key to remove from the cart.
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function remove_cart_item($cart_item_key)
     {
         if (isset($this->cart_contents[ $cart_item_key ])) {
@@ -1383,6 +1454,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  string $cart_item_key Cart item key to restore to the cart.
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function restore_cart_item($cart_item_key)
     {
         if (isset($this->removed_cart_contents[ $cart_item_key ])) {
@@ -1409,6 +1481,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param bool   $refresh_totals whether or not to calculate totals after setting the new qty. Can be used to defer calculations if setting quantities in bulk.
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function set_quantity($cart_item_key, $quantity = 1, $refresh_totals = true)
     {
         if (0 === $quantity || $quantity < 0) {
@@ -1446,6 +1519,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since  3.2.0
      * @return WC_Customer
      */
+    // @codingStandardsIgnoreLine
     public function get_customer()
     {
         return WC()->customer;
@@ -1456,6 +1530,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @uses WC_Cart_Totals
      */
+    // @codingStandardsIgnoreLine
     public function calculate_totals()
     {
         $this->reset_totals();
@@ -1477,6 +1552,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function needs_payment()
     {
         return apply_filters('woocommerce_cart_needs_payment', 0 < $this->get_total('edit'), $this);
@@ -1489,6 +1565,7 @@ class WC_Cart extends WC_Legacy_Cart
     /**
      * Uses the shipping class to calculate shipping then gets the totals when its finished.
      */
+    // @codingStandardsIgnoreLine
     public function calculate_shipping()
     {
         $this->shipping_methods = $this->needs_shipping() ? $this->get_chosen_shipping_methods(WC()->shipping()->calculate_shipping($this->get_shipping_packages())) : array();
@@ -1518,6 +1595,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param array $calculated_shipping_packages Array of packages.
      * @return array
      */
+    // @codingStandardsIgnoreLine
     protected function get_chosen_shipping_methods($calculated_shipping_packages = array())
     {
         $chosen_methods = array();
@@ -1538,6 +1616,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  array $item Item to check for shipping.
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     protected function filter_items_needing_shipping($item)
     {
         $product = $item['data'];
@@ -1550,6 +1629,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since  3.0.0
      * @return array
      */
+    // @codingStandardsIgnoreLine
     protected function get_items_needing_shipping()
     {
         return array_filter($this->get_cart(), array( $this, 'filter_items_needing_shipping' ));
@@ -1568,6 +1648,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 1.5.4
      * @return array of cart items
      */
+    // @codingStandardsIgnoreLine
     public function get_shipping_packages()
     {
         return apply_filters(
@@ -1600,6 +1681,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return bool whether or not the cart needs shipping
      */
+    // @codingStandardsIgnoreLine
     public function needs_shipping()
     {
         if (! wc_shipping_enabled() || 0 === wc_get_shipping_method_count(true)) {
@@ -1622,6 +1704,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function needs_shipping_address()
     {
         return apply_filters('woocommerce_cart_needs_shipping_address', true === $this->needs_shipping() && ! wc_ship_to_billing_address_only());
@@ -1632,6 +1715,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function show_shipping()
     {
         if (! wc_shipping_enabled() || ! $this->get_cart_contents()) {
@@ -1660,6 +1744,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return string price or string for the shipping total
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_shipping_total()
     {
 
@@ -1693,6 +1778,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @param array $posted Post data.
      */
+    // @codingStandardsIgnoreLine
     public function check_customer_coupons($posted)
     {
         foreach ($this->get_applied_coupons() as $code) {
@@ -1749,6 +1835,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param array $restrictions Array of allowed email addresses.
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function is_coupon_emails_allowed($check_emails, $restrictions)
     {
 
@@ -1780,6 +1867,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param string $coupon_code Coupon code to check.
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function has_discount($coupon_code = '')
     {
         return $coupon_code ? in_array(wc_format_coupon_code($coupon_code), $this->applied_coupons, true) : count($this->applied_coupons) > 0;
@@ -1791,6 +1879,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param string $coupon_code - The code to apply.
      * @return bool True if the coupon is applied, false if it does not exist or cannot be applied.
      */
+    // @codingStandardsIgnoreLine
     public function apply_coupon($coupon_code)
     {
         // Coupons are globally disabled.
@@ -1882,6 +1971,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param null $deprecated No longer used.
      * @return array of applied coupons
      */
+    // @codingStandardsIgnoreLine
     public function get_coupons($deprecated = null)
     {
         $coupons = array();
@@ -1905,6 +1995,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  bool   $ex_tax inc or ex tax.
      * @return float discount amount
      */
+    // @codingStandardsIgnoreLine
     public function get_coupon_discount_amount($code, $ex_tax = true)
     {
         $totals          = $this->get_coupon_discount_totals();
@@ -1923,6 +2014,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  string $code coupon code.
      * @return float discount amount
      */
+    // @codingStandardsIgnoreLine
     public function get_coupon_discount_tax_amount($code)
     {
         $totals = $this->get_coupon_discount_tax_totals();
@@ -1934,6 +2026,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @param null $deprecated No longer used.
      */
+    // @codingStandardsIgnoreLine
     public function remove_coupons($deprecated = null)
     {
         $this->set_coupon_discount_totals(array());
@@ -1948,6 +2041,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  string $coupon_code Code of the coupon to remove.
      * @return bool
      */
+    // @codingStandardsIgnoreLine
     public function remove_coupon($coupon_code)
     {
         $coupon_code = wc_format_coupon_code($coupon_code);
@@ -1969,6 +2063,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @since 2.0.0
      */
+    // @codingStandardsIgnoreLine
     public function calculate_fees()
     {
         do_action('woocommerce_cart_calculate_fees', $this);
@@ -1980,6 +2075,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since  3.2.0
      * @return WC_Cart_Fees
      */
+    // @codingStandardsIgnoreLine
     public function fees_api()
     {
         return $this->fees_api;
@@ -1998,6 +2094,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param bool   $taxable   Is the fee taxable? (default: false).
      * @param string $tax_class The tax class for the fee if taxable. A blank string is standard tax class. (default: '').
      */
+    // @codingStandardsIgnoreLine
     public function add_fee($name, $amount, $taxable = false, $tax_class = '')
     {
         $this->fees_api()->add_fee(
@@ -2016,6 +2113,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @uses WC_Cart_Fees::get_fees
      * @return array
      */
+    // @codingStandardsIgnoreLine
     public function get_fees()
     {
         $fees = $this->fees_api()->get_fees();
@@ -2031,6 +2129,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return string formatted price
      */
+    // @codingStandardsIgnoreLine
     public function get_total_ex_tax()
     {
         return apply_filters('woocommerce_cart_total_ex_tax', wc_price(max(0, $this->get_total('edit') - $this->get_total_tax())));
@@ -2041,6 +2140,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return string formatted price
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_total()
     {
         return apply_filters('woocommerce_cart_contents_total', wc_price(wc_prices_include_tax() ? $this->get_cart_contents_total() + $this->get_cart_contents_tax() : $this->get_cart_contents_total()));
@@ -2052,6 +2152,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param bool $compound whether to include compound taxes.
      * @return string formatted price
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_subtotal($compound = false)
     {
         /**
@@ -2082,6 +2183,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param WC_Product $product Product object.
      * @return string formatted price
      */
+    // @codingStandardsIgnoreLine
     public function get_product_price($product)
     {
         if ($this->display_prices_including_tax()) {
@@ -2103,6 +2205,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param int        $quantity Quantity being purchased.
      * @return string formatted price
      */
+    // @codingStandardsIgnoreLine
     public function get_product_subtotal($product, $quantity)
     {
         $price = $product->get_price();
@@ -2136,6 +2239,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return string formatted price
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_tax()
     {
         $cart_total_tax = wc_round_tax_total($this->get_cart_contents_tax() + $this->get_shipping_tax() + $this->get_fee_tax());
@@ -2149,6 +2253,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  string $tax_rate_id ID of the tax rate to get taxes for.
      * @return float amount
      */
+    // @codingStandardsIgnoreLine
     public function get_tax_amount($tax_rate_id)
     {
         $taxes = wc_array_merge_recursive_numeric($this->get_cart_contents_taxes(), $this->get_fee_taxes());
@@ -2161,6 +2266,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  string $tax_rate_id ID of the tax rate to get taxes for.
      * @return float amount
      */
+    // @codingStandardsIgnoreLine
     public function get_shipping_tax_amount($tax_rate_id)
     {
         $taxes = $this->get_shipping_taxes();
@@ -2174,6 +2280,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @param  bool $display  True if getting total to display.
      * @return float price
      */
+    // @codingStandardsIgnoreLine
     public function get_taxes_total($compound = true, $display = true)
     {
         $total = 0;
@@ -2195,6 +2302,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return mixed formatted price or false if there are none
      */
+    // @codingStandardsIgnoreLine
     public function get_total_discount()
     {
         return apply_filters('woocommerce_cart_total_discount', $this->get_discount_total() ? wc_price($this->get_discount_total()) : false, $this);
@@ -2203,6 +2311,7 @@ class WC_Cart extends WC_Legacy_Cart
     /**
      * Reset cart totals to the defaults. Useful before running calculations.
      */
+    // @codingStandardsIgnoreLine
     private function reset_totals()
     {
         $this->totals = $this->default_totals;
@@ -2215,6 +2324,7 @@ class WC_Cart extends WC_Legacy_Cart
      *
      * @return string
      */
+    // @codingStandardsIgnoreLine
     public function get_tax_price_display_mode()
     {
         if ($this->get_customer() && $this->get_customer()->get_is_vat_exempt()) {
@@ -2230,6 +2340,7 @@ class WC_Cart extends WC_Legacy_Cart
      * @since 3.6.0
      * @return string hash for cart content
      */
+    // @codingStandardsIgnoreLine
     public function get_cart_hash()
     {
         $cart_session = $this->session->get_cart_for_session();

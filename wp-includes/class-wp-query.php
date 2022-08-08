@@ -474,6 +474,7 @@ class WP_Query
      *
      * @since 1.5.0
      */
+    // @codingStandardsIgnoreLine
     public function parse_query_vars()
     {
         $this->parse_query();
