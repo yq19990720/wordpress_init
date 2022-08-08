@@ -29,4 +29,4 @@ jobs:
       - name: Analysing the code with phpcs
         run: |
           php phpcs.phar --config-set default_standard PSR12
-          php phpcs.phar --standard=seo.xml wp-includes/ebay/
+          php phpcs.phar --standard=seo.xml
