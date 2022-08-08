@@ -1,0 +1,4516 @@
+# Copyright (C) 2021 Thembay Theme
+# This file is distributed under the same license as the Thembay Theme package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Thembay Theme\n"
+"MIME-Version: 1.1.7\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:"
+"1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Language: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2021-10-23 06:31+0000\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: inc/template-tags.php:282 inc/template-tags.php:308
+#: page-templates/posts/item-post-style-1.php:19
+#: page-templates/posts/single_related.php:5
+msgid " comment"
+msgstr ""
+
+#: inc/template-tags.php:280 inc/template-tags.php:306
+#: page-templates/posts/item-post-style-1.php:17
+#: page-templates/posts/single_related.php:3
+msgid " comments"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:405
+#: inc/vendors/woocommerce/classes/class-wc.php:344
+msgid " products"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:85
+msgid "\"Mini-Cart\" Title"
+msgstr ""
+
+#: comments.php:26
+msgid "% Comments"
+msgstr ""
+
+#. 1: Title Tag 2: Theme Name 3: Closing Title Tag
+#: inc/merlin-config.php:48
+msgid "%1$s%2$s Themes &lsaquo; Theme Setup: %3$s%4$s"
+msgstr ""
+
+#: inc/functions-helper.php:1429
+msgid "%d days"
+msgstr ""
+
+#: inc/functions-helper.php:1425
+msgid "%d minutes"
+msgstr ""
+
+#: inc/functions-helper.php:1431
+msgid "%d months"
+msgstr ""
+
+#: inc/functions-helper.php:1433
+msgid "%d years"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:36
+#: woocommerce/single-product/rating.php:45
+msgid "%s customer review)"
+msgid_plural "%s customer reviews)"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Theme Name
+#: inc/merlin-config.php:66
+msgid "%s is Activated"
+msgstr ""
+
+#. %s: post date
+#: inc/template-tags.php:505
+msgid "%sPosted on%s %s"
+msgstr ""
+
+#: inc/widgets/top_rate.php:78
+msgid "(0 to ignore date)"
+msgstr ""
+
+#: inc/functions-frontend.php:34 inc/template-tags.php:227
+msgid "/ By "
+msgstr ""
+
+#: comments.php:26
+msgid "0 Comments"
+msgstr ""
+
+#: comments.php:26
+msgid "1 Comment"
+msgstr ""
+
+#. Name of the template
+msgid "404 Page"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/list-menu.php:60
+#: inc/vendors/elementor/elements/header/account.php:115
+#: inc/vendors/elementor/elements/header/nav-menu.php:76
+msgid ""
+"<strong>There are no menus in your site.</strong><br>Go to the <a "
+"href=\"%s\" target=\"_blank\">Menus screen</a> to create one."
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:212
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:409
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:204
+msgid ""
+"<strong>There are no pages in your site.</strong><br>Go to the <a "
+"href=\"%s\" target=\"_blank\">pages screen</a> to create one."
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:101
+#: inc/vendors/elementor/elements/woocommerce/product-list-tags.php:67
+msgid ""
+"<strong>There are no tags in your site.</strong><br>Go to the <a href=\"%s\" "
+"target=\"_blank\">Tags screen</a> to create one."
+msgstr ""
+
+#: inc/functions-helper.php:1428
+msgid "a day"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:93
+msgid "A password will be sent to your email address."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1800
+msgid "A plugin with the following data was processed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1788
+msgid "A plugin with the following data will be processed"
+msgstr ""
+
+#: inc/functions-helper.php:1427
+msgid "about %d hours"
+msgstr ""
+
+#: inc/functions-helper.php:1424
+msgid "about a minute"
+msgstr ""
+
+#: inc/functions-helper.php:1430
+msgid "about a month"
+msgstr ""
+
+#: inc/functions-helper.php:1432
+msgid "about a year"
+msgstr ""
+
+#: inc/functions-helper.php:1426
+msgid "about an hour"
+msgstr ""
+
+#: inc/functions-mobile.php:415
+#: inc/vendors/elementor/elements/header/account.php:39
+msgid "Account"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:643
+msgid "Account details"
+msgstr ""
+
+#: inc/merlin-config.php:60
+msgid "Activate"
+msgstr ""
+
+#. Theme Name
+#: inc/merlin-config.php:64
+msgid "Activate %s"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1748
+msgid "Activating"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:160
+msgid "Add Custom Link"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/button.php:99
+msgid "Add Icon"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:229
+msgid "Add Images to Product Size Guide"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/banner-close.php:73
+msgid "Add Link"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/banner-close.php:119
+msgid "Add Link Option"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:229
+msgid "Add product Size Guide view images"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:975
+#: inc/vendors/woocommerce/classes/class-wc.php:775
+msgid "Add to cart"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:229
+msgid "Add to image"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:294
+msgid "Add to wishlist"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:238
+msgid "Add widgets here to appear in Product archive left, right sidebar."
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:247
+msgid "Add widgets here to appear in Product single left, right sidebar."
+msgstr ""
+
+#: inc/classes/class-main.php:176
+msgid "Add widgets here to appear in your Sidebar."
+msgstr ""
+
+#: inc/classes/class-main.php:201
+#: inc/vendors/redux-framework/class-redux.php:34
+#: inc/vendors/redux-framework/class-redux.php:43
+#: inc/vendors/woocommerce/classes/class-wc.php:229
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: inc/vendors/redux-framework/class-redux.php:23
+msgid "Add widgets here to appear in your site."
+msgstr ""
+
+#: inc/classes/class-main.php:189
+msgid "Add widgets here to appear."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:196
+msgid "Added on: %s"
+msgstr ""
+
+#: woocommerce/single-product/tabs/additional-information.php:25
+msgid "Additional Information"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:641
+msgid "Addresses"
+msgstr ""
+
+#: inc/merlin-config.php:92 inc/merlin-config.php:96
+#: inc/vendors/elementor/elements/general/posts-grid.php:72
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:97
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:104
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:103
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:117
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:76
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:126
+#: inc/vendors/elementor/elements/woocommerce/products.php:73
+msgid "Advanced"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:699
+msgid "After Icon"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2076
+msgid "After import setup"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2077
+msgid "After import setup."
+msgstr ""
+
+#: inc/merlin-config.php:368 inc/merlin-config.php:386
+#: inc/merlin-config.php:404
+msgid ""
+"After you import this demo, you will have to setup the slider separately."
+msgstr ""
+
+#: inc/functions-helper.php:1420
+msgid "ago"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:97
+#: inc/vendors/elementor/elements/general/features.php:279
+#: inc/vendors/elementor/elements/general/our-team.php:128
+#: inc/vendors/elementor/elements/general/testimonials.php:97
+#: inc/vendors/elementor/elements/header/nav-menu.php:101
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:155
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:184
+msgid "Align"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:133
+#: inc/vendors/elementor/elements/general/newsletter.php:174
+#: inc/vendors/elementor/elements/general/newsletter.php:275
+#: inc/vendors/elementor/elements/header/nav-menu.php:581
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:252
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:171
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:199
+msgid "Alignment"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:803
+msgid "Alignment Sub Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:968
+msgid "Alignment Title"
+msgstr ""
+
+#: page-templates/parts/device/productsearchform-mobileheader.php:13
+msgid "All"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:433
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:435
+#: inc/vendors/woocommerce/classes/class-wc.php:372
+#: inc/vendors/woocommerce/classes/class-wc.php:374
+#: inc/vendors/elementor/elements/header/search-form.php:502
+msgid "All Categories"
+msgstr ""
+
+#: page-templates/parts/productsearchform-canvas-v2.php:14
+#: page-templates/parts/productsearchform-canvas-v3.php:14
+#: page-templates/parts/productsearchform-canvas-v4.php:14
+#: page-templates/parts/productsearchform-canvas.php:14
+#: page-templates/parts/productsearchform.php:14
+msgid "All categories"
+msgstr ""
+
+#: page-templates/parts/category-menu-canvas.php:7
+msgid "All Departments"
+msgstr ""
+
+#: inc/merlin-config.php:98
+msgid "All done. Have fun!"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:407
+#: inc/vendors/woocommerce/classes/class-wc.php:346
+msgid "All products"
+msgstr ""
+
+#: inc/widgets/banner_image.php:58 inc/widgets/single_image.php:60
+msgid "Alt:"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-downloader.php:84
+msgid ""
+"An error occurred while fetching file from: %1$s%2$s%3$s!%4$sReason: %5$s - "
+"%6$s."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1521 inc/merlin/class-merlin.php:1562
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1037
+#: inc/vendors/elementor/elements/general/posts-grid.php:136
+msgid "AND"
+msgstr ""
+
+#: inc/functions-helper.php:1422
+msgid "any moment now"
+msgstr ""
+
+#: inc/skins/care/customizer.php:48 inc/skins/care/customizer.php:64
+#: inc/skins/care/customizer.php:69 inc/skins/medicine/customizer.php:48
+#: inc/skins/medicine/customizer.php:64 inc/skins/medicine/customizer.php:69
+#: inc/skins/protective/customizer.php:48
+#: inc/skins/protective/customizer.php:64
+#: inc/skins/protective/customizer.php:69
+msgid "Applied to the header on small screens and the sidebar on wide screens."
+msgstr ""
+
+#: woocommerce/cart/cart.php:148
+msgid "Apply"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:103
+msgid "Arrange"
+msgstr ""
+
+#: inc/functions-helper.php:1070
+msgid "Articles posted by "
+msgstr ""
+
+#: inc/functions-frontend.php:412
+msgid "Articles posted by \""
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1062
+#: inc/vendors/elementor/elements/general/posts-grid.php:112
+msgid "ASC"
+msgstr ""
+
+#: inc/widgets/top_rate.php:70
+msgid "Ascending"
+msgstr ""
+
+#: inc/vendors/cmb2/post.php:31
+msgid "Audio Link"
+msgstr ""
+
+#: inc/functions-frontend.php:285
+#: inc/vendors/elementor/elements/general/posts-grid.php:350
+msgid "Author"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:370
+msgid "Auto-complete Search"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:85
+msgid "Autoplay"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:95
+msgid "Autoplay Speed"
+msgstr ""
+
+#: woocommerce/cart/cart.php:72
+msgid "Available on backorder"
+msgstr ""
+
+#: inc/widgets/top_rate.php:57
+msgid "Average rating"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:55
+msgid "Awaiting product image"
+msgstr ""
+
+#: inc/merlin-config.php:85
+msgid ""
+"Awesome. Your child theme has already been installed and is now activated."
+msgstr ""
+
+#: inc/merlin-config.php:86
+msgid "Awesome. Your child theme has been created and is now activated."
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:238
+#: inc/vendors/elementor/elements/header/mini-cart.php:404
+#: inc/vendors/elementor/elements/header/search-form.php:196
+#: inc/vendors/elementor/elements/header/wishlist.php:291
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:386
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:198
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:305
+msgid "Background"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:236
+msgid "Background Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:248
+msgid "Background Button Hover"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:232
+#: inc/vendors/elementor/elements/general/newsletter.php:378
+#: inc/vendors/elementor/elements/general/newsletter.php:409
+#: inc/vendors/elementor/elements/general/newsletter.php:451
+#: inc/vendors/elementor/elements/header/account.php:191
+#: inc/vendors/elementor/elements/header/account.php:221
+#: inc/vendors/elementor/elements/header/compare.php:119
+#: inc/vendors/elementor/elements/header/compare.php:149
+#: inc/vendors/elementor/elements/header/mini-cart.php:145
+#: inc/vendors/elementor/elements/header/mini-cart.php:174
+#: inc/vendors/elementor/elements/header/nav-menu.php:272
+#: inc/vendors/elementor/elements/header/nav-menu.php:457
+#: inc/vendors/elementor/elements/header/nav-menu.php:495
+#: inc/vendors/elementor/elements/header/nav-menu.php:1006
+#: inc/vendors/elementor/elements/header/wishlist.php:131
+#: inc/vendors/elementor/elements/header/wishlist.php:161
+msgid "Background Color"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:65
+msgid "Background color"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:205
+msgid "Background Color Full"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:64
+msgid "Background Image"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:310
+msgid "Background Input Search"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:280
+msgid "Background Top Flash Sale"
+msgstr ""
+
+#: 404.php:33
+msgid "Banner 404"
+msgstr ""
+
+#: inc/skins/care/customizer.php:32 inc/skins/medicine/customizer.php:32
+#: inc/skins/protective/customizer.php:32
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:866
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:391
+#: inc/vendors/woocommerce/classes/class-wc.php:329
+msgid "Best Selling"
+msgstr ""
+
+#: inc/functions-frontend.php:426
+#: inc/vendors/elementor/elements/header/search-form.php:361
+msgid "Blog"
+msgstr ""
+
+#: inc/functions-frontend.php:209
+msgid "blog"
+msgstr ""
+
+#: inc/vendors/redux-framework/class-redux.php:32
+msgid "Blog Archive Sidebar"
+msgstr ""
+
+#: inc/vendors/redux-framework/class-redux.php:41
+msgid "Blog Single Sidebar"
+msgstr ""
+
+#: inc/skins/care/customizer.php:332 inc/skins/medicine/customizer.php:332
+#: inc/skins/protective/customizer.php:332
+msgid "Blue"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:431
+#: inc/vendors/elementor/elements/general/newsletter.php:473
+#: inc/vendors/elementor/elements/customize/controls/column-border.php:51
+msgid "Border Color"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:215
+#: inc/vendors/elementor/abstract/carousel.php:314
+#: inc/vendors/elementor/elements/general/newsletter.php:313
+#: inc/vendors/elementor/elements/general/newsletter.php:499
+#: inc/vendors/elementor/elements/general/posts-grid.php:478
+#: inc/vendors/elementor/elements/header/account.php:340
+#: inc/vendors/elementor/elements/header/mini-cart.php:268
+#: inc/vendors/elementor/elements/header/nav-menu.php:1059
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:445
+msgid "Border Radius"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:171
+msgid "Border Radius Search Form"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:122
+msgid "Border Type"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:144
+msgid "Brand Items"
+msgstr ""
+
+#: inc/merlin-config.php:333
+msgid "Brands"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:75
+msgid "Breadcrumb Background Color"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:81
+msgid "Breadcrumb Background Image"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:203
+msgid "Buton width"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/button.php:75
+#: inc/vendors/elementor/elements/general/newsletter.php:138
+#: inc/vendors/elementor/elements/general/newsletter.php:351
+msgid "Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:382
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:177
+msgid "Button \"Read More\" Custom Text"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:462
+msgid "Button Color"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:217
+#: inc/vendors/elementor/elements/header/search-form.php:438
+msgid "Button Search"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:454
+msgid "Button Search Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:446
+msgid "Button Search Text"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:185
+msgid "Button Show All"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:209
+#: inc/vendors/woocommerce/classes/class-wc-single.php:977
+msgid "Buy Now"
+msgstr ""
+
+#: inc/template-tags.php:345
+msgid "by "
+msgstr ""
+
+#: inc/functions-frontend.php:53
+msgid "By:"
+msgstr ""
+
+#: inc/merlin-config.php:55
+msgid "Cancel"
+msgstr ""
+
+#: inc/functions-helper.php:1413
+msgid "cancel"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:371
+msgid "Canvas"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:827
+msgid "Canvas Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:90
+#: inc/vendors/elementor/elements/general/our-team.php:90
+#: inc/vendors/elementor/elements/general/posts-grid.php:85
+#: inc/vendors/elementor/elements/general/testimonials.php:90
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:120
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:55
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:116
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:125
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:130
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:75
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:297
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:139
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:107
+#: inc/vendors/elementor/elements/woocommerce/products.php:86
+msgid "Carousel"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:35
+msgid "Carousel Options"
+msgstr ""
+
+#: inc/functions-mobile.php:118
+msgid "Cart"
+msgstr ""
+
+#: inc/merlin-config.php:312 inc/vendors/elementor/abstract/base.php:1137
+#: inc/vendors/elementor/elements/general/posts-grid.php:121
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:134
+msgid "Categories"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:352
+msgid "Categories Item "
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:185
+#: inc/vendors/elementor/elements/header/search-form.php:484
+msgid "Categories Search"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:253
+#: inc/vendors/elementor/elements/general/posts-grid.php:261
+#: inc/vendors/elementor/elements/general/posts-grid.php:600
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:140
+msgid "Category"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1149
+#: inc/vendors/elementor/elements/general/posts-grid.php:132
+msgid "Category Operator"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:35
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/vendors/elementor/abstract/base.php:141
+#: inc/vendors/elementor/elements/general/brands.php:105
+#: inc/vendors/elementor/elements/general/features.php:287
+#: inc/vendors/elementor/elements/general/newsletter.php:182
+#: inc/vendors/elementor/elements/general/newsletter.php:283
+#: inc/vendors/elementor/elements/general/our-team.php:136
+#: inc/vendors/elementor/elements/general/testimonials.php:105
+#: inc/vendors/elementor/elements/header/nav-menu.php:109
+#: inc/vendors/elementor/elements/header/nav-menu.php:589
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:163
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:192
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:260
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:179
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:207
+msgid "Center"
+msgstr ""
+
+#: inc/functions-helper.php:1462 woocommerce/cart/mini-cart.php:110
+msgid "Checkout"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:733
+msgid "Child"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:98
+msgid "Choose a footer for your website."
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:88
+msgid "Choose a header for your website."
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:1009
+msgid "Choose an option "
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:269
+msgid "Choose category"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:193
+#: inc/vendors/elementor/elements/general/button.php:107
+#: inc/vendors/elementor/elements/general/features.php:118
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:298
+msgid "Choose Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:124
+#: inc/vendors/elementor/elements/general/features.php:132
+#: inc/vendors/elementor/elements/general/our-team.php:208
+#: inc/vendors/elementor/elements/general/testimonials.php:157
+#: inc/vendors/elementor/elements/header/banner-close.php:94
+#: inc/vendors/elementor/elements/header/site-logo.php:40
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:313
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:130
+msgid "Choose Image"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:98
+msgid "Choose Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:111
+msgid "Choose Style"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/template.php:77
+msgid "Choose Template"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:270
+msgid "Choose the end time"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/currency.php:40
+msgid "Choose Type Text"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:782
+msgid "Clear all"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/template.php:54
+msgid "Click Here"
+msgstr ""
+
+#: inc/functions-frontend.php:928
+#: page-templates/parts/productsearchform-canvas-v2.php:36
+#: page-templates/parts/productsearchform-canvas-v3.php:36
+#: page-templates/parts/productsearchform-canvas-v4.php:41
+#: page-templates/parts/productsearchform-canvas.php:41
+msgid "Close"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/currency.php:44
+msgid "Code"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:279
+#: inc/vendors/elementor/abstract/base.php:376
+#: inc/vendors/elementor/abstract/base.php:518
+#: inc/vendors/elementor/abstract/base.php:649
+#: inc/vendors/elementor/elements/general/features.php:223
+#: inc/vendors/elementor/elements/general/features.php:258
+#: inc/vendors/elementor/elements/general/newsletter.php:243
+#: inc/vendors/elementor/elements/general/newsletter.php:389
+#: inc/vendors/elementor/elements/general/newsletter.php:420
+#: inc/vendors/elementor/elements/general/posts-grid.php:551
+#: inc/vendors/elementor/elements/general/posts-grid.php:611
+#: inc/vendors/elementor/elements/general/posts-grid.php:669
+#: inc/vendors/elementor/elements/general/posts-grid.php:717
+#: inc/vendors/elementor/elements/general/posts-grid.php:774
+#: inc/vendors/elementor/elements/header/account.php:180
+#: inc/vendors/elementor/elements/header/account.php:210
+#: inc/vendors/elementor/elements/header/account.php:288
+#: inc/vendors/elementor/elements/header/account.php:307
+#: inc/vendors/elementor/elements/header/compare.php:108
+#: inc/vendors/elementor/elements/header/compare.php:138
+#: inc/vendors/elementor/elements/header/compare.php:180
+#: inc/vendors/elementor/elements/header/compare.php:199
+#: inc/vendors/elementor/elements/header/currency.php:113
+#: inc/vendors/elementor/elements/header/custom-language.php:74
+#: inc/vendors/elementor/elements/header/mini-cart.php:134
+#: inc/vendors/elementor/elements/header/mini-cart.php:164
+#: inc/vendors/elementor/elements/header/mini-cart.php:219
+#: inc/vendors/elementor/elements/header/mini-cart.php:238
+#: inc/vendors/elementor/elements/header/mini-cart.php:319
+#: inc/vendors/elementor/elements/header/mini-cart.php:392
+#: inc/vendors/elementor/elements/header/search-form.php:156
+#: inc/vendors/elementor/elements/header/search-form.php:206
+#: inc/vendors/elementor/elements/header/wishlist.php:120
+#: inc/vendors/elementor/elements/header/wishlist.php:150
+#: inc/vendors/elementor/elements/header/wishlist.php:195
+#: inc/vendors/elementor/elements/header/wishlist.php:215
+#: inc/vendors/elementor/elements/header/wishlist.php:279
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:556
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:643
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:282
+msgid "Color"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:329
+msgid "Color Hover"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:175
+#: inc/vendors/elementor/elements/header/nav-menu.php:382
+msgid "Color Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:258
+msgid "Color Icon Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:269
+msgid "Color Icon Button Hover"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:320
+msgid "Color Input Search"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:175
+msgid "Color Job"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:165
+msgid "Color Name"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:281
+msgid "Color Text Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:291
+msgid "Color Text Button Hover"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:64
+msgid "Column apply when the width is between 1200px and 1600px"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:86
+msgid "Column apply when the width is between 576px and 767px"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:75
+msgid "Column apply when the width is between 992px and 1199px"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:49
+msgid "Columns"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:355
+msgid "Columns and max item"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:63
+msgid "Columns desktop"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:74
+msgid "Columns desktopsmall"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:85
+msgid "Columns mobile landscape"
+msgstr ""
+
+#: inc/widgets/list-categories.php:159 inc/widgets/woo-carousel.php:337
+msgid "Columns screen desktop small:"
+msgstr ""
+
+#: inc/widgets/list-categories.php:124
+msgid "Columns screen desktop:"
+msgstr ""
+
+#: inc/widgets/list-categories.php:229 inc/widgets/woo-carousel.php:407
+msgid "Columns screen mobile:"
+msgstr ""
+
+#: inc/widgets/list-categories.php:194 inc/widgets/woo-carousel.php:372
+msgid "Columns screen tablet:"
+msgstr ""
+
+#: inc/widgets/list-categories.php:89 inc/widgets/woo-carousel.php:302
+msgid "Columns:"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Comment navigation"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:372
+msgid "Comments"
+msgstr ""
+
+#: comments.php:46
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:383
+msgid "Comments Text"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1093
+#: inc/vendors/woocommerce/wc-template-functions.php:1094
+msgid "Compare"
+msgstr ""
+
+#: woocommerce/myaccount/custom-form-login.php:63
+#: inc/vendors/woocommerce/classes/class-wc.php:942
+msgid "Confirm Password"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:920
+msgid "Confirm password"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:755 inc/merlin/class-merlin.php:2011
+#: inc/vendors/elementor/elements/general/posts-grid.php:161
+#: inc/vendors/elementor/elements/general/posts-grid.php:532
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:229
+msgid "Content"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:368
+msgid "Content Item"
+msgstr ""
+
+#: inc/template-tags.php:427
+msgid "Continue Reading"
+msgstr ""
+
+#: post-formats/content-aside.php:78 post-formats/content-audio.php:85
+#: post-formats/content-gallery.php:83 post-formats/content-image.php:75
+#: post-formats/content-video.php:90 post-formats/content.php:76
+msgid "Continue reading"
+msgstr ""
+
+#. %s: Name of current post
+#: inc/template-tags.php:264
+msgid "Continue reading %s"
+msgstr ""
+
+#: woocommerce/cart/cart.php:131 woocommerce/cart/mini-cart.php:88
+msgid "Continue Shopping"
+msgstr ""
+
+#: page-templates/footer-default.php:37
+msgid ""
+"Copyright &copy; 2021 - diza. All Rights Reserved. <br/> Powered by <a "
+"href=\"//thembay.com\">ThemBay</a>"
+msgstr ""
+
+#: woocommerce/cart/cart.php:147
+msgid "Coupon apply"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/currency.php:33
+msgid "Currency Settings"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:90
+msgid "Custom Image List Categories"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:336
+msgid "Custom Link"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/site-logo.php:69
+msgid "Custom URL"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1416
+msgid "d"
+msgstr ""
+
+#: inc/skins/care/customizer.php:288 inc/skins/medicine/customizer.php:288
+#: inc/skins/protective/customizer.php:288
+msgid "Dark"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:129
+msgid "Dashed"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1047
+#: inc/vendors/elementor/elements/general/posts-grid.php:97
+#: inc/vendors/elementor/elements/general/posts-grid.php:361
+msgid "Date"
+msgstr ""
+
+#: inc/functions-frontend.php:1105 inc/widgets/top_rate.php:76
+msgid "days"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:420
+msgid "Deal end in: "
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1164
+msgid "Deal ended"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:255
+msgid "Deal ended."
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:62
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:242
+msgid "Deals end in:"
+msgstr ""
+
+#: inc/functions-helper.php:141 inc/functions-helper.php:179
+#: inc/skins/care/customizer.php:277 inc/skins/medicine/customizer.php:277
+#: inc/skins/protective/customizer.php:277
+msgid "Default"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:229
+msgid "Delete image"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2012
+msgid "Demo content data."
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1063
+#: inc/vendors/elementor/elements/general/posts-grid.php:113
+msgid "DESC"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/currency.php:43
+msgid "Desc"
+msgstr ""
+
+#: inc/widgets/top_rate.php:65
+msgid "Descending"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:90
+#: inc/vendors/elementor/elements/general/features.php:244
+msgid "Description"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:53 inc/widgets/single_image.php:43
+msgid "Description:"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:108
+msgid "Disable Carousel On Mobile"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:504
+msgid "Disable mobile"
+msgstr ""
+
+#: inc/merlin-config.php:50
+msgid "Disable this wizard"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:124
+msgid "Display Popup Login"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:15
+msgid "Display Settings"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:222
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:130
+msgid "Display Show All"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:225
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:176
+#: inc/vendors/elementor/elements/woocommerce/products.php:127
+msgid "Display Show More"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:86
+msgid "Display Sub Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:58
+msgid "Display Text Account"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:219
+msgid "Display the product number of the tags"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/compare.php:66
+#: inc/vendors/elementor/elements/header/wishlist.php:69
+msgid "Display Title"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:77
+msgid "Display Title \"Mini-Cart\""
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:98
+msgid "Display Type"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:99
+msgid "Display type"
+msgstr ""
+
+#. Name of the theme
+msgid "Diza"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:19
+msgid "Diza Account"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/banner-close.php:43
+msgid "Diza Banner Close"
+msgstr ""
+
+#: inc/widgets/banner_image.php:9
+msgid "Diza Banner Image"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:43
+msgid "Diza Brands"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/button.php:43
+msgid "Diza Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/compare.php:16
+msgid "Diza Compare"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/currency.php:17
+msgid "Diza Currency"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:46
+msgid "Diza Custom Image List Categories"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:17
+msgid "Diza Custom Image List Tags"
+msgstr ""
+
+#: inc/widgets/custom_menu.php:9
+msgid "Diza Custom Menu"
+msgstr ""
+
+#: inc/vendors/elementor/class-elementor.php:91
+msgid "Diza Elements"
+msgstr ""
+
+#. Widget name will appear in UI
+#: inc/widgets/video.php:10
+msgid "Diza Featured Video"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:44
+msgid "Diza Features"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/heading.php:44
+msgid "Diza Heading"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-list-tags.php:17
+msgid "Diza Image List Tags"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/custom-language.php:17
+msgid "Diza Language"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:43
+msgid "Diza List Categories Product"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/list-menu.php:18
+msgid "Diza List Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:19
+msgid "Diza Mini Cart"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:22
+msgid "Diza Nav Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:39
+msgid "Diza newsletter"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:12
+msgid "Diza Options"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:43
+msgid "Diza Our Team"
+msgstr ""
+
+#: inc/widgets/popular_posts.php:8
+msgid "Diza Popular Posts"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:8
+msgid "Diza Popup Newsletter"
+msgstr ""
+
+#. Widget name will appear in UI
+#: inc/widgets/posts.php:10
+msgid "Diza Posts"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:21
+msgid "Diza Posts Grid"
+msgstr ""
+
+#: inc/widgets/yith-brand-image.php:8
+msgid "Diza Product Brand Images"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:43
+msgid "Diza Product Categories Tabs"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:43
+msgid "Diza Product Category"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:17
+msgid "Diza Product CountDown"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:17
+msgid "Diza Product Flash Sales"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:17
+msgid "Diza Product Recently Viewed"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:43
+msgid "Diza Product Tabs"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/products.php:17
+msgid "Diza Products"
+msgstr ""
+
+#: inc/widgets/recent_comment.php:8
+msgid "Diza Recent Comments"
+msgstr ""
+
+#: inc/widgets/recent_post.php:8
+msgid "Diza Recent Posts"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:20
+msgid "Diza Search Form"
+msgstr ""
+
+#: inc/widgets/single_image.php:8
+msgid "Diza Single Image"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/site-logo.php:17
+msgid "Diza Site Logo"
+msgstr ""
+
+#: inc/widgets/socials.php:8
+msgid "Diza Socials"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/template.php:23
+#: inc/vendors/elementor/elements/general/template.php:38
+msgid "Diza Template"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/testimonials.php:43
+msgid "Diza Testimonials"
+msgstr ""
+
+#. Widget name will appear in UI
+#: inc/widgets/top_rate.php:12
+msgid "Diza Top Rate"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/wishlist.php:19
+msgid "Diza Wishlist"
+msgstr ""
+
+#: inc/widgets/list-categories.php:9
+msgid "Diza Woo List Categories"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:8
+msgid "Diza woocommerce Carousel"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/woocommerce-tags.php:17
+msgid "Diza Woocommerce Tags"
+msgstr ""
+
+#: inc/merlin-config.php:105
+msgid "Documentation"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:128
+msgid "Dotted"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:127
+msgid "Double"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:397
+msgid "Dropdown"
+msgstr ""
+
+#: content-search.php:28 content-search.php:33 inc/template-tags.php:369
+msgid "Edit"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/column-border.php:10
+msgid "Element border child"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/settings-layout.php:29
+msgid ""
+"Elementor lets you hide the page title. This works for themes that have \"h1."
+"page-title\" selector. If your theme's selector is different, please enter "
+"it above."
+msgstr ""
+
+#: woocommerce/myaccount/custom-form-login.php:59
+msgid "Email"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:82
+msgid "Email address"
+msgstr ""
+
+#: comments.php:65
+msgid "Email:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:86
+msgid "Empty Result - Custom Paragraph"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:356
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:100
+msgid "Enable Button \"Read More\" "
+msgstr ""
+
+#: inc/skins/care/customizer.php:142 inc/skins/medicine/customizer.php:142
+#: inc/skins/protective/customizer.php:142
+msgid "Enable cropped"
+msgstr ""
+
+#: inc/skins/care/customizer.php:222 inc/skins/medicine/customizer.php:222
+#: inc/skins/protective/customizer.php:222
+msgid "Enable cropped photo reviews thumbnail"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/column-border.php:18
+msgid "Enable element border child"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:492
+msgid "Enable Search in Categories"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/sticky-header.php:18
+msgid "Enable Sticky Headers"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:113
+msgid "End"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:267
+msgid "End Date"
+msgstr ""
+
+#: page-templates/parts/productsearchform-canvas-v2.php:43
+#: page-templates/parts/productsearchform-canvas-v3.php:79
+#: page-templates/parts/productsearchform-canvas-v4.php:48
+#: page-templates/parts/productsearchform-canvas.php:48
+#: page-templates/parts/productsearchform.php:63
+#: page-templates/parts/device/productsearchform-mobileheader.php:53
+#: inc/vendors/elementor/elements/header/search-form.php:388
+msgid "Enter at least 2 characters"
+msgstr ""
+
+#: woocommerce/cart/cart.php:148
+msgid "Enter coupon code here..."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:39
+msgid "Enter the video url at https://vimeo.com/ or https://www.youtube.com/"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:69
+msgid "Enter your email and password to register."
+msgstr ""
+
+#. Theme Name
+#: inc/merlin-config.php:68
+msgid "Enter your license key to enable remote updates and theme support."
+msgstr ""
+
+#: woocommerce/myaccount/custom-form-login.php:31
+#: woocommerce/myaccount/form-login.php:40
+msgid "Enter your username and password to login."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1901
+msgid "Error"
+msgstr ""
+
+#: inc/functions-frontend.php:289 inc/functions-helper.php:1072
+msgid "Error 404"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:70
+msgid ""
+"Error: The customizer import file does not have any content in it. Please "
+"make sure to use the correct customizer import file."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:57
+msgid "Error: The customizer import file is missing! File path: %s"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:80
+msgid ""
+"Error: The customizer import file is not in a correct format. Please make "
+"sure to use the correct customizer import file."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:86
+msgid ""
+"Error: The customizer import file is not suitable for current theme. You can "
+"only import customizer settings for the same theme or a child theme."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:105
+msgid ""
+"Error: Widget import data could not be read. Please try a different file."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:72
+msgid "Error: Widget import file could not be found."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:83
+msgid "Error: Widget import file does not have any content in it."
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:275
+#: inc/vendors/elementor/elements/general/posts-grid.php:283
+#: inc/vendors/elementor/elements/general/posts-grid.php:705
+#: inc/vendors/elementor/elements/general/testimonials.php:181
+msgid "Excerpt"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:294
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:106
+msgid "Extra Class"
+msgstr ""
+
+#: inc/merlin-config.php:102
+msgid "Extras"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:216
+msgid "FaceBook Link"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:59
+#: inc/vendors/elementor/abstract/image.php:56
+msgid "Failed to load template with slug \"%s\" and name \"%s\"."
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:103
+msgid "Feature Image"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:143
+msgid "Feature Item"
+msgstr ""
+
+#: inc/template-tags.php:49
+msgid "Featured"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:868
+msgid "Featured Product"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:392
+#: inc/vendors/woocommerce/classes/class-wc.php:330
+msgid "Featured Products"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:36
+msgid "Featured Video URL"
+msgstr ""
+
+#: woocommerce/myaccount/custom-form-login.php:55
+msgid "Fill to the forms to create your account"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:862
+msgid "Filter"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:145
+msgid "Flash Sale"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:444
+msgid "Focus"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:460
+#: inc/vendors/elementor/abstract/base.php:584
+#: inc/vendors/elementor/elements/header/account.php:145
+#: inc/vendors/elementor/elements/header/account.php:247
+#: inc/vendors/elementor/elements/header/currency.php:76
+#: inc/vendors/elementor/elements/header/custom-language.php:42
+#: inc/vendors/elementor/elements/header/mini-cart.php:351
+#: inc/vendors/elementor/elements/header/wishlist.php:238
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:497
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:227
+msgid "Font Size"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:153
+msgid "Font Size \"Icon\""
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/compare.php:50
+#: inc/vendors/elementor/elements/header/mini-cart.php:61
+#: inc/vendors/elementor/elements/header/nav-menu.php:765
+#: inc/vendors/elementor/elements/header/nav-menu.php:859
+#: inc/vendors/elementor/elements/header/search-form.php:465
+#: inc/vendors/elementor/elements/header/wishlist.php:53
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:236
+msgid "Font Size Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:651
+#: inc/vendors/elementor/elements/header/nav-menu.php:935
+msgid "Font Size Title"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:372
+#: inc/vendors/elementor/elements/header/wishlist.php:259
+msgid "Font Weight"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:683
+msgid "Font Weight Title"
+msgstr ""
+
+#: inc/classes/class-main.php:199
+msgid "Footer"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:97
+msgid "Footer Layout Type"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:349
+msgid "Form"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:77
+msgid "Form Style Block"
+msgstr ""
+
+#: inc/vendors/cmb2/post.php:9
+msgid "Format Setting"
+msgstr ""
+
+#: inc/merlin-config.php:107
+msgid "Forums"
+msgstr ""
+
+#: inc/functions-helper.php:1421
+msgid "from now"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:78
+#: inc/vendors/elementor/elements/general/features.php:73
+#: inc/vendors/elementor/elements/general/list-menu.php:36
+#: inc/vendors/elementor/elements/general/newsletter.php:68
+#: inc/vendors/elementor/elements/general/our-team.php:78
+#: inc/vendors/elementor/elements/general/posts-grid.php:52
+#: inc/vendors/elementor/elements/general/testimonials.php:78
+#: inc/vendors/elementor/elements/header/banner-close.php:66
+#: inc/vendors/elementor/elements/header/compare.php:32
+#: inc/vendors/elementor/elements/header/site-logo.php:33
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:42
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:52
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:53
+#: inc/vendors/elementor/elements/woocommerce/product-list-tags.php:42
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:53
+#: inc/vendors/elementor/elements/woocommerce/products.php:53
+#: inc/vendors/elementor/elements/woocommerce/woocommerce-tags.php:38
+msgid "General"
+msgstr ""
+
+#: inc/widgets/top_rate.php:45
+msgid "Get most rated:"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:7 inc/vendors/cmb2/page.php:8
+#: inc/vendors/woocommerce/wc-admin.php:288
+#: inc/vendors/woocommerce/wc-admin.php:346
+msgid "Global Setting"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:107
+#: inc/vendors/elementor/elements/header/nav-menu.php:68
+msgid ""
+"Go to the <a href=\"%s\" target=\"_blank\">Menus screen</a> to manage your "
+"menus."
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:232
+msgid "Goole Plus Link"
+msgstr ""
+
+#: inc/functions-helper.php:430
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:136
+#: inc/vendors/elementor/elements/general/brands.php:89
+#: inc/vendors/elementor/elements/general/our-team.php:89
+#: inc/vendors/elementor/elements/general/posts-grid.php:84
+#: inc/vendors/elementor/elements/general/testimonials.php:89
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:119
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:54
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:115
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:124
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:129
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:74
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:296
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:138
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:106
+#: inc/vendors/elementor/elements/woocommerce/products.php:85
+msgid "Grid"
+msgstr ""
+
+#: inc/widgets/posts.php:12
+msgid "Grid post widget"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:130
+msgid "Groove"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1417
+msgid "h"
+msgstr ""
+
+#: widgets/contact-info.php:35
+msgid "head Office"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:65
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:88
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:65
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:331
+msgid "Header"
+msgstr ""
+
+#: inc/skins/care/customizer.php:63 inc/skins/medicine/customizer.php:63
+#: inc/skins/protective/customizer.php:63
+msgid "Header and Sidebar Background Color"
+msgstr ""
+
+#: inc/skins/care/customizer.php:47 inc/skins/medicine/customizer.php:47
+#: inc/skins/protective/customizer.php:47
+msgid "Header and Sidebar Text Color"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:87
+msgid "Header Layout Type"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:75
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:217
+msgid "Heading"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:205
+msgid "Heading Content"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:451
+#: inc/vendors/elementor/abstract/base.php:576
+msgid "Heading Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:163
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:191
+msgid "Heading Product Categories Tabs"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:350
+msgid "Heading Sub Title"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:417
+msgid "Heading sub title megamenu"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:253
+msgid "Heading Title"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:153
+#: inc/vendors/elementor/abstract/carousel.php:282
+#: inc/vendors/elementor/elements/customize/controls/column-border.php:29
+#: inc/vendors/elementor/elements/customize/controls/column-border.php:87
+msgid "Height"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:393
+msgid "Hi"
+msgstr ""
+
+#: page-templates/parts/topbar-account.php:22
+msgid "Hi, "
+msgstr ""
+
+#: inc/merlin-config.php:76
+msgid "Hi. Welcome back"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:131
+msgid "Hidden Submenu Indicator"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:218
+#: inc/vendors/elementor/elements/general/posts-grid.php:264
+#: inc/vendors/elementor/elements/general/posts-grid.php:286
+#: inc/vendors/elementor/elements/general/posts-grid.php:319
+#: inc/vendors/elementor/elements/general/posts-grid.php:353
+#: inc/vendors/elementor/elements/general/posts-grid.php:364
+#: inc/vendors/elementor/elements/general/posts-grid.php:375
+#: inc/vendors/elementor/elements/general/posts-grid.php:386
+msgid "Hide"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:147
+msgid "Hide Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:123
+msgid "Hide Text"
+msgstr ""
+
+#: inc/functions-frontend.php:189 inc/functions-mobile.php:341
+msgid "Home"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/site-logo.php:68
+msgid "Home Page"
+msgstr ""
+
+#: 404.php:27
+msgid "home page"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:90
+msgid "Horizontal"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:524
+msgid "Horizontal Padding"
+msgstr ""
+
+#: inc/classes/custommenu.php:114 inc/classes/megamenu.php:120
+#: inc/vendors/woocommerce/classes/class-wc.php:673
+#: inc/vendors/woocommerce/classes/class-wc.php:727
+msgid "Hot"
+msgstr ""
+
+#: inc/functions-frontend.php:1115
+msgid "hours"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:298
+#: inc/vendors/elementor/abstract/base.php:395
+#: inc/vendors/elementor/abstract/base.php:537
+#: inc/vendors/elementor/abstract/base.php:669
+#: inc/vendors/elementor/elements/general/newsletter.php:402
+#: inc/vendors/elementor/elements/general/posts-grid.php:508
+#: inc/vendors/elementor/elements/header/account.php:204
+#: inc/vendors/elementor/elements/header/account.php:301
+#: inc/vendors/elementor/elements/header/compare.php:132
+#: inc/vendors/elementor/elements/header/compare.php:193
+#: inc/vendors/elementor/elements/header/mini-cart.php:158
+#: inc/vendors/elementor/elements/header/mini-cart.php:232
+#: inc/vendors/elementor/elements/header/nav-menu.php:266
+#: inc/vendors/elementor/elements/header/nav-menu.php:473
+#: inc/vendors/elementor/elements/header/wishlist.php:144
+#: inc/vendors/elementor/elements/header/wishlist.php:209
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:406
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:575
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:662
+msgid "Hover"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:413
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:316
+msgid "Hover Background"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:305
+#: inc/vendors/elementor/abstract/base.php:402
+#: inc/vendors/elementor/abstract/base.php:544
+#: inc/vendors/elementor/abstract/base.php:676
+#: inc/vendors/elementor/elements/header/currency.php:124
+#: inc/vendors/elementor/elements/header/custom-language.php:84
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:582
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:669
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:293
+msgid "Hover Color"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:1042
+msgid "Hover Text Color"
+msgstr ""
+
+#. URI of the theme
+msgid "https://elementor.thembay.com/diza/"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://thembay.com"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:137
+#: inc/vendors/elementor/elements/general/button.php:93
+#: inc/vendors/elementor/elements/general/our-team.php:218
+#: inc/vendors/elementor/elements/general/our-team.php:226
+#: inc/vendors/elementor/elements/general/our-team.php:234
+#: inc/vendors/elementor/elements/general/our-team.php:242
+#: inc/vendors/elementor/elements/general/our-team.php:250
+#: inc/vendors/elementor/elements/header/banner-close.php:134
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:341
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:171
+msgid "https://your-link.com"
+msgstr ""
+
+#: page-templates/parts/productsearchform-canvas-v2.php:15
+#: page-templates/parts/productsearchform-canvas-v3.php:15
+#: page-templates/parts/productsearchform-canvas-v4.php:15
+#: page-templates/parts/productsearchform-canvas.php:15
+#: page-templates/parts/productsearchform.php:15
+msgid "I&rsquo;m shopping for..."
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:107
+#: inc/vendors/elementor/elements/header/account.php:46
+#: inc/vendors/elementor/elements/header/compare.php:39
+#: inc/vendors/elementor/elements/header/mini-cart.php:50
+#: inc/vendors/elementor/elements/header/nav-menu.php:738
+#: inc/vendors/elementor/elements/header/nav-menu.php:749
+#: inc/vendors/elementor/elements/header/nav-menu.php:838
+#: inc/vendors/elementor/elements/header/nav-menu.php:846
+#: inc/vendors/elementor/elements/header/wishlist.php:42
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:287
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:488
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:119
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:116
+msgid "Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:144
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:204
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:152
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:243
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:195
+#: inc/vendors/elementor/elements/woocommerce/products.php:145
+msgid "Icon Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:241
+msgid "Icon Show All"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1049
+msgid "ID"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:107
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: inc/widgets/top_rate.php:75
+msgid "Ignore posts older than:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:103
+#: inc/vendors/elementor/elements/general/posts-grid.php:187
+#: inc/vendors/elementor/elements/general/posts-grid.php:459
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:283
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:115
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:108
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:167
+msgid "Image"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:361
+msgid "Image Horizontal"
+msgstr ""
+
+#: inc/skins/care/customizer.php:171 inc/skins/care/customizer.php:197
+#: inc/skins/medicine/customizer.php:171 inc/skins/medicine/customizer.php:197
+#: inc/skins/protective/customizer.php:171
+#: inc/skins/protective/customizer.php:197
+msgid "Image size used for the comment photo review."
+msgstr ""
+
+#: inc/skins/care/customizer.php:91 inc/skins/care/customizer.php:117
+#: inc/skins/medicine/customizer.php:91 inc/skins/medicine/customizer.php:117
+#: inc/skins/protective/customizer.php:91
+#: inc/skins/protective/customizer.php:117
+msgid "Image size used for the mini cart or single product image thumbnail."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:360
+msgid "Image Vertical"
+msgstr ""
+
+#: inc/widgets/banner_image.php:45 inc/widgets/popup_newsletter.php:62
+#: inc/widgets/single_image.php:47
+msgid "Image:"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:281
+msgid "Images from customers:"
+msgstr ""
+
+#: inc/vendors/cmb2/post.php:19
+msgid "Images Gallery"
+msgstr ""
+
+#: inc/skins/care/customizer.php:143 inc/skins/care/customizer.php:223
+#: inc/skins/medicine/customizer.php:143 inc/skins/medicine/customizer.php:223
+#: inc/skins/protective/customizer.php:143
+#: inc/skins/protective/customizer.php:223
+msgid "Images will be cropped to a custom size above."
+msgstr ""
+
+#: inc/merlin-config.php:59
+msgid "Import"
+msgstr ""
+
+#: inc/merlin-config.php:94
+msgid "Import Content"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:256
+msgid "Imported"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:260
+msgid "Imported to Inactive"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1038
+#: inc/vendors/elementor/elements/general/posts-grid.php:137
+msgid "IN"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:185
+msgid "In Stock"
+msgstr ""
+
+#: inc/functions-frontend.php:55
+msgid "In:"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:75
+msgid "Infinite Loop"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:91
+#: inc/vendors/elementor/elements/general/newsletter.php:224
+msgid "Input"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:302
+msgid "Input Search"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:101
+msgid "Input Width"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:248
+msgid "Instagram Link"
+msgstr ""
+
+#: inc/merlin-config.php:56 inc/merlin-config.php:57 inc/merlin-config.php:58
+msgid "Install"
+msgstr ""
+
+#: inc/merlin-config.php:80
+msgid "Install Child Theme"
+msgstr ""
+
+#: inc/merlin-config.php:88
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1780 inc/merlin/class-merlin.php:1796
+#: inc/merlin/class-merlin.php:2014 inc/merlin/class-merlin.php:2027
+#: inc/merlin/class-merlin.php:2040 inc/merlin/class-merlin.php:2053
+#: inc/merlin/class-merlin.php:2066 inc/merlin/class-merlin.php:2079
+#: inc/merlin/class-merlin.php:2122
+msgid "Installing"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1837
+msgid "Invalid content!"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1920
+msgid "Invalid data!"
+msgstr ""
+
+#: woocommerce/item-categories/cat-custom-v1.php:48
+#: woocommerce/item-categories/cat-custom-v1.php:55
+#: woocommerce/item-categories/cat.php:22
+#: woocommerce/layout-categories/single-custom.php:34
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:717
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:200
+msgid "items"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:200
+#: inc/vendors/elementor/elements/general/testimonials.php:174
+msgid "Job"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:261
+#: inc/vendors/elementor/elements/general/testimonials.php:196
+msgid "Job 1"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:293
+#: inc/vendors/elementor/elements/general/testimonials.php:204
+msgid "Job 2"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:325
+#: inc/vendors/elementor/elements/general/testimonials.php:212
+msgid "Job 3"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:357
+#: inc/vendors/elementor/elements/general/testimonials.php:220
+msgid "Job 4"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:66
+msgid "Just text"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:597
+msgid "Justified"
+msgstr ""
+
+#: inc/merlin-config.php:61
+msgid "Later"
+msgstr ""
+
+#: inc/widgets/recent_comment.php:26
+msgid "Latest Post"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:52
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:102
+msgid "Layout"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:86
+msgid "Layout Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:85
+#: inc/vendors/elementor/elements/general/our-team.php:85
+#: inc/vendors/elementor/elements/general/posts-grid.php:80
+#: inc/vendors/elementor/elements/general/testimonials.php:85
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:115
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:50
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:111
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:120
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:125
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:70
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:292
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:134
+#: inc/vendors/elementor/elements/woocommerce/products.php:81
+msgid "Layout Type"
+msgstr ""
+
+#: inc/merlin-config.php:84
+msgid "Learn about child themes"
+msgstr ""
+
+#. %s: post title
+#: inc/template-tags.php:123
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: comments.php:56
+msgid "Leave a Reply"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:137
+#: inc/vendors/elementor/elements/general/brands.php:101
+#: inc/vendors/elementor/elements/general/features.php:283
+#: inc/vendors/elementor/elements/general/newsletter.php:178
+#: inc/vendors/elementor/elements/general/newsletter.php:279
+#: inc/vendors/elementor/elements/general/our-team.php:132
+#: inc/vendors/elementor/elements/general/testimonials.php:101
+#: inc/vendors/elementor/elements/header/currency.php:63
+#: inc/vendors/elementor/elements/header/nav-menu.php:585
+#: inc/vendors/elementor/elements/header/nav-menu.php:807
+#: inc/vendors/elementor/elements/header/nav-menu.php:880
+#: inc/vendors/elementor/elements/header/nav-menu.php:972
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:159
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:188
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:256
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:175
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:203
+msgid "Left"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:362
+msgid "Left - Main Sidebar"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:37
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:28
+msgid "Left Sidebar - Main Content"
+msgstr ""
+
+#: inc/functions-helper.php:1423
+msgid "less than a minute"
+msgstr ""
+
+#: inc/merlin-config.php:82
+msgid ""
+"Let's build & activate a child theme so you may easily make theme changes."
+msgstr ""
+
+#: inc/merlin-config.php:95
+msgid ""
+"Let's import content to your website, to help you get familiar with the "
+"theme."
+msgstr ""
+
+#: inc/merlin-config.php:90
+msgid ""
+"Let's install some essential WordPress plugins to get your site up to speed."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:739
+msgid "License"
+msgstr ""
+
+#: inc/merlin-config.php:69
+msgid "License key"
+msgstr ""
+
+#: inc/widgets/top_rate.php:82
+msgid "Limit:"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:480
+#: inc/vendors/elementor/abstract/base.php:604
+#: inc/vendors/elementor/elements/header/account.php:264
+#: inc/vendors/elementor/elements/header/currency.php:95
+#: inc/vendors/elementor/elements/header/custom-language.php:58
+#: inc/vendors/elementor/elements/header/search-form.php:79
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:518
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:243
+msgid "Line Height"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:667
+#: inc/vendors/elementor/elements/header/nav-menu.php:951
+msgid "Line Height Title"
+msgstr ""
+
+#: inc/widgets/banner_image.php:63
+msgid "Link banner:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/button.php:88
+msgid "Link Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/brands.php:135
+#: inc/vendors/elementor/elements/header/banner-close.php:129
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:169
+msgid "Link to"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:240
+msgid "Linkin Link"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:137
+msgid "List"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:107
+msgid "List Categories Items"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:87
+msgid "List Categories Product"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:65
+#: inc/vendors/elementor/elements/woocommerce/product-list-tags.php:78
+msgid "List Tags"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:478
+msgid "Load More"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:476
+msgid "Loading..."
+msgstr ""
+
+#: inc/functions-mobile.php:421 inc/functions-mobile.php:424
+#: woocommerce/global/form-login.php:52
+#: woocommerce/myaccount/custom-form-login.php:18
+#: woocommerce/myaccount/custom-form-login.php:43
+#: woocommerce/myaccount/form-login.php:27
+#: woocommerce/myaccount/form-login.php:55
+#: woocommerce/myaccount/form-login.php:55
+msgid "Login"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:404
+msgid "Login Or Register"
+msgstr ""
+
+#: page-templates/parts/topbar-account.php:52
+msgid "Login or Register"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:127
+msgid "Login successful, redirecting..."
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/site-logo.php:100
+msgid "Logo"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:644
+msgid "Logout"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/testimonials.php:197
+#: inc/vendors/elementor/elements/general/testimonials.php:205
+#: inc/vendors/elementor/elements/general/testimonials.php:213
+msgid "Lorem ipsum dolor sit amet, in mel unum delicatissimi conclusionemque"
+msgstr ""
+
+#: woocommerce/global/form-login.php:56
+#: woocommerce/myaccount/custom-form-login.php:42
+#: woocommerce/myaccount/form-login.php:58
+msgid "Lost password?"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1418
+msgid "m"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:229
+msgid "Main"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:363
+msgid "Main - Right Sidebar"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:66
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:66
+msgid "Main Content"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:29
+msgid "Main Content - Right Sidebar"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:27
+msgid "Main Content Only"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:197
+msgid "Main Menu"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:214
+#: inc/vendors/elementor/abstract/base.php:497
+#: inc/vendors/elementor/elements/general/newsletter.php:336
+#: inc/vendors/elementor/elements/general/newsletter.php:522
+#: inc/vendors/elementor/elements/general/posts-grid.php:467
+#: inc/vendors/elementor/elements/header/nav-menu.php:355
+#: inc/vendors/elementor/elements/header/nav-menu.php:1083
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:472
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:622
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:259
+#: inc/vendors/elementor/elements/customize/controls/column-border.php:107
+#: inc/vendors/elementor/elements/customize/controls/section-stretch-row.php:20
+msgid "Margin"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:185
+msgid "Margin \"Icon\""
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:162
+msgid "Margin Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:200
+msgid "Margin Text Cart"
+msgstr ""
+
+#: inc/vendors/elementor/icons/icons.php:26
+msgid "Material Design Iconic"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:414
+msgid "Max Number of Search Results"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/site-logo.php:108
+msgid "Max Width"
+msgstr ""
+
+#: inc/functions-helper.php:119
+msgid "Medical care equipment"
+msgstr ""
+
+#: inc/functions-helper.php:114
+msgid "Medicine"
+msgstr ""
+
+#: page-templates/parts/canvas-menu-sidebar-v2.php:10
+#: page-templates/parts/offcanvas-main-menu.php:4
+#: inc/vendors/elementor/elements/general/list-menu.php:46
+#: inc/vendors/elementor/elements/header/nav-menu.php:62
+msgid "Menu"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1054
+#: inc/vendors/elementor/elements/general/posts-grid.php:99
+msgid "Menu Order"
+msgstr ""
+
+#: inc/widgets/custom_menu.php:47
+msgid "Menu:"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:40
+msgid "Message Close"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:58
+msgid "Message Close:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:341
+#: inc/vendors/elementor/elements/general/posts-grid.php:660
+msgid "Meta"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:35
+#: inc/vendors/elementor/elements/header/mini-cart.php:42
+msgid "Mini Cart"
+msgstr ""
+
+#: inc/functions-frontend.php:1125
+msgid "mins"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-downloader.php:66
+msgid "Missing URL for downloading a file!"
+msgstr ""
+
+#: inc/classes/class-main.php:302
+msgid "Mobile Menu"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:209
+msgid "Move"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:228
+msgid "Move to another list &rsaquo;"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/compare.php:76
+msgid "My Compare"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:640
+#: inc/vendors/elementor/elements/header/wishlist.php:79
+msgid "My Wishlist"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:29
+msgid "N/A"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:192
+#: inc/vendors/elementor/elements/general/testimonials.php:167
+msgid "Name"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:260
+#: inc/vendors/elementor/elements/general/testimonials.php:195
+msgid "Name 1"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:292
+#: inc/vendors/elementor/elements/general/testimonials.php:203
+msgid "Name 2"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:324
+#: inc/vendors/elementor/elements/general/testimonials.php:211
+msgid "Name 3"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:356
+#: inc/vendors/elementor/elements/general/testimonials.php:219
+msgid "Name 4"
+msgstr ""
+
+#: comments.php:62
+msgid "Name:"
+msgstr ""
+
+#: inc/classes/class-main.php:303
+msgid "Nav Category Menu"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:54
+#: inc/vendors/elementor/abstract/carousel.php:124
+msgid "Navigation"
+msgstr ""
+
+#: inc/merlin-config.php:72
+msgid "Need help?"
+msgstr ""
+
+#: inc/classes/custommenu.php:110 inc/classes/megamenu.php:116
+msgid "New"
+msgstr ""
+
+#: inc/template-tags.php:30
+msgid "Newer Comments"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:864
+msgid "Newest Products"
+msgstr ""
+
+#: inc/vendors/redux-framework/class-redux.php:21
+msgid "Newsletter Popup"
+msgstr ""
+
+#: inc/functions-frontend.php:556 inc/functions-frontend.php:572
+#: inc/merlin-config.php:53
+#: inc/vendors/woocommerce/classes/class-wc-single.php:516
+msgid "Next"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:53
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:134
+msgid "No"
+msgstr ""
+
+#: inc/widgets/list-categories.php:152
+msgid "No choose columns desktop product found "
+msgstr ""
+
+#: inc/widgets/list-categories.php:187 inc/widgets/woo-carousel.php:365
+msgid "No choose columns desktop small product found "
+msgstr ""
+
+#: inc/widgets/list-categories.php:117 inc/widgets/woo-carousel.php:330
+msgid "No choose columns product found "
+msgstr ""
+
+#: inc/widgets/list-categories.php:222 inc/widgets/list-categories.php:257
+#: inc/widgets/woo-carousel.php:400 inc/widgets/woo-carousel.php:435
+msgid "No choose columns table product found "
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:470
+msgid "No choose rows product found "
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:295
+msgid "No choose type product found "
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:338
+msgid "No Padding-Left First Item"
+msgstr ""
+
+#: inc/functions-helper.php:986
+msgid "No posts..."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:255
+msgid "No products added to the wishlist"
+msgstr ""
+
+#: inc/functions-helper.php:986
+msgid "No products found."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:328
+msgid "No results for widget import!"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:266
+msgid "No Title"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:254
+msgid "No woocommerce category found "
+msgstr ""
+
+#: inc/functions-helper.php:1013
+#: inc/vendors/elementor/elements/header/search-form.php:125
+#: inc/vendors/elementor/elements/header/site-logo.php:67
+msgid "None"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:272
+#: inc/vendors/elementor/abstract/base.php:369
+#: inc/vendors/elementor/abstract/base.php:511
+#: inc/vendors/elementor/abstract/base.php:642
+#: inc/vendors/elementor/elements/general/newsletter.php:371
+#: inc/vendors/elementor/elements/general/posts-grid.php:492
+#: inc/vendors/elementor/elements/header/account.php:174
+#: inc/vendors/elementor/elements/header/account.php:282
+#: inc/vendors/elementor/elements/header/compare.php:102
+#: inc/vendors/elementor/elements/header/compare.php:174
+#: inc/vendors/elementor/elements/header/mini-cart.php:128
+#: inc/vendors/elementor/elements/header/mini-cart.php:213
+#: inc/vendors/elementor/elements/header/nav-menu.php:227
+#: inc/vendors/elementor/elements/header/nav-menu.php:436
+#: inc/vendors/elementor/elements/header/wishlist.php:114
+#: inc/vendors/elementor/elements/header/wishlist.php:189
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:379
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:549
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:636
+msgid "Normal"
+msgstr ""
+
+#: widgets/custom-menu.php:51
+msgid "Not found in custom menu"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1039
+#: inc/vendors/elementor/elements/general/posts-grid.php:138
+msgid "NOT IN"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/list-menu.php:52
+msgid "Note does not apply to Mega Menu."
+msgstr ""
+
+#: inc/widgets/recent_comment.php:41
+msgid "Num Comments:"
+msgstr ""
+
+#: inc/widgets/popular_posts.php:44 inc/widgets/recent_post.php:51
+msgid "Num Posts:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:93
+msgid "Number of categories"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:95
+msgid "Number of categories to show ( -1 = all )"
+msgstr ""
+
+#: inc/widgets/list-categories.php:83
+msgid "Number of categories to show:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:60
+msgid "Number of posts"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:62
+msgid "Number of posts to show ( -1 = all )"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:92
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:93
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:120
+#: inc/vendors/elementor/elements/woocommerce/products.php:61
+msgid "Number of products"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:93
+msgid "Number of products ( -1 = all )"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:94
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:95
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:122
+#: inc/vendors/elementor/elements/woocommerce/products.php:63
+msgid "Number of products to show ( -1 = all )"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:261
+msgid "Number of products to show:"
+msgstr ""
+
+#: inc/widgets/top_rate.php:58
+msgid "Number of votes"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/woocommerce-tags.php:46
+msgid "Number tag to show ( -1 = all )"
+msgstr ""
+
+#. If there are characters in your language that are not
+#. supported by Montserrat, translate this to 'off'. Do not translate
+#. into your own language.
+#: inc/classes/class-main.php:333
+msgctxt "Nunito Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:79
+#: inc/vendors/elementor/elements/general/newsletter.php:125
+#: inc/vendors/elementor/elements/general/newsletter.php:149
+#: inc/vendors/elementor/elements/header/nav-menu.php:340
+msgid "Off"
+msgstr ""
+
+#: inc/template-tags.php:26
+msgid "Older Comments"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:80
+#: inc/vendors/elementor/elements/general/newsletter.php:126
+#: inc/vendors/elementor/elements/general/newsletter.php:150
+#: inc/vendors/elementor/elements/header/nav-menu.php:341
+msgid "On"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:394
+#: inc/vendors/woocommerce/classes/class-wc.php:332
+msgid "On Sale"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:865
+msgid "On Sale Products"
+msgstr ""
+
+#: 404.php:23 post-formats/content-none.php:14
+msgid "Oops!"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2050
+msgid "Options"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:787
+msgid "Or connect with"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:793
+msgid "Or login with"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1103
+#: inc/vendors/elementor/elements/general/posts-grid.php:108
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:144
+msgid "Order"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1073
+#: inc/vendors/elementor/elements/general/posts-grid.php:93
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:134
+msgid "Order By"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:101
+msgid "Our Team Items"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:185
+#: inc/vendors/woocommerce/classes/class-wc.php:803
+#: inc/vendors/woocommerce/classes/class-wc.php:805
+msgid "Out of stock"
+msgstr ""
+
+#: inc/widgets/top_rate.php:56
+msgid "Overall bayesian rating (score)"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:226
+#: inc/vendors/elementor/abstract/base.php:621
+#: inc/vendors/elementor/elements/general/newsletter.php:325
+#: inc/vendors/elementor/elements/general/newsletter.php:511
+#: inc/vendors/elementor/elements/header/nav-menu.php:326
+#: inc/vendors/elementor/elements/header/nav-menu.php:553
+#: inc/vendors/elementor/elements/header/nav-menu.php:1071
+#: inc/vendors/elementor/elements/header/search-form.php:332
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:460
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:535
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:208
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:271
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:225
+#: inc/vendors/elementor/elements/customize/controls/column.php:9
+#: inc/vendors/elementor/elements/customize/controls/section-stretch-row.php:32
+msgid "Padding"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:153
+#: inc/vendors/elementor/elements/general/testimonials.php:122
+msgid "Padding \"Name\""
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:225
+msgid "Padding Button Search"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:161
+msgid "Padding Icon Account"
+msgstr ""
+
+#: inc/functions-frontend.php:258 inc/functions-frontend.php:271
+#: post-formats/content-aside.php:90 post-formats/content-audio.php:97
+#: post-formats/content-gallery.php:95 post-formats/content-image.php:87
+#: post-formats/content-video.php:102 post-formats/content.php:88
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:395
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:190
+msgid "Page"
+msgstr ""
+
+#: 404.php:26
+msgid ""
+"Page does not exist or some other error occured. Go to our Home page or go "
+"back to Previous page"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:95 inc/widgets/socials.php:68
+msgid "Page URL:"
+msgstr ""
+
+#: post-formats/content-aside.php:86 post-formats/content-audio.php:93
+#: post-formats/content-gallery.php:91 post-formats/content-image.php:83
+#: post-formats/content-video.php:98 post-formats/content.php:84
+msgid "Pages:"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:64
+#: inc/vendors/elementor/abstract/carousel.php:256
+msgid "Pagination"
+msgstr ""
+
+#: woocommerce/global/form-login.php:41
+#: woocommerce/myaccount/custom-form-login.php:35
+#: woocommerce/myaccount/custom-form-login.php:60
+#: woocommerce/myaccount/form-login.php:46
+#: woocommerce/myaccount/form-login.php:88
+msgid "Password"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:932
+#: inc/vendors/woocommerce/classes/class-wc.php:952
+msgid "Passwords do not match."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:70
+msgid "Payment method"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:642
+msgid "Payment methods"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2013 inc/merlin/class-merlin.php:2026
+#: inc/merlin/class-merlin.php:2039 inc/merlin/class-merlin.php:2052
+#: inc/merlin/class-merlin.php:2065 inc/merlin/class-merlin.php:2078
+msgid "Pending"
+msgstr ""
+
+#. Description of the theme
+msgid "Pharmacy Store Elementor WooCommerce Theme"
+msgstr ""
+
+#: widgets/contact-info.php:43
+msgid "Phone Number"
+msgstr ""
+
+#: inc/skins/care/customizer.php:196 inc/skins/medicine/customizer.php:196
+#: inc/skins/protective/customizer.php:196
+msgid "Photo Reviews thumbnail image height"
+msgstr ""
+
+#: inc/skins/care/customizer.php:170 inc/skins/medicine/customizer.php:170
+#: inc/skins/protective/customizer.php:170
+msgid "Photo Reviews thumbnail image width"
+msgstr ""
+
+#: inc/skins/care/customizer.php:310 inc/skins/medicine/customizer.php:310
+#: inc/skins/protective/customizer.php:310
+msgid "Pink"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:386
+#: inc/vendors/woocommerce/wc-template-functions.php:432
+msgid "Placeholder"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:922
+msgctxt "placeholder"
+msgid "Confirm Password"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/newsletter.php:258
+msgid "Placeholder Color"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:378
+msgid "Placeholder Text"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1462
+msgid "Please add your license key before attempting to activate one."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:617
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:612
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:27
+msgid "Please enter a valid credit card number."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:24
+msgid "Please enter a valid date (ISO)."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:23
+msgid "Please enter a valid date."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:21
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:25
+msgid "Please enter a valid number."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:22
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:32
+msgid "Please enter a value between {0} and {1} characters long."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:33
+msgid "Please enter a value between {0} and {1}."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:35
+msgid "Please enter a value greater than or equal to {0}."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:34
+msgid "Please enter a value less than or equal to {0}."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:29
+msgid "Please enter a value with a valid extension."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:31
+msgid "Please enter at least {0} characters."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:30
+msgid "Please enter no more than {0} characters."
+msgstr ""
+
+#: elementor_templates/instagram.php:16
+msgid "Please enter number of photos"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:26
+msgid "Please enter only digits."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:28
+msgid "Please enter the same value again."
+msgstr ""
+
+#: elementor_templates/instagram.php:10
+msgid "Please enter username"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:20
+msgid "Please fix this field."
+msgstr ""
+
+#: elementor_templates/custom-image-list-tags.php:36
+#: elementor_templates/product-list-tags.php:32
+msgid "Please go to the product save to get the tag."
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:144
+msgid "Please select category to show:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/woocommerce-tags.php:60
+msgid "Please select the number of tags again"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:133
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:485
+msgid "Please select the show product"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:747
+msgid "Plugins"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1051
+msgid "Popularity"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:194
+#: inc/vendors/elementor/abstract/carousel.php:298
+msgid "Position"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:61
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:61
+msgid "Position Displayed"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/currency.php:60
+msgid "Position Flags"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/wishlist.php:302
+msgid "Position Left"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:352
+#: inc/vendors/elementor/elements/header/mini-cart.php:279
+msgid "Position Popup"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:876
+msgid "Positioning Content"
+msgstr ""
+
+#: inc/functions-frontend.php:547
+msgid "Post navigation"
+msgstr ""
+
+#: inc/functions-frontend.php:53
+msgid "Posted: "
+msgstr ""
+
+#: inc/functions-frontend.php:516
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/functions-frontend.php:391 inc/functions-helper.php:1064
+msgid "Posts tagged \""
+msgstr ""
+
+#: inc/widgets/posts.php:50
+msgid "Posts:"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:514
+msgid "Prev"
+msgstr ""
+
+#: inc/functions-frontend.php:554 inc/functions-frontend.php:571
+msgid "Previous"
+msgstr ""
+
+#: inc/functions-frontend.php:432
+#: inc/vendors/woocommerce/wc-template-functions.php:265
+msgid "Previous page"
+msgstr ""
+
+#: inc/merlin-config.php:307 woocommerce/cart/cart.php:32
+#: woocommerce/cart/cart.php:79 inc/vendors/elementor/abstract/base.php:1050
+msgid "Price"
+msgstr ""
+
+#: inc/classes/class-main.php:301
+msgid "Primary Menu"
+msgstr ""
+
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:48
+#: inc/vendors/woocommerce/wc-template-functions.php:252
+#: inc/vendors/elementor/elements/header/search-form.php:360
+msgid "Product"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:236
+msgid "Product Archive Sidebar"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:85
+msgid "Product Categories"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:87
+msgid "Product Category"
+msgstr ""
+
+#: inc/merlin-config.php:322
+msgid "Product Color"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:24
+msgid "Product Description"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:68
+msgid "Product name"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:245
+msgid "Product Single Sidebar"
+msgstr ""
+
+#: inc/merlin-config.php:317
+msgid "Product Size"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:145
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:158
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:83
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:308
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:150
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:115
+#: inc/vendors/elementor/elements/woocommerce/products.php:108
+msgid "Product Style"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:87
+msgid "Product Tabs"
+msgstr ""
+
+#: inc/merlin-config.php:327
+msgid "Product Tags"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:227
+msgid "Product Top Archive Product"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:111
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:149
+#: inc/vendors/elementor/elements/woocommerce/products.php:98
+msgid "Product Type"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:96
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:325
+msgid "Products"
+msgstr ""
+
+#: inc/functions-helper.php:109
+msgid "Protective suit"
+msgstr ""
+
+#: inc/functions-frontend.php:551
+msgid "Published In"
+msgstr ""
+
+#: inc/skins/care/customizer.php:321 inc/skins/medicine/customizer.php:321
+#: inc/skins/protective/customizer.php:321
+msgid "Purple"
+msgstr ""
+
+#: woocommerce/cart/cart.php:33 woocommerce/cart/cart.php:85
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:83
+msgid "Quantity"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1259
+#: inc/vendors/woocommerce/wc-template-functions.php:1261
+msgid "Quick View"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1053
+#: inc/vendors/elementor/elements/general/posts-grid.php:100
+msgid "Random"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:869
+msgid "Random Product"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:395
+#: inc/vendors/woocommerce/classes/class-wc.php:333
+msgid "Random Products"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:1052
+msgid "Rating"
+msgstr ""
+
+#: page-templates/posts/item-post-style-1.php:14
+#: inc/vendors/elementor/elements/general/posts-grid.php:308
+#: inc/vendors/elementor/elements/general/posts-grid.php:316
+#: inc/vendors/elementor/elements/general/posts-grid.php:762
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:384
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:179
+msgid "Read More"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:329
+msgid "Read more"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:371
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:166
+msgid "Read More Options"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:327
+msgid "Read More Text"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:761
+msgid "Ready"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-shop.php:393
+#: inc/vendors/woocommerce/classes/class-wc.php:331
+msgid "Recent Products"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:344
+msgid "Recently Viewed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2064
+msgid "Redux framework options."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2063
+msgid "Redux Options"
+msgstr ""
+
+#: woocommerce/myaccount/custom-form-login.php:21
+#: woocommerce/myaccount/custom-form-login.php:66
+#: woocommerce/myaccount/form-login.php:30
+#: woocommerce/myaccount/form-login.php:101
+#: woocommerce/myaccount/form-login.php:101
+msgid "Register"
+msgstr ""
+
+#: posts-releated.php:41
+msgid "Related posts"
+msgstr ""
+
+#: woocommerce/single-product/related.php:44
+msgid "Related products"
+msgstr ""
+
+#: woocommerce/global/form-login.php:50
+#: woocommerce/myaccount/custom-form-login.php:39
+#: woocommerce/myaccount/form-login.php:53
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:239
+msgid "Remove"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:206
+#: inc/vendors/woocommerce/wc-admin.php:229
+msgid "Remove product image"
+msgstr ""
+
+#: woocommerce/cart/cart.php:114 woocommerce/cart/mini-cart.php:70
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:135 woocommerce/wishlist-view.php:239
+msgid "Remove this product"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1118
+msgid "req"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1117
+msgid "Required"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/responsive.php:39
+msgid "Responsive Settings"
+msgstr ""
+
+#: inc/functions-helper.php:953
+msgid "result found with"
+msgstr ""
+
+#: inc/functions-helper.php:955
+msgid "results found with"
+msgstr ""
+
+#: inc/merlin-config.php:49
+msgid "Return to the dashboard"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2037
+msgid "Revolution Slider"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:145
+#: inc/vendors/elementor/elements/general/brands.php:109
+#: inc/vendors/elementor/elements/general/features.php:291
+#: inc/vendors/elementor/elements/general/newsletter.php:186
+#: inc/vendors/elementor/elements/general/newsletter.php:287
+#: inc/vendors/elementor/elements/general/our-team.php:140
+#: inc/vendors/elementor/elements/general/testimonials.php:109
+#: inc/vendors/elementor/elements/header/currency.php:64
+#: inc/vendors/elementor/elements/header/nav-menu.php:593
+#: inc/vendors/elementor/elements/header/nav-menu.php:811
+#: inc/vendors/elementor/elements/header/nav-menu.php:884
+#: inc/vendors/elementor/elements/header/nav-menu.php:976
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:167
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:196
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:264
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:183
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:211
+msgid "Right"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:44
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/classes/class-main.php:334
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:44
+msgid "Rows"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:442
+msgid "Rows:"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1419
+msgid "s"
+msgstr ""
+
+#: inc/classes/custommenu.php:118 inc/classes/megamenu.php:124
+#: inc/vendors/woocommerce/classes/class-wc.php:710
+msgid "Sale"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2038
+msgid "Sample Revolution sliders data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2051
+msgid "Sample theme options data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2025
+msgid "Sample widgets data."
+msgstr ""
+
+#: widgets/recent-comment.php:24
+msgid "says"
+msgstr ""
+
+#: inc/functions-frontend.php:275 inc/functions-helper.php:1415
+#: page-templates/parts/search-modal.php:17
+msgid "Search"
+msgstr ""
+
+#: searchform.php:13
+msgid "Search ..."
+msgstr ""
+
+#: page-templates/parts/device/productsearchform-mobileheader.php:14
+msgid "Search for products..."
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:32
+msgid "Search Form"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:500
+msgid "Search in Categories Text"
+msgstr ""
+
+#: page-templates/parts/productsearchform-canvas-v2.php:68
+#: page-templates/parts/productsearchform-canvas-v4.php:63
+#: page-templates/parts/productsearchform-canvas.php:68
+msgid "Search in:"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:394
+msgid "Search Min Characters"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:380
+msgid "Search products..."
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:356
+msgid "Search Result"
+msgstr ""
+
+#: inc/functions-helper.php:1062
+msgid "Search results for"
+msgstr ""
+
+#: inc/functions-frontend.php:407
+msgid "Search results for \""
+msgstr ""
+
+#: search.php:25
+msgid "Search Results for:"
+msgstr ""
+
+#: inc/functions-frontend.php:1135
+msgid "secs"
+msgstr ""
+
+#: inc/functions-frontend.php:124
+msgid "See all author post "
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/template.php:64
+msgid "Select"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:60
+msgid "Select Breadcrumbs Layout"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1220
+msgid "Select Demo"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:23
+msgid "Select Layout"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:779
+msgid "Select options"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:196
+msgid "Select Page"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:74 inc/widgets/socials.php:47
+msgid "Select socials:"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:17
+msgid "Sending user info, please wait..."
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/list-menu.php:71
+msgid "Separator Between"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/settings-layout.php:21
+msgid "Sets the default space between widgets (Default: 0)"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/settings-layout.php:11
+msgid "Sets the default width of the content area (Default: 1200)"
+msgstr ""
+
+#: woocommerce/item-categories/cat-custom-v1.php:12
+#: woocommerce/layout-categories/grid-custom.php:35
+#: woocommerce/layout-categories/single-custom.php:16
+#: inc/vendors/woocommerce/wc-template-functions.php:254
+msgid "Shop"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:889
+msgid "shop"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:24
+msgid "Shop order"
+msgstr ""
+
+#: page-templates/parts/offcanvas-cart-left.php:7
+#: page-templates/parts/offcanvas-cart-right.php:7
+#: woocommerce/cart/mini-cart-button-no-popup.php:14
+#: inc/vendors/woocommerce/wc-template-functions.php:150
+#: inc/vendors/woocommerce/wc-template-functions.php:151
+#: inc/vendors/elementor/elements/header/mini-cart.php:87
+msgid "Shopping cart"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/posts-grid.php:217
+#: inc/vendors/elementor/elements/general/posts-grid.php:263
+#: inc/vendors/elementor/elements/general/posts-grid.php:285
+#: inc/vendors/elementor/elements/general/posts-grid.php:318
+#: inc/vendors/elementor/elements/general/posts-grid.php:352
+#: inc/vendors/elementor/elements/general/posts-grid.php:363
+#: inc/vendors/elementor/elements/general/posts-grid.php:374
+#: inc/vendors/elementor/elements/general/posts-grid.php:385
+msgid "Show"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:85 inc/widgets/socials.php:58
+msgid "Show "
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:97
+msgid "Show \"Mini-Cart\" Price"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:135
+msgid "Show All"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:498
+msgid "Show auto"
+msgstr ""
+
+#: inc/widgets/banner_image.php:10
+msgid "Show banner image"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:51
+msgid "Show Breadcrumb?"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:157
+msgid "Show Canvas Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:169
+msgid "Show Canvas Menu Class"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/banner-close.php:81
+msgid "Show Close Button"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:715
+msgid "Show content menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:716
+msgid "Show content menu on home page"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:218
+msgid "Show Count"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:213
+msgid "Show Count Category"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:511
+msgid "Show count in Categories"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:327
+msgid "Show Custom Link"
+msgstr ""
+
+#: inc/widgets/custom_menu.php:10
+msgid "Show custom menu"
+msgstr ""
+
+#: inc/widgets/video.php:12
+msgid "Show Featured video"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/currency.php:52
+msgid "Show Flags"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:729
+msgid "Show Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:50
+msgid "Show Image of Search Result"
+msgstr ""
+
+#: inc/widgets/list-categories.php:10
+msgid "Show list categories"
+msgstr ""
+
+#: inc/widgets/popular_posts.php:9
+msgid "Show list of popular posts"
+msgstr ""
+
+#: inc/widgets/recent_comment.php:9
+msgid "Show list of recent comments"
+msgstr ""
+
+#: inc/widgets/recent_post.php:9
+msgid "Show list of recent post"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:9
+msgid "Show list product"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:492
+msgid "Show loop"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:186
+msgid "Show More"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:479
+msgid "Show navigations"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:486
+msgid "Show paginations"
+msgstr ""
+
+#: inc/widgets/popup_newsletter.php:9
+msgid "Show Popup Newsletter"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:58
+msgid "Show Price of Search Result"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:43
+msgid "Show Result"
+msgstr ""
+
+#: inc/widgets/single_image.php:9
+msgid "Show single image"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:170
+msgid "Show Tabs"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:145
+msgid "Show Toggle Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/wishlist.php:88
+msgid "Show Total"
+msgstr ""
+
+#: inc/widgets/yith-brand-image.php:9
+msgid "Show YITH product brand images(Only applicable to product single pages)"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:88
+msgid "Show/hidden Autoplay"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:78
+msgid "Show/hidden Infinite Loop"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:57
+msgid "Show/hidden Navigation"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:67
+msgid "Show/hidden Pagination"
+msgstr ""
+
+#: inc/classes/class-main.php:174
+msgid "Sidebar Default"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:144
+msgid "Sidebar does not exist in theme (moving widget to Inactive)"
+msgstr ""
+
+#: inc/vendors/elementor/icons/icons.php:8
+msgid "Simple Line Icons"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:165
+msgid "Site does not support widget"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:174
+msgid "Size Icon"
+msgstr ""
+
+#: inc/merlin-config.php:52
+msgid "Skip"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:31
+msgid "SKU:"
+msgstr ""
+
+#: inc/widgets/socials.php:9
+msgid "Socials for website."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-template-functions.php:1240
+#: inc/vendors/woocommerce/wc-template-functions.php:1460
+#: inc/vendors/woocommerce/classes/class-wc-single.php:439
+msgid "Sold"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:441
+msgid "Sold out"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc-single.php:871
+msgid "Sold: "
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:126
+msgid "Solid"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:467
+msgid "Something went wrong. Please refresh the page and try again!"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/woocommerce-tags.php:88
+msgid "Sorry, but no tags were found"
+msgstr ""
+
+#: post-formats/content-none.php:14
+msgid "Sorry, but your search returned no results!"
+msgstr ""
+
+#: inc/widgets/top_rate.php:54
+msgid "Sort by:"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:325
+#: inc/vendors/elementor/abstract/base.php:425
+#: inc/vendors/elementor/elements/general/posts-grid.php:581
+#: inc/vendors/elementor/elements/general/posts-grid.php:641
+#: inc/vendors/elementor/elements/general/posts-grid.php:689
+#: inc/vendors/elementor/elements/general/posts-grid.php:743
+#: inc/vendors/elementor/elements/general/posts-grid.php:804
+msgid "Spacing"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:137
+msgid "Spacing Content"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:268
+msgid "Spacing Description"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:233
+msgid "Spacing title"
+msgstr ""
+
+#: inc/merlin-config.php:54
+#: inc/vendors/elementor/elements/header/nav-menu.php:105
+msgid "Start"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/sticky-header.php:10
+msgid "Sticky Header"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:91
+msgid "Stock status"
+msgstr ""
+
+#: inc/vendors/elementor/elements/customize/controls/section-stretch-row.php:9
+msgid "Stretch Row"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/features.php:202
+#: inc/vendors/elementor/elements/general/our-team.php:121
+#: inc/vendors/elementor/elements/general/posts-grid.php:149
+#: inc/vendors/elementor/elements/header/custom-language.php:36
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:128
+msgid "Style"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:138
+#: inc/vendors/elementor/elements/header/compare.php:93
+#: inc/vendors/elementor/elements/header/mini-cart.php:119
+#: inc/vendors/elementor/elements/header/wishlist.php:105
+msgid "Style Icon"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:323
+#: inc/vendors/elementor/elements/header/mini-cart.php:254
+msgid "Style Popup"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:308
+msgid "Style Price"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:71
+msgid "Style Search Form"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:237
+#: inc/vendors/elementor/elements/header/compare.php:165
+#: inc/vendors/elementor/elements/header/mini-cart.php:190
+#: inc/vendors/elementor/elements/header/wishlist.php:177
+msgid "Style Text"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/mini-cart.php:344
+#: inc/vendors/elementor/elements/header/wishlist.php:231
+msgid "Style Total"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:165
+msgid "Sub Title"
+msgstr ""
+
+#: comments.php:71
+msgid "submit"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1809 inc/merlin/class-merlin.php:2015
+#: inc/merlin/class-merlin.php:2028 inc/merlin/class-merlin.php:2041
+#: inc/merlin/class-merlin.php:2054 inc/merlin/class-merlin.php:2067
+#: inc/merlin/class-merlin.php:2080
+msgid "Success"
+msgstr ""
+
+#: inc/widgets/video.php:44
+msgid ""
+"Support video from Youtube and Vimeo link. Ex: https://www.youtube.com/watch?"
+"v=sd0grLQ4voU"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:179
+msgid "Tab Item"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:90
+#: inc/vendors/elementor/elements/woocommerce/product-list-tags.php:56
+msgid "Tag"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:37
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:872
+msgid "Tagged: \""
+msgstr ""
+
+#: inc/functions-frontend.php:279
+msgid "Tags"
+msgstr ""
+
+#: inc/functions-frontend.php:83
+msgid "Tags: "
+msgstr ""
+
+#: inc/skins/care/customizer.php:116 inc/skins/medicine/customizer.php:116
+#: inc/skins/protective/customizer.php:116
+msgid "Tbay thumbnail image height"
+msgstr ""
+
+#: inc/skins/care/customizer.php:90 inc/skins/medicine/customizer.php:90
+#: inc/skins/protective/customizer.php:90
+msgid "Tbay thumbnail image width"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/testimonials.php:136
+msgid "Testimonials Items"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:107
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:143
+msgid "Text"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:76
+msgid "Text After Login"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/account.php:66
+msgid "Text Before Login"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/button.php:81
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-tags.php:194
+#: inc/vendors/elementor/elements/woocommerce/list-categories-product.php:142
+#: inc/vendors/elementor/elements/woocommerce/product-categories-tabs.php:233
+#: inc/vendors/elementor/elements/woocommerce/product-category.php:184
+#: inc/vendors/elementor/elements/woocommerce/products.php:135
+msgid "Text Button"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:227
+#: inc/vendors/elementor/elements/header/nav-menu.php:234
+#: inc/vendors/elementor/elements/header/nav-menu.php:289
+#: inc/vendors/elementor/elements/header/nav-menu.php:443
+#: inc/vendors/elementor/elements/header/nav-menu.php:480
+#: inc/vendors/elementor/elements/header/nav-menu.php:1027
+msgid "Text Color"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:239
+msgid "Text Color Hover"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:230
+msgid "Text Show All"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/search-form.php:386
+msgid "Text Validate Input Search"
+msgstr ""
+
+#: 404.php:24
+msgid "that link is broken"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2153
+msgid "The blog page was set"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1652
+msgid "The child theme functions.php content was generated"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1030
+msgid "The child theme installation step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1717
+msgid ""
+"The child theme screenshot was copied to the child theme, with the following "
+"result"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1719
+msgid "The child theme screenshot was not generated, because of these results"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1683
+msgid "The child theme style.css content was generated"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1890
+msgid "The content import AJAX call failed with this passed data"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1848
+msgid "The content import AJAX call will be executed with this import data"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1258
+msgid "The content import step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1832
+msgid ""
+"The content importer AJAX call failed to start, because of incorrect data"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1915
+msgid ""
+"The content importer AJAX call for retrieving total content import items "
+"failed to start, because of incorrect data."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:30
+msgid "The customizer import has finished successfully"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1415
+msgid "The existing child theme was activated"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-downloader.php:49
+msgid "The file was not able to save to disk, while trying to download it"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1338
+msgid "The final step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2168
+msgid "The Hello world post status was set to draft"
+msgstr ""
+
+#: inc/widgets/top_rate.php:14
+msgid "The highest rated posts on your site"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2143
+msgid "The home page was set"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:960
+msgid "The license activation step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1475
+msgid "The license activation was performed with the following results"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1432
+msgid "The newly generated child theme was activated"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1158
+msgid "The plugin installation step has been displayed"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-redux-importer.php:32
+msgid "The Redux Framework data was imported"
+msgstr ""
+
+#: inc/merlin-config.php:91
+msgid ""
+"The required WordPress plugins are all installed and up to date. Press "
+"\"Next\" to continue the setup wizard."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2106
+msgid "The revolution slider import was executed"
+msgstr ""
+
+#: inc/merlin-config.php:70
+msgid "The theme is already registered, so you can go to the next step!"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:866
+msgid "The welcome step has been displayed"
+msgstr ""
+
+#. Author of the theme
+msgid "Thembay"
+msgstr ""
+
+#: inc/vendors/elementor/icons/icons.php:45
+msgid "Thembay Custom"
+msgstr ""
+
+#: inc/merlin-config.php:45
+msgid "Theme Setup"
+msgstr ""
+
+#. EDD Item Name
+#: inc/merlin/class-merlin.php:1554
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1544
+msgid ""
+"This appears to be an invalid license key. Please try again or contact "
+"support."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:99
+msgid "This email address is already registered."
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:19
+msgid "This field is required."
+msgstr ""
+
+#: woocommerce/yith-wfbt-form-free.php:59 woocommerce/yith-wfbt-form.php:92
+msgid "This item"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2192
+msgid ""
+"This predefined demo import does not have the name parameter: "
+"import_file_name"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:97
+msgid "This username is already registered."
+msgstr ""
+
+#: inc/merlin-config.php:77
+msgid ""
+"This wizard will set up your theme, install plugins, and import content. It "
+"is optional & should take only a few minutes."
+msgstr ""
+
+#: inc/merlin-config.php:104
+msgid "Ticket System"
+msgstr ""
+
+#: inc/widgets/list-categories.php:27 inc/widgets/woo-carousel.php:26
+#: inc/vendors/elementor/abstract/base.php:85
+#: inc/vendors/elementor/abstract/base.php:1048
+#: inc/vendors/elementor/elements/general/features.php:82
+#: inc/vendors/elementor/elements/general/features.php:209
+#: inc/vendors/elementor/elements/general/heading.php:79
+#: inc/vendors/elementor/elements/general/posts-grid.php:98
+#: inc/vendors/elementor/elements/general/posts-grid.php:207
+#: inc/vendors/elementor/elements/general/posts-grid.php:215
+#: inc/vendors/elementor/elements/general/posts-grid.php:540
+#: inc/vendors/elementor/elements/header/compare.php:74
+#: inc/vendors/elementor/elements/header/nav-menu.php:613
+#: inc/vendors/elementor/elements/header/nav-menu.php:621
+#: inc/vendors/elementor/elements/header/nav-menu.php:623
+#: inc/vendors/elementor/elements/header/nav-menu.php:905
+#: inc/vendors/elementor/elements/header/nav-menu.php:907
+#: inc/vendors/elementor/elements/header/wishlist.php:77
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:604
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:342
+#: inc/vendors/elementor/elements/woocommerce/product-tabs.php:163
+msgid "Title"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:896
+msgid "Title Content"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:60
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:240
+msgid "Title Date"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:253
+msgid "Title deal ended"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:93
+#: inc/vendors/elementor/elements/general/posts-grid.php:227
+#: inc/vendors/elementor/elements/header/nav-menu.php:631
+#: inc/vendors/elementor/elements/header/nav-menu.php:915
+msgid "Title HTML Tag"
+msgstr ""
+
+#: inc/widgets/banner_image.php:41 inc/widgets/custom_menu.php:42
+#: inc/widgets/list-categories.php:78 inc/widgets/popular_posts.php:40
+#: inc/widgets/popup_newsletter.php:47 inc/widgets/posts.php:45
+#: inc/widgets/recent_comment.php:37 inc/widgets/recent_post.php:34
+#: inc/widgets/single_image.php:39 inc/widgets/socials.php:43
+#: inc/widgets/top_rate.php:40 inc/widgets/video.php:35
+#: inc/widgets/woo-carousel.php:116
+msgid "Title:"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/carousel.php:111
+msgid "To help load faster in mmobile"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:705
+msgid "Toggle content menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:570
+#: inc/vendors/elementor/elements/header/nav-menu.php:994
+msgid "Toggle Menu"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:867
+msgid "Top Rated"
+msgstr ""
+
+#: woocommerce/cart/cart.php:34 woocommerce/cart/cart.php:103
+msgid "Total"
+msgstr ""
+
+#: inc/classes/class-main.php:304
+msgid "Tracking Order Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:92
+msgid "Tree View"
+msgstr ""
+
+#: post-formats/content-none.php:16
+msgid "Try again please, use the search form below."
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/our-team.php:224
+msgid "Twitter Link"
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/custom-image-list-categories.php:279
+msgid "Type Custom"
+msgstr ""
+
+#: inc/widgets/woo-carousel.php:267
+msgid "Type Products:"
+msgstr ""
+
+#: inc/widgets/recent_post.php:39
+msgid "Type:"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:75
+msgid "Unit price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:137
+msgid "Update Cart"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1764
+msgid "Updating"
+msgstr ""
+
+#: inc/template-tags.php:94
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr ""
+
+#: inc/template-tags.php:113
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr ""
+
+#: inc/template-tags.php:85
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr ""
+
+#: inc/template-tags.php:55
+msgctxt "Used before post format."
+msgid "Format"
+msgstr ""
+
+#: inc/template-tags.php:76
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:102
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr ""
+
+#: inc/template-tags.php:91 inc/template-tags.php:99
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""
+
+#: woocommerce/myaccount/custom-form-login.php:58
+#: woocommerce/myaccount/form-login.php:76
+msgid "Username"
+msgstr ""
+
+#: woocommerce/global/form-login.php:38 woocommerce/myaccount/form-login.php:43
+msgid "Username or email"
+msgstr ""
+
+#: woocommerce/myaccount/custom-form-login.php:34
+msgid "Username/ Email"
+msgstr ""
+
+#: inc/functions-helper.php:431
+#: inc/vendors/elementor/elements/header/nav-menu.php:91
+msgid "Vertical"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:792
+msgid "Vertical Menu"
+msgstr ""
+
+#: inc/vendors/elementor/elements/header/nav-menu.php:537
+msgid "Vertical Padding"
+msgstr ""
+
+#: widgets/video.php:18
+msgid "Video error!"
+msgstr ""
+
+#: inc/vendors/cmb2/post.php:25
+msgid "Video Link"
+msgstr ""
+
+#: inc/widgets/video.php:40
+msgid "Video link:"
+msgstr ""
+
+#: inc/widgets/video.php:47
+msgid "Video name:"
+msgstr ""
+
+#: inc/merlin-config.php:106
+msgid "Video Tutorials"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-admin.php:37
+msgid "Video URL"
+msgstr ""
+
+#: inc/widgets/video.php:52
+msgid "Video width:"
+msgstr ""
+
+#: inc/functions-helper.php:1414
+msgid "View all"
+msgstr ""
+
+#: inc/functions-frontend.php:735 inc/functions-frontend.php:821
+msgid "View all posts in %s"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:109
+msgid "View Cart"
+msgstr ""
+
+#: inc/vendors/woocommerce/classes/class-wc.php:298
+msgid "View wishlist"
+msgstr ""
+
+#: woocommerce/cart/mini-cart-button-left.php:10
+#: woocommerce/cart/mini-cart-button-no-popup.php:9
+#: woocommerce/cart/mini-cart-button-popup.php:9
+#: woocommerce/cart/mini-cart-button-right.php:9
+#: woocommerce/cart/mini-cart-button.php:9
+msgid "View your shopping cart"
+msgstr ""
+
+#: inc/merlin-config.php:103
+msgid "View your website"
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/template.php:54
+msgid "Want to learn more about Elementor library?"
+msgstr ""
+
+#: inc/functions-helper.php:1451
+msgid "was added to shopping cart."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1188
+msgid "Watch Demo Online"
+msgstr ""
+
+#: comments.php:67
+msgid "Website"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:726
+msgid "Welcome"
+msgstr ""
+
+#. Theme Name
+#: inc/merlin-config.php:75
+msgid "Welcome to %s"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:198
+msgid "Widget already exists"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2024
+msgid "Widgets"
+msgstr ""
+
+#: inc/vendors/elementor/abstract/base.php:708
+#: inc/vendors/elementor/abstract/carousel.php:133
+#: inc/vendors/elementor/abstract/carousel.php:265
+#: inc/vendors/elementor/elements/header/search-form.php:99
+#: inc/vendors/elementor/elements/header/search-form.php:140
+#: inc/vendors/elementor/elements/customize/controls/column-border.php:67
+msgid "Width"
+msgstr ""
+
+#: inc/functions-mobile.php:381
+#: inc/vendors/woocommerce/wc-template-functions.php:1121
+#: inc/vendors/elementor/elements/header/wishlist.php:35
+msgid "Wishlist"
+msgstr ""
+
+#: inc/classes/class-main.php:187
+msgid "WPML Sidebar"
+msgstr ""
+
+#: inc/vendors/woocommerce/wc-ajax-auth.php:124
+msgid "Wrong username or password."
+msgstr ""
+
+#: inc/skins/care/customizer.php:299 inc/skins/medicine/customizer.php:299
+#: inc/skins/protective/customizer.php:299
+msgid "Yellow"
+msgstr ""
+
+#: inc/vendors/cmb2/page.php:54
+msgid "Yes"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1453
+msgid ""
+"Yikes! The theme activation failed. Please try again or contact support."
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-count-down.php:112
+#: inc/vendors/elementor/elements/woocommerce/product-flash-sales.php:343
+msgid ""
+"You do not have any discount products. <br>Go to the <strong><a href=\"%s\" "
+"target=\"_blank\">Products screen</a></strong> to create one."
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:418
+msgid "You have no recent viewed item."
+msgstr ""
+
+#: inc/vendors/elementor/elements/woocommerce/product-recently-viewed.php:88
+msgid "You have no recently viewed item."
+msgstr ""
+
+#: inc/vendors/elementor/elements/general/template.php:53
+msgid "You Haven’t Saved Templates Yet."
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:37
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:38
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: inc/merlin-config.php:78
+msgid ""
+"You may have already run this theme setup wizard. If you would like to "
+"proceed anyway, click on the \"Start\" button below."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: inc/merlin-config.php:81
+msgid "You're good to go!"
+msgstr ""
+
+#: inc/merlin-config.php:89
+msgid "You're up to speed!"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:87
+msgid "Your cart is empty"
+msgstr ""
+
+#: inc/merlin-config.php:83
+msgid ""
+"Your child theme has already been installed and is now activated, if it "
+"wasn't already."
+msgstr ""
+
+#: comments.php:57
+msgid "Your Comment:"
+msgstr ""
+
+#: comments.php:72
+msgid "Your email address will not be published. Required fields are makes."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1549
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#. Expiration date
+#: inc/merlin/class-merlin.php:1534
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1540
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1558
+msgid "Your license key has reached its activation limit."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:59
+msgid "Your order"
+msgstr ""
+
+#. Theme Author
+#: inc/merlin-config.php:101
+msgid "Your theme has been all set up. Enjoy your new theme by %s."
+msgstr ""
+
+#: inc/merlin-config.php:71
+msgid "Your theme is activated! Remote updates and theme support are enabled."
+msgstr ""

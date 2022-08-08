@@ -390,16 +390,16 @@ function localLanguage(res)
     //language
     var language_img_src = '<img src=' + res.data['language_img_src'] + '>' + res.data['Language'] + '<b class="caret"></b>'
     $('.language_text').html(language_img_src);
-    var currency = 'Currency & ' + res.data['currency_code'] + '</span>' + '<b class="caret"></b>'
+    var currency = 'Currency & ' + res.data['currency_code'] + '<b class="caret"></b>'
     $('.currency_text').html(currency);
     var purchases = '<div style="text-align: center;">' + res.data['purchases'] + '</div>'
     $('.purchases').html(purchases);
     var welcome = '<div style="text-align: center;">' + res.data['welcome'] + '</div>'
     $('.welcome').html(welcome);
-    var street = '<div style="vertical-align: inherit;">' + res.data['address'] + ': ' + res.data['street'] + '</div>'
+    var street = '<div style="vertical-align: inherit;">' + res.data['street'] + '</div>'
     $('.street').html(street);
-    var callus = '<p>' + res.data['call_us'] + ': <span style="text-align: left; background-color: #ffffff;">' + res.data['phone_number'] + '</span></p>'
-    $('.callus').html(callus);
+    var phone_number = '<div style="vertical-align: inherit;">' + res.data['phone_number'] + '</div>'
+    $('.phone-number').html(phone_number);
     var menu_account_cart = '<li id="menu-item-1389" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1389"><a href="/my-account">' + res.data['my_amount'] + '</a></li>' +
         '        <li id="menu-item-1390" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1390"><a href="/cart">' + res.data['cart'] + '</a></li>'
     $('#menu-my-account').html(menu_account_cart)
@@ -410,7 +410,7 @@ function localLanguage(res)
     $('.business-hours').html(business_hours)
     var copyright = '<span>' + res.data['copyright'][0] + '<a style="color: #007bff" href="/">&nbsp' + res.data['smtp_name'] + '</a>&nbsp' + res.data['copyright'][1] + '</span>'
     $('.copyright').html(copyright)
-    var supper = '<span>' + res.data['email'] + ': ' + res.data['support'] + res.data['smtp_name'] + '</span>'
+    var supper = '<span>' + res.data['support'] + res.data['smtp_name'] + '</span>'
     $('.supper').html(supper)
     var heading_title = '<span class="title">' + res.data['heading'][0] + '</span>'
     $('.FeaturedProducts').html(heading_title)
@@ -436,8 +436,9 @@ function localLanguage(res)
     $('.tab-description').html(description)
     var tbay_title = '<span>' + res.data['tbay_title'] + '</span>'
     $('.diza-tbay-title').html(tbay_title)
-    var test = res.data['stock']
-    $('.diza-stock').html(test)
+    var stock = res.data['stock']
+    $('.diza-stock').html(stock)
+
     //login
     var login = res.data['login']
     $('.diza-login').html(login)
@@ -459,7 +460,6 @@ function localLanguage(res)
     $("#password2").attr('placeholder', res.data['confirm_pwd'])
     $("#diza-submit-register").attr('value', res.data['register'])
     $("#diza-submit-login").attr('value', res.data['login'])
-
 
     //mini cart
     var miniCartSubTotal = res.data['subtotal']
