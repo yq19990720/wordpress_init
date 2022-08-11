@@ -1,11 +1,6 @@
 name: "CI"
 on: # rebuild any PRs and main branch changes
-  pull_request:
-    paths:
-      - "**.php"
-      - "phpcs.xml"
-      - ".github/workflows/phpcs.yml"
-  push:
+  [push,pull_request]:
     paths:
       - "**.php"
       - "phpcs.xml"
