@@ -1,28 +1,30 @@
 <?php
 
-if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
-    class Diza_Tbay_mmenu_menu extends Walker_Nav_Menu {
-        
+if (!class_exists("Diza_Tbay_mmenu_menu")) {
+    class Diza_Tbay_mmenu_menu extends Walker_Nav_Menu
+    {
        /**
          * __construct function.
-         * 
+         *
          * @access public
          * @return void
          */
-        public function __construct() {
-            add_filter('nav_menu_css_class' , array($this, 'add_nav_class'), 10 , 2);
+        public function __construct()
+        {
+            add_filter('nav_menu_css_class', array($this, 'add_nav_class'), 10, 2);
         }
         
         /**
          * special_nav_class function.
-         * 
+         *
          * @access public
          * @param mixed $classes
          * @param mixed $item
          * @return void
          */
-        public function add_nav_class($classes, $item){
-            if(in_array('current-menu-item', $classes)){
+        public function add_nav_class($classes, $item)
+        {
+            if (in_array('current-menu-item', $classes)) {
                 $classes[] = ' active ';
             }
             return $classes;
@@ -30,16 +32,16 @@ if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
         
         /**
          * start_lvl function.
-         * 
+         *
          * @access public
          * @param mixed &$output
          * @param mixed $depth
          * @return void
          */
-        public function start_lvl( &$output, $depth=0 ,$args = array() ) {
-            $indent = str_repeat( "\t", $depth );
+        public function start_lvl(&$output, $depth = 0, $args = array())
+        {
+            $indent = str_repeat("\t", $depth);
             $output    .= "\n$indent<ul class=\"sub-menu\">\n";
-
         }
 
         /**
@@ -53,14 +55,15 @@ if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
          * @param int    $depth  Depth of menu item. Used for padding.
          * @param array  $args   An array of arguments. @see wp_nav_menu()
          */
-        public function end_lvl( &$output, $depth = 0, $args = array() ) {
+        public function end_lvl(&$output, $depth = 0, $args = array())
+        {
             $indent = str_repeat("\t", $depth);
             $output .= "$indent</ul>\n";
         }
 
         /**
          * start_el function.
-         * 
+         *
          * @access public
          * @param mixed &$output
          * @param mixed $item
@@ -69,9 +72,10 @@ if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
          * @param int $id (default: 0)
          * @return void
          */
-       public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+        public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+        {
 
-            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+            $indent = ( $depth ) ? str_repeat("\t", $depth) : '';
 
             $li_attributes = '';
 
@@ -79,70 +83,70 @@ if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
             $class_names    .= ($item->current || $item->current_item_ancestor) ? ' active' : ' ';
 
             $tbay_mega_profile = $this->getSubMegaMenuProfile($item, $depth);
-            if ( $tbay_mega_profile ) {
+            if ($tbay_mega_profile) {
                 $args->has_children = true;
                 $class_names .= ' has-submenu';
             }
 
 
-            if( !empty( $item->classes ) ) {
+            if (!empty($item->classes)) {
                 $classes =  (array) $item->classes;
 
-                $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+                $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
             }
 
 
-            $class_names = ' class="' . esc_attr( $class_names ) . '"';
+            $class_names = ' class="' . esc_attr($class_names) . '"';
 
-            $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-            $id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
+            $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args);
+            $id = strlen($id) ? ' id="' . esc_attr($id) . '"' : '';
 
             $output .= $indent . '<li' . $id . $class_names . $li_attributes . '>';
 
-            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-            if(strcmp($item->url_type,"currency") == 0){
-               $attributes .= ' class="elementor-item currency_code" currency_code='.$item->currency_code."";
-            }else if(strcmp($item->url_type,"language") == 0){
-               $attributes .= ' class="elementor-item language_code" language_code='.$item->language_code."" ;
-            }else{
-               $attributes .= ' class="elementor-item"';
+            $attributes  = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) . '"' : '';
+            if (strcmp($item->url_type, "currency") == 0) {
+                $attributes .= ' class="elementor-item currency_code" currency_code=' . $item->currency_code . "";
+            } else if (strcmp($item->url_type, "language") == 0) {
+                $attributes .= ' class="elementor-item language_code" language_code=' . $item->language_code . "" ;
+            } else {
+                $attributes .= ' class="elementor-item"';
             }
-            $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
-            $attributes .= ! empty( $item->xfn ) ? ' rel="'    . esc_attr( $item->xfn ) .'"' : '';
+            $attributes .= ! empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+            $attributes .= ! empty($item->xfn) ? ' rel="'    . esc_attr($item->xfn) . '"' : '';
            //首页列表页详情页
-           if(strcmp($item->url_type,"currency") == 0){
-               $attributes .= ! empty( $item->url ) ? ' href="javascript:void(0);"' : '';
-           }else if($_SERVER['REQUEST_URI'] =="/" || strpos($_SERVER['REQUEST_URI'],'detail/') !== false || strpos($_SERVER['REQUEST_URI'],'shop/') !== false ){
-               if( strcmp($item->url_type,"language") == 0){
-                   $attributes .= ! empty( $item->url ) ? ' href="javascript:void(0);"' : '';
-               }else{
-                   $attributes .= ! empty( $item->url ) ? ' href="'   . esc_url( $item->url ) .'"' : '';
-               }
-           }else{
-               $attributes .= ! empty( $item->url ) ? ' href="'   . esc_url( $item->url ) .'"' : '';
-           }
+            if (strcmp($item->url_type, "currency") == 0) {
+                $attributes .= ! empty($item->url) ? ' href="javascript:void(0);"' : '';
+            } else if ($_SERVER['REQUEST_URI'] == "/" || strpos($_SERVER['REQUEST_URI'], 'detail/') !== false || strpos($_SERVER['REQUEST_URI'], 'shop/') !== false) {
+                if (strcmp($item->url_type, "language") == 0) {
+                      $attributes .= ! empty($item->url) ? ' href="javascript:void(0);"' : '';
+                } else {
+                    $attributes .= ! empty($item->url) ? ' href="'   . esc_url($item->url) . '"' : '';
+                }
+            } else {
+                $attributes .= ! empty($item->url) ? ' href="'   . esc_url($item->url) . '"' : '';
+            }
 
             $item_output = $args->before;
-            $item_output .= '<a'. $attributes .'>';
-            if(strcmp($item->language_title,$item->title) == 0){
-               $item_output .='<div class="language_text">';
-               $item_output .= '</div></a>';
-             }else if(strcmp($item->currency_title,$item->title) == 0){
-               $item_output .='<div class="currency_text">';
-               $item_output .= '</div></a>';
-             }else{
-               $item_output .= $args->link_before . $this->display_icon($item) . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-               $item_output .= '</a>';
+            $item_output .= '<a' . $attributes . '>';
+            if (strcmp($item->language_title, $item->title) == 0) {
+                $item_output .= '<div class="language_text">';
+                $item_output .= '</div></a>';
+            } else if (strcmp($item->currency_title, $item->title) == 0) {
+                $item_output .= '<div class="currency_text">';
+                $item_output .= '</div></a>';
+            } else {
+                $item_output .= $args->link_before . $this->display_icon($item) . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+                $item_output .= '</a>';
             }
             $item_output .= $args->after;
-            $item_output .= $this->generateSubMegaMenu( $item , $tbay_mega_profile );
+            $item_output .= $this->generateSubMegaMenu($item, $tbay_mega_profile);
 
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+            $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
         }
 
         /**
          * display_element function.
-         * 
+         *
          * @access public
          * @param mixed $element
          * @param mixed &$children_elements
@@ -152,8 +156,9 @@ if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
          * @param mixed &$output
          * @return void
          */
-        public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
-            if ( ! $element ) {
+        public function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output)
+        {
+            if (! $element) {
                 return;
             }
 
@@ -161,55 +166,54 @@ if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
             $id       = $element->$id_field;
 
             //display this element
-            $this->has_children = ! empty( $children_elements[ $id ] );
-            if ( isset( $args[0] ) && is_array( $args[0] ) ) {
+            $this->has_children = ! empty($children_elements[ $id ]);
+            if (isset($args[0]) && is_array($args[0])) {
                 $args[0]['has_children'] = $this->has_children; // Back-compat.
             }
 
-            $cb_args = array_merge( array(&$output, $element, $depth), $args);
+            $cb_args = array_merge(array(&$output, $element, $depth), $args);
             call_user_func_array(array($this, 'start_el'), $cb_args);
 
             // descend only when the depth is right and there are childrens for this element
-            if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
-
-                foreach ( $children_elements[ $id ] as $child ){
-
-                    if ( !isset($newlevel) ) {
+            if (($max_depth == 0 || $max_depth > $depth + 1 ) && isset($children_elements[$id])) {
+                foreach ($children_elements[ $id ] as $child) {
+                    if (!isset($newlevel)) {
                         $newlevel = true;
                         //start the child delimiter
-                        $cb_args = array_merge( array(&$output, $depth), $args);
+                        $cb_args = array_merge(array(&$output, $depth), $args);
                         call_user_func_array(array($this, 'start_lvl'), $cb_args);
                     }
-                    $this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
+                    $this->display_element($child, $children_elements, $max_depth, $depth + 1, $args, $output);
                 }
-                unset( $children_elements[ $id ] );
+                unset($children_elements[ $id ]);
             }
 
-            if ( isset($newlevel) && $newlevel ){
+            if (isset($newlevel) && $newlevel) {
                 //end the child delimiter
-                $cb_args = array_merge( array(&$output, $depth), $args);
+                $cb_args = array_merge(array(&$output, $depth), $args);
                 call_user_func_array(array($this, 'end_lvl'), $cb_args);
             }
 
             //end this element
-            $cb_args = array_merge( array(&$output, $element, $depth), $args);
+            $cb_args = array_merge(array(&$output, $element, $depth), $args);
             call_user_func_array(array($this, 'end_el'), $cb_args);
         }
 
         /**
          *
          */
-        public function getSubMegaMenuProfile($item, $depth ) {
+        public function getSubMegaMenuProfile($item, $depth)
+        {
             return isset($item->tbay_mega_profile) && $item->tbay_mega_profile ? $item->tbay_mega_profile : false;
         }
 
         /**
          *
          */
-        public function generateSubMegaMenu( $item, $tbay_mega_profile ) {
-            global $tbaymegamenu; 
-            if ( $tbay_mega_profile ) {
-
+        public function generateSubMegaMenu($item, $tbay_mega_profile)
+        {
+            global $tbaymegamenu;
+            if ($tbay_mega_profile) {
                 $args = array(
                     'name'        => $tbay_mega_profile,
                     'post_type'   => 'tbay_megamenu',
@@ -217,34 +221,34 @@ if ( !class_exists("Diza_Tbay_mmenu_menu") ) {
                     'numberposts' => 1
                 );
                 $posts = get_posts($args);
-                if ( $posts && isset($posts[0]) ) {
+                if ($posts && isset($posts[0])) {
                     $post = $posts[0];
                     $tbaymegamenu = true;
 
-                    if( defined('TBAY_ELEMENTOR_ACTIVED') && diza_is_elementor_activated() && in_array( 'tbay_megamenu', get_option( 'elementor_cpt_support' ) ) ) {
-
-                        if ( class_exists( 'Elementor\Core\Files\CSS\Post' ) ) { 
-                            $css_file = new Elementor\Core\Files\CSS\Post( $post->ID );
+                    if (defined('TBAY_ELEMENTOR_ACTIVED') && diza_is_elementor_activated() && in_array('tbay_megamenu', get_option('elementor_cpt_support'))) {
+                        if (class_exists('Elementor\Core\Files\CSS\Post')) {
+                            $css_file = new Elementor\Core\Files\CSS\Post($post->ID);
                             $css_file->enqueue();
                         }
 
-                        $content = Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $post->ID );
+                        $content = Elementor\Plugin::instance()->frontend->get_builder_content_for_display($post->ID);
                     } else {
-                        $content = do_shortcode( $post->post_content );
-                    }    
+                        $content = do_shortcode($post->post_content);
+                    }
 
                     $tbaymegamenu  = false;
-                    return '<div class="sub-menu"><div class="dropdown-menu-inner">'.$content.'</div></div>';
+                    return '<div class="sub-menu"><div class="dropdown-menu-inner">' . $content . '</div></div>';
                 }
             }
             return '';
         }
 
-        public function display_icon($item) {
-            if ( $item->tbay_icon_image ) {
-                return '<img src="'.esc_url($item->tbay_icon_image).'" alt="'.esc_attr($item->title).'"/>';
-            } elseif ( $item->tbay_icon_font ) {
-                return '<i class="'.esc_attr($item->tbay_icon_font).'"></i>';
+        public function display_icon($item)
+        {
+            if ($item->tbay_icon_image) {
+                return '<img src="' . esc_url($item->tbay_icon_image) . '" alt="' . esc_attr($item->title) . '"/>';
+            } elseif ($item->tbay_icon_font) {
+                return '<i class="' . esc_attr($item->tbay_icon_font) . '"></i>';
             }
         }
     }

@@ -1,29 +1,51 @@
 <?xml version="1.0"?>
 <ruleset name="phpcs">
+
     <description>PHPCS configuration file.</description>
+
     <rule ref="PSR12">
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
     </rule>
+    <rule ref="Squiz.Functions"/>
+    <rule ref="Squiz.NamingConventions"/>
 
     <!-- check all files in the app directory, feel free to add more files with: -->
+    <!-- folder -->
     <file>wp-content/themes/diza/js/ebay</file>
-    <file>wp-content/themes/diza/woocommerce/cart</file>
     <file>wp-content/themes/diza/woocommerce/checkout</file>
     <file>wp-includes/ebay</file>
+    <file>wp-content/plugins/stripe/</file>
+    <file>wp-content/plugins/paypal/</file>
+
+    <!-- document -->
+    <file>wp-includes/l10n.php</file>
+    <file>wp-includes/class-wp-query.php</file>
+    <file>wp-content/themes/diza/inc/classes/megamenu.php</file>
+    <file>wp-content/themes/diza/inc/classes/mmenu.php</file>
+    <file>wp-content/themes/diza/inc/functions-frontend.php</file>
+    <file>wp-content/themes/diza/woocommerce/cart/cart.php</file>
+    <file>wp-content/themes/diza/functions.php</file>
+    <file>wp-content/themes/diza/woocommerce/cart/is-login-mini-cart.php</file>
+    <file>wp-content/themes/diza/woocommerce/cart/mini-cart.php</file>
+    <file>wp-content/plugins/woocommerce/includes/wc-formatting-functions.php</file>
+    <file>wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php</file>
+    <file>wp-content/plugins/woocommerce/includes/data-stores/abstract-wc-order-data-store-cpt.php</file>
+    <file>wp-content/plugins/woocommerce/includes/wc-template-functions.php</file>
     <file>wp-content/plugins/woocommerce/includes/class-wc-ajax.php</file>
     <file>wp-content/plugins/woocommerce/includes/class-wc-cart.php</file>
     <file>wp-content/plugins/woocommerce/includes/class-wc-checkout.php</file>
     <file>wp-content/plugins/woocommerce/includes/class-wc-order.php</file>
-    <file>wp-content/plugins/stripe/</file>
-    <file>wp-content/plugins/paypal/</file>
-    <file>wp-includes/class-wp-query.php</file>
+    <file>wp-content/plugins/woocommerce/templates/cart/cart-totals.php</file>
+    <file>wp-content/plugins/woocommerce/templates/checkout/thankyou.php</file>
+
 
     <!-- exclude our migrations directory from the violation check-->
-    <exclude-pattern>wp-content/themes/diza/woocommerce/cart/cross-sells</exclude-pattern>
     <exclude-pattern>wp-includes/ebay/ebay_config.php</exclude-pattern>
     <exclude-pattern>wp-includes/ebay/language_config.php</exclude-pattern>
     <exclude-pattern>wp-includes/ebay/data_config.php</exclude-pattern>
-
     <!-- ignore warnings and display ERRORS only -->
     <arg value="np"/>
+    <arg name="extensions" value="php,inc,js,css,tpl" />
+    <arg name="report" value="xml"/>
+    <arg name="colors"/>
 </ruleset>
