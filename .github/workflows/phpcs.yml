@@ -30,3 +30,4 @@ jobs:
         run: |
           php phpcs.phar --config-set default_standard PSR12
           php phpcs.phar --standard=seo.xml
+          php phpcbf.phar --standard=seo.xml
