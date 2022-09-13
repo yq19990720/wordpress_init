@@ -1,0 +1,8 @@
+.idea
+/wp-content/uploads/wc-logs/*
+!/wp-content/uploads/wc-logs/index.html
+!/wp-content/uploads/wc-logs/.htaccess
+/wp-content/uploads/woocommerce_uploads/*
+!/wp-content/uploads/woocommerce_uploads/index.html
+!/wp-content/uploads/woocommerce_uploads/.htaccess
+/phpMyAdmin4.8.5
