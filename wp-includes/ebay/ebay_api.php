@@ -72,8 +72,7 @@ class EbayApi
         return res_banner($res->data);
     }
 
-    final public function productList(string $data, string $page_num, string $page_size, string $search = null): array
-    {
+    final public function productList(string $data, string $page_num, string $page_size, string $search = null): array {
         global $ebay_list;
         if (!$search) {
             $data = str_replace("sku", "", Page_code($data));
